@@ -1,0 +1,99 @@
+{
+    "displaylayers": [ "color_swap", "keyboard_on_off", "keyboard_refle_on_off", "mouse_on_off", "mouse_refl_on_off" ],
+    "positions": {
+        "Render_Cam_F01_FL": {
+            "doffocusdist": 5.000000,
+            "fovy": 28.841547,
+            "pos": [ 0.443318, 0.055846, -4.677834, 13.535971, 162.208313 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F02_F": {
+            "doffocusdist": 5.000000,
+            "fovy": 31.890791,
+            "pos": [ 0.000000, 0.043633, -0.086630, 13.104494, 153.101746 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F02_Port": {
+            "doffocusdist": 5.000000,
+            "fovy": 36.243721,
+            "pos": [ -3.141364, -1.115261, -0.067492, 3.184368, 96.088264 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F02_Rear": {
+            "doffocusdist": 5.000000,
+            "fovy": 25.360767,
+            "pos": [ -3.141501, 0.055850, -0.062782, 13.175271, 186.594315 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F02_Top": {
+            "doffocusdist": 5.000000,
+            "fovy": 25.360767,
+            "pos": [ -3.141545, 1.432914, -1.447781, 0.710373, 209.899689 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F03_FR": {
+            "doffocusdist": 5.000000,
+            "fovy": 28.072487,
+            "pos": [ -0.446669, 0.022959, 4.384754, 13.721850, 165.462494 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F04_L": {
+            "doffocusdist": 5.000000,
+            "fovy": 30.957275,
+            "pos": [ -4.698396, 0.018324, -3.144583, 14.936077, 147.990707 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F05_R": {
+            "doffocusdist": 5.000000,
+            "fovy": 33.398487,
+            "pos": [ -1.584789, 0.018498, 2.657985, 14.683272, 138.675781 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "hmxBack": {
+            "fovy": 28.841000,
+            "pos": [ -3.141593, 0.000000, 0.000000, 0.000000, 108.629547 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "hmxFront": {
+            "fovy": 28.841000,
+            "pos": [ 0.000000, 0.000000, 0.000000, 0.000000, 108.629547 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "hmxHero": {
+            "fovy": 28.841000,
+            "pos": [ 0.443318, 0.055846, -4.677876, 13.535961, 162.208527 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "hmxLeft": {
+            "fovy": 28.841000,
+            "pos": [ -1.570796, 0.000000, 0.000000, 0.000000, 108.629547 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "hmxRight": {
+            "fovy": 28.841000,
+            "pos": [ -4.712389, 0.000000, 0.000000, 0.000000, 108.629547 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "hmxTop": {
+            "fovy": 28.841000,
+            "pos": [ 0.000000, 1.570796, -0.000000, 0.000000, 108.629547 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        }
+    },
+    "states": [ "Ascent_Solid", "Pearl_White", "keyboard_black", "keyboard_off", "keyboard_on", "keyboard_white", "keyboard_refle_off", "keyboard_refle_on", "mouse_black", "mouse_off", "mouse_on", "mouse_white", "mouse_refle_off", "mouse_refle_on" ],
+    "ver": "v2.0.509"
+}

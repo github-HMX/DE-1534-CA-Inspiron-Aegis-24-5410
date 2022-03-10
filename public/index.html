@@ -1,0 +1,2191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="Content-Language" content="en">
+   <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
+   <meta name='mobile-web-app-capable' content='yes'>
+   <meta name='apple-mobile-web-app-capable' content='yes'>
+
+   <title>Inspiron 24 All-In-One & Aegis </title>
+   <style type='text/css'>
+      .closeIcon {
+         display: none;
+      }
+
+      html,
+      body {
+         user-select: none;
+         /* supported by Chrome and Opera */
+         -webkit-user-select: none;
+         /* Safari */
+         -khtml-user-select: none;
+         /* Konqueror HTML */
+         -moz-user-select: none;
+         /* Firefox */
+         -ms-user-select: none;
+         /* Internet Explorer */
+      }
+
+      html,
+      body {
+         background-color: #f9f9f9;
+         width: 100%;
+         height: 100%;
+         margin: 0px;
+         overflow: hidden;
+      }
+
+      #root {
+         z-index: 1;
+         /* position: absolute;
+    top: 0px;
+    left: 0px; */
+         display: block;
+         width: 100%;
+      }
+
+      canvas {
+         display: block;
+      }
+
+      #loader {
+         position: absolute;
+         left: 50%;
+         top: 168px;
+         transform: translate(-50%, 100%);
+         z-index: 1200;
+         margin-top: 136px;
+         opacity: 1;
+         transition: opacity 1s;
+      }
+
+      #exploreButtton {
+         position: absolute;
+         left: 50%;
+         top: 341px;
+         transform: translate(-50%, 100%);
+         z-index: 1200;
+         cursor: pointer;
+         height: 74px;
+         width: 417px;
+         background: #80808057;
+         border-radius: 2px;
+         align-items: center;
+         text-align: center;
+         padding: 12px;
+         font-family: Roboto;
+         font-style: normal;
+         font-weight: normal;
+         font-size: 24px;
+         line-height: 36px;
+         color: #FFFFFF;
+         border: 0;
+      }
+
+      #loading {
+         display: none;
+         justify-content: center;
+         position: absolute;
+         left: 50%;
+         top: 57%;
+         transform: translate(-50%, -280%);
+         width: 265px;
+         height: 120px;
+         background: #ffffff;
+      }
+
+      #loading>div {
+         text-align: center;
+         font-family: Roboto;
+         font-style: normal;
+         font-weight: 300;
+         font-size: 40px;
+         line-height: 48px;
+      }
+
+      #mainload {
+         display: none;
+         ;
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100vh;
+         background-color: #ffffff;
+         z-index: 1200;
+         /* transform: scale(0.6); */
+      }
+
+      #Scalable {
+         transform: scale(0.6);
+         width: 100%;
+         height: 100vh;
+      }
+
+      .MuiPaper-root.MuiDrawer-paper.makeStyles-drawerPaper-2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0 {
+         min-width: 285px !important;
+      }
+
+      .MuiPaper-root.MuiDrawer-paper.jss2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0 {
+         min-width: 285px !important;
+
+      }
+
+      .mobile {
+         display: none;
+      }
+
+      #loader {
+         width: 938px;
+         height: 5px;
+      }
+
+      .hotspots {
+         display: block;
+         position: absolute;
+         z-index: 11;
+      }
+
+      #hotspot1demo:focus {
+         outline: none;
+         border: none;
+      }
+
+      #loading:focus {
+         outline: none;
+         border: none;
+      }
+
+      /* .hotspots:focus {
+    outline: 1px solid #0076ce;
+} */
+
+      @media screen and (min-width: 640px) and (max-width: 824px) and (orientation : landscape) {
+
+         #loading {
+            display: none;
+            justify-content: center;
+            position: absolute;
+            left: 50%;
+            top: 70%;
+            transform: translate(-50%, -280%);
+            width: 265px;
+            height: 120px;
+            background: #ffffff;
+         }
+      }
+
+      @media screen and (max-width: 600px) {
+         #root {
+            z-index: 1;
+            /* position: absolute; 
+    top: 92.5%; 
+    left: 0px; */
+            display: block;
+            width: 100%;
+         }
+
+         .desktop {
+            display: none;
+         }
+
+         .mobile {
+            display: block;
+         }
+
+         div#loading {
+            display: flex;
+            flex-wrap: wrap;
+            left: 50%;
+            top: 42%;
+            transform: translate(-50%, -240%);
+            min-width: 350px;
+         }
+
+         #loaders {
+            width: 379px;
+            height: 5px;
+            top: 465px;
+         }
+
+         #loading>div>.img {
+            margin-top: 44px;
+            margin-left: 40px;
+            height: 69px;
+            width: 164px;
+         }
+
+         #loading>div {
+            margin: 0;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 36px;
+
+         }
+
+         #exploreButtton {
+            position: absolute;
+            left: 50%;
+            top: 473px;
+            transform: translate(-50%, 100%);
+            z-index: 1200;
+            cursor: pointer;
+            height: 74px;
+            width: 379px;
+            background: #80808057;
+            border-radius: 2px;
+            align-items: center;
+            text-align: center;
+            padding: 12px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 36px;
+            color: #FFFFFF;
+            border: 0;
+         }
+      }
+
+      @media screen and (max-width: 390px) {
+         #exploreButtton {
+            position: absolute;
+            left: 50%;
+            top: 473px;
+            top: 465px;
+            transform: translate(-50%, 100%);
+            z-index: 1200;
+            cursor: pointer;
+            height: 74px;
+            width: 330px;
+            background: #80808057;
+            border-radius: 2px;
+            align-items: center;
+            text-align: center;
+            padding: 12px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 36px;
+            color: #FFFFFF;
+            border: 0;
+         }
+
+         #loaders {
+            width: 330px;
+            height: 37px;
+            top: 440px;
+         }
+
+         #loading>div>img {
+            margin-left: 40px !important;
+
+         }
+
+         .threebtns>div {
+            display: flex !important;
+            justify-content: center;
+            max-width: 360px;
+         }
+
+      }
+
+      #infinityrt-canvas {
+         transition: margin 1s;
+      }
+   </style>
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" />
+
+   <!-- <script src='jquery-1.8.2.min.js' type='text/javascript'></script> -->
+   <script type="text/javascript" src='normalizeWheel.js'></script>
+   <script src='libvector3.js' type='text/javascript'></script>
+   <script src='SSE.js' type='text/javascript'></script>
+   <script src="InfinityRT_Navigation.js" type="text/javascript"></script>
+   <!-- <script type="text/javascript" src="skin.js"></script> -->
+   <script type="text/javascript" src="rt-Analytics.js"></script>
+   <script type="text/javascript">
+
+      var animationLoading,_scenePollInterval,timeStart,loaderbarWidth = 0;
+      var updateEnabled = true;
+      var canvas = null;
+      var calloutcanvas = null;
+      var scene = null;
+      ctxCallouts = null;
+      var checkOrientationStatus = null;
+      //     function detectIpadDevice(){
+      // 	var iPadConfig = {};
+      // 	iPadConfig.isIPadDevice = false;
+      // 	iPadConfig.dPR = window.devicePixelRatio;
+
+      // 	iPadConfig.isMacDevice = navigator.userAgent.toLowerCase().indexOf("macintosh") >= 0;
+      // 	iPadConfig.ipadDevice = navigator.userAgent.toLowerCase().indexOf("ipad") >= 0;
+
+      // 	iPadConfig.iPadWidth = (window.outerWidth == 768 || window.outerWidth == 1024 || window.outerWidth == 1366);
+      // 	iPadConfig.iPadHeight = (window.outerHeight == 768 || window.outerHeight == 1024 || window.outerHeight == 1366);
+
+      // 	if((iPadConfig.dPR > 1 && iPadConfig.iPadWidth && iPadConfig.iPadHeight && iPadConfig.isMacDevice) || iPadConfig.ipadDevice){
+      // 		iPadConfig.isIPadDevice = true;
+      // 	}
+      // 	return iPadConfig.isIPadDevice;
+      // }
+
+      var isipad = navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && (navigator.userAgent.indexOf("iPhone") == -1);
+
+      var mob = (navigator.userAgent.indexOf("iPhone") != -1) || ((navigator.userAgent.indexOf("Android") != -1) || (navigator.userAgent.indexOf("Mobile") != -1)) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1) || (navigator.userAgent == "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.1 Safari/605.1.15");
+      function InfinityRTStart() {
+
+         if (mob || isipad) {
+            var urlDataPath = './model_gl_mob/';
+         } else {
+            var urlDataPath = './model_gl/';
+         }
+
+
+         timeStart = new Date().getTime();
+         touch = new Vector3();
+         touches = [new Vector3(),new Vector3(),new Vector3()];
+         prevTouches = [new Vector3(),new Vector3(),new Vector3()];
+         var loaderDiv = document.getElementById('loader');
+
+         var loaderDivs = document.getElementById('loaders');
+         var loadingDiv = document.getElementById('loading');
+         var exploreBtn = document.getElementById('exploreButtton');
+         var mainLoad = document.getElementById('mainload');
+         // loaderDiv.style.left = ((document.documentElement.clientWidth / 2) - (265 / 2)) + "px";
+         // loaderDiv.style.top = ((document.documentElement.clientHeight / 2) - (12 / 2)) + "px";
+         // loadingDiv.style.left = ((document.documentElement.clientWidth / 2) - (265 / 2)) + "px";
+         // loadingDiv.style.top = ((document.documentElement.clientHeight / 3.5) - (12 / 2)) + "px";
+         loaderDiv.style.display = 'block';
+         loaderDivs.style.display = 'block';
+
+         loadingDiv.style.display = 'flex';
+         mainLoad.style.display = 'block';
+
+         if (exploreBtn) {
+            exploreBtn.style.backgroundColor = "#80808057";
+            exploreBtn.style.pointerEvents = "none";
+         }
+         // $("#loader").css("left", ((document.documentElement.clientWidth / 2) - (265 / 2)) + "px");
+         // $("#loader").css("top", ((document.documentElement.clientHeight / 2) - (12 / 2)) + "px");
+         // $("#loader").css('display', 'block');
+         animationLoading = setInterval(function () {
+            loaderbarWidth++;
+            if (loaderbarWidth > 50) loaderbarWidth = 50;
+            //console.log("animationLoading -- loaderbar " + loaderbarWidth + "px");
+            document.getElementById('loaderbar').style.width = loaderbarWidth + "px"
+            // $("#loaderbar", window.document).css("width", loaderbarWidth + "px");
+         },100);
+         try {
+            canvas = document.getElementById("infinityrt-canvas");
+            calloutcanvas = document.getElementById("calloutcanvas");
+
+            ui = document.getElementById("root");
+            if (typeof (canvas) != 'undefined') {
+               var gl = infinityrt_getwebglcontext(canvas,{ xrCompatible: true,antialias: true,depth: true });
+               if (!gl) {
+                  alert("***Could not initialise WebGL canvas");
+               }
+               else {
+                  scene = new infinityrt_scene({ rtgl: gl,useDraco: false },urlDataPath,canvas.width,canvas.height,undefined,undefined,undefined,function () { },function () { });
+                  scene._nav = new infinityrt_navigation(scene,canvas.width,canvas.height);
+                  scene._jitRadius = 3;
+                  scene.gotoPosInTime(0.998110,-0.032676,1.520975,5.866925,72.177856,1,undefined,undefined,{ fovy: 37.849300,zang: -0.003371 })
+                  //scene.fovy = 37.849285;
+                  resizeCanvas2();
+                  scene.start();
+                  _scenePollInterval = setInterval("isInfinityRTReady()",100);
+                  addMouseListeners(canvas);
+                  addMouseListeners(ui);
+                  window.addEventListener('keypress',keyPress,false);
+               }
+            }
+         }
+         catch (e) {
+            console.log(e);
+         }
+         if (scene != null) {
+            window.requestAnimationFrame(frameUpdate);
+            // $(this).bind("contextmenu", onRightClick); //prevents a right click     
+            document.body.oncontextmenu = onRightClick;
+            if (typeof (onInit) != 'undefined') onInit();
+         }
+      }
+      function onRightClick(event) {
+         //console.log("press right");
+         //mdown = true;
+         //panNav = true;
+         return false; //surpress theright menu 
+      }
+      function isInfinityRTReady() {
+         if (scene == null)
+            return;
+         scene.start();
+         outstandingJobs = scene.getOutstandingJobs();
+         if (outstandingJobs <= 0 && scene._prepared) {
+            onInfinityRTReady();
+            clearInterval(_scenePollInterval);
+         } else if (scene._projectparsed) {
+            clearInterval(animationLoading);
+            updateProgressBar();
+         }
+         setTimeout(() => {
+            document.getElementById('exploreButtton').style.pointerEvents = "";
+            //    window.backlitereset();
+            //    window.picker.setColor("#00f7ff"); //set initial color
+            //     window.picker.linkTo(onColorChange); //link to callback
+            // abc();
+         },3000);
+      }
+
+      function updateProgressBar() {
+         if (scene == null)
+            return;
+         totalJobs = scene.getTotalJobs();
+         outstandingJobs = scene.getOutstandingJobs();
+         var perc = 100 - Math.round(outstandingJobs / totalJobs * 100);
+         var newwidth = 948 * perc / 100;
+         //console.log("updateProgressBar -- loaderbar " + newwidth + "px perc " + perc + " jobs " + outstandingJobs + "/" + totalJobs);
+         // $("#loaderbar", window.document).css("width", newwidth + "px");
+         var newwidth = 948 * perc / 100;
+         if (mob) {
+            newwidth = 386 * perc / 100;
+            document.querySelector('.mobile #loaderbar').style.width = newwidth + "px";
+         }
+         if (window.innerWidth < 411) {
+            newwidth = 334 * perc / 100;
+            document.querySelector('.mobile #loaderbar').style.width = newwidth + "px";
+         }
+         // if(isipad){
+         //      newwidth = 847 * perc / 100;
+         //      document.getElementById('loaderbar').style.width = newwidth + "px";
+         // }
+         else {
+
+            document.getElementById('loaderbar').style.width = newwidth + "px";
+         }
+
+      }
+      var config = {
+         name: "laptop-7410-chromebook"
+      }
+      var hideIndexId = ["colorBtn","selectProductBtn","closeIcon","productViewBtn","feature","animswtich","positionBtn","rLeft","rRight","zoomOut","sliderRange","previousView","zoomIn","resetView","nextView","HowToUseHeader"];
+
+      var time = (new Date().getTime() - timeStart);
+      function onInfinityRTReady() {
+         // scene._bDoF = true;
+         // window.document.getElementById('howToUSE').style.animationName = "example";
+         if (time < 60000) {
+            RT_RecordTiming("Load",time,config.name);
+         }
+
+         document.getElementById("loading").focus();
+         setTimeout(function () {
+            document.getElementById("loading").removeAttribute("tabIndex");
+         },3000);
+         document.getElementById('loader').style.opacity = '0';
+         document.getElementById('loaders').style.opacity = '0';
+         document.getElementById('root').style.display = "block"
+         document.getElementById('root').style.visibility = "visible"
+         document.getElementById('footerControIpad').style.visibility = "visible"
+         document.getElementById('footerControMob').style.visibility = "visible"
+         document.getElementById('footerControlDesk').style.visibility = "visible"
+         // document.getElementById('howTousePopupDesk').style.visibility = "visible"
+
+
+         document.getElementById('loading').style.display = 'flex';
+         document.getElementById('mainload').style.display = 'block';
+         document.getElementById('loaderbar').style.width = '100%';
+         document.getElementById('exploreButtton').disabled = false;
+         document.getElementById('exploreButtton').style.backgroundColor = '#0076CE';
+         document.querySelector('.mobile #exploreButtton').disabled = false;
+         document.querySelector('.mobile #exploreButtton').style.backgroundColor = '#0076CE';
+         // $("#reset", window.document).css('display', 'none');
+         console.log('End time: ' + (new Date().getTime() - timeStart));
+         // window.localStorage.removeItem('Animation');
+         window.localStorage.removeItem('hotspot');
+         window.scene.groupApplyState("keyboard_on");
+         window.scene.groupApplyState("mouse_on");
+         GotoPosInTimeNamedValue('Render_Cam_F01_FL');
+         window.localStorage.setItem('Animation','on');
+         window.localStorage.setItem("laptop","laptop360");
+         document.getElementById("animSwitchValue").checked = true;
+         document.getElementById("animSwitchValue1").checked = true;
+
+         if (!(mob || isipad)) {
+            hideHotspot();
+            document.getElementById("hotspot1").setAttribute("tabindex","-1");
+            document.getElementById("hotspot2").setAttribute("tabindex","-1");
+            document.getElementById("hotspot3").setAttribute("tabindex","-1");
+            document.getElementById("hotspot4").setAttribute("tabindex","-1");
+            document.getElementById("hotspot5").setAttribute("tabindex","-1");
+            document.getElementById("hotspot6").setAttribute("tabindex","-1");
+            document.getElementById("hotspot7").setAttribute("tabindex","-1");
+            document.getElementById("hotspot8").setAttribute("tabindex","-1");
+            document.getElementById("hotspot9").setAttribute("tabindex","-1");
+            document.getElementById("hotspot10").setAttribute("tabindex","-1");
+            // document.getElementById("LeftMenuWrapper").setAttribute("tabindex", "-1");
+            setTimeout(function () {
+               hideTabIndexes();
+
+            },600);
+
+         }
+
+         // var x = document.getElementById("setFocus")
+         // x.focus();
+         // scene.gotoPosInTime(0.998131, -0.032685, 1.516193, 8.131649,72.131241, 1, undefined, undefined, {fovy: 37.849285, zang: -0.003351})
+         // Examples
+         // scene.gotoPos(0,0,0,0,-50,50, undefined, onSample);
+         // scene.gotoPos(0,0,0,0,-50,50, undefined, { preset: 'slowinout' });
+         // scene.gotoPos(0,0,0,0,-50,50, undefined, { tangents: [[0.3, 0.5], [0.5, 1.0]] });
+      }
+      function hideHotspot() {
+         document.getElementById("hotspot1demo").style.color = "transparent"
+         document.getElementById("hotspot1").style.color = "transparent"
+         document.getElementById("hotspot2").style.color = "transparent"
+         document.getElementById("hotspot3").style.color = "transparent"
+         document.getElementById("hotspot4").style.color = "transparent"
+         document.getElementById("hotspot5").style.color = "transparent"
+         document.getElementById("hotspot6").style.color = "transparent"
+         document.getElementById("hotspot7").style.color = "transparent"
+         document.getElementById("hotspot8").style.color = "transparent"
+         document.getElementById("hotspot9").style.color = "transparent"
+         document.getElementById("hotspot10").style.color = "transparent"
+         document.getElementById("hotspot11").style.color = "transparent"
+         document.getElementById("hotspot12").style.color = "transparent"
+         document.getElementById("hotspot13").style.color = "transparent"
+
+
+      }
+
+      function hideTabIndexes() {
+         for (let i = 0; i < hideIndexId.length; i++) {
+            if (window.document.getElementById(hideIndexId[i])) {
+               window.document.getElementById(hideIndexId[i]).setAttribute("tabindex","-1");
+            }
+         }
+
+         //         window.document.getElementById("colorBtn").setAttribute("tabindex", "-1");
+         //         window.document.getElementById("selectProductBtn").setAttribute("tabindex", "-1");
+         //         // window.document.getElementById("headerName").setAttribute("tabindex", "-1");
+         //         // window.document.getElementById("productName").setAttribute("tabindex", "-1");
+         //         window.document.getElementById("closeIcon").setAttribute("tabindex", "-1");
+         //         // window.document.getElementById("Howtouses").setAttribute("tabindex", "-1");
+         //         // window.document.getElementById("howTousePopupDesk").setAttribute("tabindex", "-1");
+
+         //         // window.document.getElementById("Howtouses").style.display="none";
+
+         //         window.document.getElementById("productViewBtn").setAttribute("tabindex", "-1");
+         //         window.document.getElementById("feature").setAttribute("tabindex", "-1");
+         //         window.document.getElementById("animswtich").setAttribute("tabindex", "-1");
+         //         window.document.getElementById("positionBtn").setAttribute("tabindex", "-1");
+         //         window.document.getElementById("rLeft").setAttribute("tabindex", "-1");
+         //         window.document.getElementById("rRight").setAttribute("tabindex", "-1");
+         //         window.document.getElementById("zoomOut").setAttribute("tabindex", "-1");
+         //         window.document.getElementById("sliderRange").setAttribute("tabindex", "-1");
+         //         window.document.getElementById("zoomIn").setAttribute("tabindex", "-1");
+         //         window.document.getElementById("previousView").setAttribute("tabindex", "-1");
+         //         window.document.getElementById("resetView").setAttribute("tabindex", "-1");
+         //         window.document.getElementById("nextView").setAttribute("tabindex", "-1");
+         //         // window.document.getElementById("closeBtnHow").setAttribute("tabindex", "-1");
+         //         window.document.getElementById("howToUSE").setAttribute("tabindex", "-1");
+         //         // window.document.getElementById("howToUSE").style.display="none";
+         //         window.document.getElementById('LeftMenuWrapper').setAttribute('aria-hidden', 'true');
+         // // document.getElementById("LeftMenuWrapper").setAttribute("tabindex", "-1");
+
+         //         // window.document.getElementById("userName1").setAttribute("tabindex", "-1");
+         //         // window.document.getElementById("userName2").setAttribute("tabindex", "-1");
+         //         // window.document.getElementById("userName3").setAttribute("tabindex", "-1");
+      }
+      function addMouseListeners(canvas) {
+         canvas.addEventListener('mousemove',mouseMove,false);
+         canvas.addEventListener('mousedown',mouseDown,false);
+         canvas.addEventListener('mouseup',mouseUp,false);
+         canvas.addEventListener('wheel',mouseWheel,false);
+         canvas.addEventListener('DOMMouseScroll',mouseWheel,false);
+         canvas.addEventListener('touchstart',touchStart,false);
+         canvas.addEventListener('touchmove',touchMove,false);
+         canvas.addEventListener('touchend',touchEnd,false);
+         canvas.addEventListener('mouseout',mouseOut);
+      }
+      var sceneViewMatrix;
+      function frameUpdate() {
+
+         // if (btnXR && btnXR.session && btnXR.session.isImmersive)
+         //     return;
+         setTimeout(function () {
+            window.requestAnimationFrame(frameUpdate);
+         },scene.backoff);
+         sceneViewMatrix = scene._nav.NavCreateViewMatrix(scene._initialNavMatrix);
+         scene.setViewMatrix(sceneViewMatrix);
+         if (scene._refineCount < 64) frameUpdateForScene(scene);
+
+      }
+      function frameUpdateForScene(scene) {
+         var bGotoPosUpdate = scene._nav._navGotoPosActive;
+         scene.setViewMatrix(scene._nav.NavCreateViewMatrix(scene._initialNavMatrix));
+         scene.setModelMatrix(scene._nav.NavCreateModelMatrix(scene._initialNavMatrix));
+         var drawn = scene.draw();
+         if (bGotoPosUpdate)
+            scene.clearRefine();
+         // if(!mob){
+         //if (drawn) hotspotPosAsignment();
+         // }
+         // document.getElementById("hotspot1").style.display="none"
+         // document.getElementById("hotspot2").style.display="none"
+         // document.getElementById("hotspot3").style.display="none"
+         // document.getElementById("hotspot4").style.display="none"
+
+         if (!mob) {
+            // setTimeout(function(){ document.getElementById("sliderRange").value = parseInt(60+100-window.scene._nav._navDolly); }, 500);
+         }
+
+         if (scene._nav._navDolly < 100) {
+            scene._bDoF = true;
+         }
+         else {
+            scene._bDoF = false;
+         }
+      }
+      window.addEventListener('resize',resizeCanvas2,false);
+      function resizeCanvas2() {
+
+         var mob = (navigator.userAgent.indexOf("iPhone") != -1) || ((navigator.userAgent.indexOf("Android") != -1) || (navigator.userAgent.indexOf("Mobile") != -1)) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1) || (navigator.userAgent == "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.1 Safari/605.1.15");
+         isipad = navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && (navigator.userAgent.indexOf("iPhone") == -1)
+         // document.getElementById('hotspot_container').style.display = 'none';
+         // setTimeout(function(){
+         //    document.getElementById('hotspot_container').style.display = 'block';
+         // },5000)
+         if (isipad) {
+            if (window.innerHeight > window.innerWidth) {
+               console.log("Portrait")
+               if (canvas != null) {
+                  calloutcanvas.width = canvas.width = window.innerWidth;
+                  calloutcanvas.height = canvas.height = window.innerHeight;
+                  calloutcanvas.style.marginLeft = canvas.style.marginLeft = '0px';
+                  if (scene != null) {
+                     scene._nav.canvasResize(canvas.width,canvas.height);
+                     scene.resize(canvas.width,canvas.height);
+                  }
+                  window.checkOrientationStatus(true);
+               }
+            } else if (window.innerHeight < window.innerWidth) {
+               console.log("Landscape")
+               window.checkOrientationStatus(false);
+               setTimeout(function () {
+                  var menu = document.querySelector('#LeftMenuWrapper div');
+                  var marginVal = menu == null ? 0 : menu.offsetWidth;
+                  calloutcanvas.width = canvas.width = window.innerWidth - marginVal;
+                  calloutcanvas.height = canvas.height = window.innerHeight;
+                  calloutcanvas.style.marginLeft = canvas.style.marginLeft = marginVal + 'px';
+                  if (scene != null) {
+                     scene._nav.canvasResize(canvas.width,canvas.height);
+                     scene.resize(canvas.width,canvas.height);
+                  }
+               },500)
+
+
+            }
+         } else {
+            setTimeout(function () {
+
+               if (!mob && window.innerWidth > 960 || isipad && window.innerWidth > window.innerHeight) {
+
+
+                  if (canvas != null) {
+                     var menu = document.querySelector('#LeftMenuWrapper div');
+                     var marginVal = menu == null ? 0 : menu.offsetWidth;
+                     calloutcanvas.width = canvas.width = window.innerWidth - marginVal;
+                     calloutcanvas.height = canvas.height = window.innerHeight;
+                     calloutcanvas.style.marginLeft = canvas.style.marginLeft = marginVal + 'px';
+                     if (scene != null) {
+                        scene._nav.canvasResize(canvas.width,canvas.height);
+                        scene.resize(canvas.width,canvas.height);
+                     }
+                     window.checkOrientationStatus(false);
+                  }
+               } else if (window.innerWidth < 960) {
+                  if (canvas != null) {
+                     var menu = document.querySelector('#LeftMenuWrapper div');
+                     var marginVal = 0;
+                     calloutcanvas.width = canvas.width = window.innerWidth - marginVal;
+                     calloutcanvas.height = canvas.height = window.innerHeight;
+                     calloutcanvas.style.marginLeft = canvas.style.marginLeft = marginVal + 'px';
+                     if (scene != null) {
+                        scene._nav.canvasResize(canvas.width,canvas.height);
+                        scene.resize(canvas.width,canvas.height);
+                     }
+                     window.checkOrientationStatus(false);
+                  }
+               }
+               else {
+                  if (canvas != null) {
+                     calloutcanvas.width = canvas.width = window.innerWidth;
+                     calloutcanvas.height = canvas.height = window.innerHeight;
+
+                     if (scene != null) {
+                        scene._nav.canvasResize(canvas.width,canvas.height);
+                        scene.resize(canvas.width,canvas.height);
+                     }
+                  }
+                  window.checkOrientationStatus(false);
+               }
+            },100)
+         }
+      }
+      // function resizeCanvas2() {
+      //    // alert();
+      //    // if(window.innerHeight > window.innerWidth){
+      //    //         alert("Portrait mode!");
+      //    //     } else if(window.innerHeight < window.innerWidth){
+      //    //         alert("Landscape mode!");
+      //    //     }
+      //    // if(window.devicePixelRatio > 1 && window.devicePixelRatio <= 1.5){
+      //    //     let rootElm = document.getElementById('root');
+      //    //     rootElm.classList.add('oneFiftyPercent')
+      //    // } else{
+      //    //     let rootElm = document.getElementById('root');
+      //    //     rootElm.classList.remove('oneFiftyPercent')
+      //    // }
+
+      //    var mob = (navigator.userAgent.indexOf("iPhone") != -1) || ((navigator.userAgent.indexOf("Android") != -1) || (navigator.userAgent.indexOf("Mobile") != -1)) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1) || (navigator.userAgent == "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.1 Safari/605.1.15");
+      //    isipad = navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && (navigator.userAgent.indexOf("iPhone") == -1)
+
+
+      //    if (isipad) {
+      //       if (window.innerHeight > window.innerWidth) {
+      //          console.log("Portrait")
+      //          // alert("Portrait mode!");
+      //          if (canvas != null) {
+      //             calloutcanvas.width = canvas.width = window.innerWidth;
+      //             calloutcanvas.height = canvas.height = window.innerHeight;
+      //             calloutcanvas.style.marginLeft = canvas.style.marginLeft = '0px';
+      //             if (scene != null) {
+      //                scene._nav.canvasResize(canvas.width,canvas.height);
+      //                scene.resize(canvas.width,canvas.height);
+      //             }
+      //             window.checkOrientationStatus(true);
+      //          }
+      //       } else if (window.innerHeight < window.innerWidth) {
+      //          // alert("Landscape mode!");
+      //          console.log("Landscape")
+      //          window.checkOrientationStatus(false);
+      //          setTimeout(function () {
+      //             var menu = document.querySelector('#LeftMenuWrapper div');
+      //             var marginVal = menu == null ? 0 : menu.offsetWidth;
+      //             // alert(menu)
+      //             // alert(marginVal)
+      //             // if(window.innerWidth < 1280){
+      //             //     marginVal = 0;
+      //             // }
+      //             calloutcanvas.width = canvas.width = window.innerWidth - marginVal;
+      //             calloutcanvas.height = canvas.height = window.innerHeight;
+      //             calloutcanvas.style.marginLeft = canvas.style.marginLeft = marginVal + 'px';
+      //             if (scene != null) {
+      //                scene._nav.canvasResize(canvas.width,canvas.height);
+      //                scene.resize(canvas.width,canvas.height);
+      //             }
+      //          },500)
+
+
+      //       }
+      //    } else {
+      //       setTimeout(function () {
+      //          // canvas.width = window.innerWidth - menu.offsetWidth;
+      //          //     canvas.height = window.innerHeight;
+      //          //     canvas.style.marginLeft = menu.offsetWidth+'px';
+      //          //     scene._nav.canvasResize(canvas.width, canvas.height);
+      //          //         scene.resize(canvas.width, canvas.height);
+
+
+
+      //          if (!mob && window.innerWidth > 960 || isipad && window.innerWidth > window.innerHeight) {
+
+
+      //             if (canvas != null) {
+      //                var menu = document.querySelector('#LeftMenuWrapper div');
+      //                var marginVal = menu == null ? 0 : menu.offsetWidth;
+      //                // alert(menu)
+      //                // if(window.innerWidth < 1280){
+      //                //     marginVal = 0;
+      //                // }
+      //                calloutcanvas.width = canvas.width = window.innerWidth - marginVal;
+      //                calloutcanvas.height = canvas.height = window.innerHeight;
+      //                calloutcanvas.style.marginLeft = canvas.style.marginLeft = marginVal + 'px';
+      //                if (scene != null) {
+      //                   scene._nav.canvasResize(canvas.width,canvas.height);
+      //                   scene.resize(canvas.width,canvas.height);
+      //                }
+      //                window.checkOrientationStatus(false);
+      //             }
+      //          } else {
+      //             if (canvas != null) {
+      //                calloutcanvas.width = canvas.width = window.innerWidth;
+      //                calloutcanvas.height = canvas.height = window.innerHeight;
+
+      //                if (scene != null) {
+      //                   scene._nav.canvasResize(canvas.width,canvas.height);
+      //                   scene.resize(canvas.width,canvas.height);
+      //                }
+      //             }
+      //             window.checkOrientationStatus(false);
+      //          }
+      //       },100)
+      //    }
+
+
+      //    // console.log(menu.offsetWidth, document.getElementById("infinityrt-canvas").style.marginLeft);
+      // }
+
+
+      // function resizeCanvas() {
+      //     var mob = (navigator.userAgent.indexOf("iPhone") != -1) || ((navigator.userAgent.indexOf("Android") != -1) || (navigator.userAgent.indexOf("Mobile") != -1)) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1) || (navigator.userAgent == "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.1 Safari/605.1.15");
+      //     var isipad = navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2
+      //     // canvas.width = window.innerWidth - menu.offsetWidth;
+      //     //     canvas.height = window.innerHeight;
+      //     //     canvas.style.marginLeft = menu.offsetWidth+'px';
+      //     //     scene._nav.canvasResize(canvas.width, canvas.height);
+      //     //         scene.resize(canvas.width, canvas.height);
+      //     if(mob==false  && window.innerWidth > 1026  || isipad && window.innerWidth > window.innerHeight){
+
+      //     if (canvas != null) {
+      //         var menu = document.querySelector('#LeftMenuWrapper div');
+      //         var marginVal = menu == null ? 0 : menu.offsetWidth;
+      //         // alert(marginVal)
+      //         if(window.innerWidth < 1280){
+      //             marginVal = 0;
+      //         }
+      //         calloutcanvas.width = canvas.width = window.innerWidth - marginVal;
+      //         calloutcanvas.height = canvas.height = window.innerHeight;
+      //         calloutcanvas.style.marginLeft = canvas.style.marginLeft = marginVal+'px';
+      //         if (scene != null) {
+      //             scene._nav.canvasResize(canvas.width, canvas.height);
+      //             scene.resize(canvas.width, canvas.height);
+      //         }
+      //     }
+      // } else{
+      //     if (canvas != null) {
+      //         calloutcanvas.width = canvas.width = window.innerWidth;
+      //         calloutcanvas.height = canvas.height = window.innerHeight;
+      //         if (scene != null) {
+      //             scene._nav.canvasResize(canvas.width, canvas.height);
+      //             scene.resize(canvas.width, canvas.height);
+      //         }
+      //     }
+      // }
+
+      //     // console.log(menu.offsetWidth, document.getElementById("infinityrt-canvas").style.marginLeft);
+      // }
+      function GotoPosInTimeNamedValue(gotoposname,onComplete,onSample) {
+
+         // below code is updated in it.
+         //   if(!myParam && !is_host){
+         //     console.log('jsonobject', jsonobject)  
+         //   }   
+         // updated code ends here
+
+         var opt = undefined,
+            gp = jsonobject.positions[gotoposname];
+         //    console.log(gp)
+         if (gp.fovy && scene.fovy != gp.fovy)
+            opt = {
+               fovy: gp.fovy
+            };
+         if (gp.pos.length > 5) {
+            if (!opt)
+               opt = {};
+            opt.zang = gp.pos[5];
+         }
+         scene.gotoPosInTime(gp.pos[0],gp.pos[1],gp.pos[2],gp.pos[3],gp.pos[4],gp.time,onComplete,onSample,opt);
+      }
+
+
+
+      var jsonobject;
+
+      function getCameraValues(uijson) {
+         var jsonhttp = new XMLHttpRequest();
+         jsonhttp.skin = this;
+         jsonhttp.open("GET",uijson,true);
+         jsonhttp.onload = function (e) {
+            if (jsonhttp.status >= 200 && jsonhttp.status <= 299) {
+               var s = jsonhttp.skin;
+               jsonobject = JSON.parse(jsonhttp.response);
+               //s.createUI();
+            }
+         };
+         jsonhttp.send("");
+      }
+      window.addEventListener('DOMContentLoaded',function () {
+         getCameraValues("./model_gl/config.json");
+      });
+
+      function keyPress(ev) {
+         if (ev.keyCode === 0) {
+            ev.preventDefault()
+            scene._nav._navDX = scene._nav._navDY = 0;
+            scene._nav._navMX = scene._nav._navMY = 0;
+            scene._nav._navXAng = scene._nav._navYAng = 0;
+            scene._nav._navDolly = 0.0;
+            scene._nav._navPan = [0.0,0.0];
+            scene.clearRefine();
+         }
+      }
+      function getScene(ev) {
+         return scene;
+      }
+      var mpos = [0,0];
+      var mdown = false;
+      var panNav = false;
+      function mouseDown(ev) {
+         // console.log(ev.path)
+
+
+         for (i in ev.path) {
+            if (ev.path[i].id == "leftPan" || ev.path[i].id == 'footerControls') return;
+            // console.log(ev.path[i].id)
+
+         }
+
+         if (window.innerWidth > window.innerHeight) {
+            window.localStorage.removeItem('hotspot');
+         }
+
+         mdown = true;
+         if (ev.which == 3 || ev.which == 2)
+            panNav = true;
+         mpos = [ev.clientX - canvas.offsetLeft,ev.clientY - canvas.offsetTop];
+      }
+      function mouseUp(ev) {
+         mdown = false;
+         if (ev.which == 3 || ev.which == 2 || panNav) panNav = false;
+      }
+      function mouseMove(ev) {
+
+         if (!mdown)
+            return;
+         var s = getScene(ev);
+         var mousePos = [ev.clientX - canvas.offsetLeft,ev.clientY - canvas.offsetTop];
+         var mdelta = [(mpos[0] - mousePos[0]),(mpos[1] - mousePos[1])];
+         mpos = [mousePos[0],mousePos[1]];
+         if (!panNav) {
+            if (s._nav.NavRotation(mpos,mdelta))
+               s.clearRefine();
+         }
+         else {
+            if (s._nav.NavPan(mdelta))
+               s.clearRefine();
+         }
+
+      }
+
+      function mouseWheel(ev) {
+         for (i in ev.path) {
+            if (ev.path[i].id == "leftPan" || ev.path[i].id == 'footerControls') return;
+            // console.log(ev.path[i].id)
+
+         }
+         window.localStorage.removeItem('hotspot');
+
+         var s = getScene(ev);
+         var delta = ev.wheelDelta;
+         // //var deltaScene = (delta*0.05)*(scene.sceneRadius*0.01);
+         // var deltaScene = delta * 1.8;
+         // console.log(deltaScene);
+
+         // if (!updateEnabled || mdown || !animStoped) return;
+         if (!ev) ev = window.event; /* IE7, IE8, Chrome, Safari */
+         if (ev.preventDefault) ev.preventDefault(); /* Chrome, Safari, Firefox */
+         ev.returnValue = false; /* IE7, IE8 */
+         // var delta = -ev.deltaY;
+         var deltaScene = delta * 4.3;
+
+         if (s._nav.NavChangeDolly(deltaScene,true)) {
+            console.log(s._nav._navDolly);
+            document.getElementById("sliderRange").value = s._nav.getZoomFactor();
+            s.clearRefine();
+         }
+         setTimeout(function () { document.getElementById("sliderRange").value = s._nav.getZoomFactor(); },100);
+      }
+
+      function mouseOut(ev) {
+         if (!mdown) return;
+         mdown = false;
+      }
+      // function mouseWheel(ev) {
+
+      //     for(i in ev.path){
+      //         if(ev.path[i].id == "leftPan" || ev.path[i].id =='footerControls') return;
+      //         // console.log(ev.path[i].id)
+
+      //     }
+      //     window.localStorage.removeItem('hotspot');
+
+      //     var s = window.scene;
+      //     const delta = normalizeWheel(ev);
+      //     if (s._nav.NavChangeDolly(delta.pixelY<0?100:-100))
+      //     document.getElementById("sliderRange").value = s._nav.getZoomFactor();
+      //         s.clearRefine();
+
+      //         setTimeout(function(){ document.getElementById("sliderRange").value = s._nav.getZoomFactor(); }, 700);
+      // }
+
+      // function mouseWheel(ev) {
+
+      //     for(i in ev.path){
+      //         if(ev.path[i].id == "leftPan" || ev.path[i].id =='footerControls') return;
+      //         // console.log(ev.path[i].id)
+
+      //     }
+      //     window.localStorage.removeItem('hotspot');
+
+      //     var s = window.scene;
+      //     const delta = normalizeWheel(ev);
+      //     if (s._nav.NavChangeDolly(delta.pixelY<0?100:-100))
+      //     document.getElementById("sliderRange").value = s._nav.getZoomFactor();
+      //         s.clearRefine();
+
+      //         setTimeout(function(){ document.getElementById("sliderRange").value = s._nav.getZoomFactor(); }, 700);
+      // }
+
+      var touch,touches,prevTouches,prevDistance = null;
+      //TOUCH VARIABLES NAVIGATION ************************
+      var touchSensitivity = 500.0;
+      var touchZoom = 0.06;
+      var touchPan = 500.0;
+      //**************************************************
+      var firstInteraction = true;
+      function touchStart(event) {
+         var screenX = document.getElementById('infinityrt-canvas').clientWidth;
+         var screenY = document.getElementById('infinityrt-canvas').clientHeight;
+         switch (event.touches.length) {
+            case 1:
+               touches[0].set(event.touches[0].pageX,event.touches[0].pageY,0);
+               touches[1].set(event.touches[0].pageX,event.touches[0].pageY,0);
+               break;
+            case 2:
+               touches[0].set(event.touches[0].pageX,event.touches[0].pageY,0);
+               touches[1].set(event.touches[1].pageX,event.touches[1].pageY,0);
+               prevDistance = touches[0].distanceTo(touches[1]);
+               break;
+         }
+         prevTouches[0].copy(touches[0]);
+         prevTouches[1].copy(touches[1]);
+      }
+      var doubleTouch = false;
+
+      function touchMove(event) {
+         var screenX = document.getElementById('infinityrt-canvas').clientWidth;
+         var screenY = document.getElementById('infinityrt-canvas').clientHeight;
+         var s = getScene(event);
+
+         if (event.touches.length > 1) {
+
+            event.preventDefault();
+         }
+         event.stopPropagation();
+         window.localStorage.removeItem('hotspot');
+
+         if (event.target.id != "root") {
+            // alert('event.target.id != "root"')
+            return;
+         }
+         for (i in event.path) {
+            // console.log(event.path[i])
+            if (event.path[i].id == "leftPan" || event.path[i].id == 'footerControls') {
+               return;
+            }
+
+         }
+         var getClosest = function (touch,touches) {
+            var closest = touches[0];
+            for (var i in touches) {
+               if (closest.distanceTo(touch) > touches[i].distanceTo(touch)) closest = touches[i];
+            }
+            return closest;
+         }
+         switch (event.touches.length) {
+            case 1:
+               if (doubleTouch == false) {
+                  touches[0].set(event.touches[0].pageX,event.touches[0].pageY,0);
+                  touches[1].set(event.touches[0].pageX,event.touches[0].pageY,0);
+                  if (s._nav.NavRotation([touches[0].x,touches[0].y],[(prevTouches[0].x - touches[0].x) * touchSensitivity / screenX,(prevTouches[0].y - touches[0].y) * touchSensitivity / screenY])) s.clearRefine();
+                  //scope.rotate( touches[ 0 ].sub( getClosest( touches[ 0 ] ,prevTouches ) ).multiplyScalar( - 0.005 ) );
+                  if (firstInteraction) {
+                     firstInteraction = false;
+                     RT_RecordEvent("First 3D Interaction","First 3D Interaction",config.name);
+                  } else {
+                     RT_RecordEvent("3D Model Interaction","Rotating",config.name);
+                  }
+               }
+               break;
+            case 2:
+               doubleTouch = true;
+               touches[0].set(event.touches[0].pageX,event.touches[0].pageY,0);
+               touches[1].set(event.touches[1].pageX,event.touches[1].pageY,0);
+               var distance = touches[0].distanceTo(touches[1]);
+               var deltaScene = (prevDistance - distance) * touchZoom * screenX;
+               if (s._nav.NavChangeDolly(-deltaScene,true)) {
+                  s.clearRefine();
+                  RT_RecordEvent("3D Model Interaction","Zooming",config.name);
+                  if (document.getElementById("sliderRange") !== null) {
+                     document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor();
+                  }
+               }
+               //scope.zoom( new Vector3( 0, 0, prevDistance - distance ) );
+               prevDistance = distance;
+               var offset0 = touches[0].clone().sub(getClosest(touches[0],prevTouches));
+               var offset1 = touches[1].clone().sub(getClosest(touches[1],prevTouches));
+               offset0.x = -offset0.x;
+               offset1.x = -offset1.x;
+               var mdelta2 = [offset1.x * touchPan / screenX,-offset1.y * touchPan / screenY];
+               if (s._nav.NavPan(mdelta2)) s.clearRefine();
+               //scope.pan( offset0.add( offset1 ).multiplyScalar( 0.5 ) );
+               break;
+         }
+         prevTouches[0].copy(touches[0]);
+         prevTouches[1].copy(touches[1]);
+      }
+      function touchEnd(event) {
+         setTimeout(function () { doubleTouch = false; },1000);
+      }
+
+      window.addEventListener('DOMContentLoaded',function () {
+         var resetBtn = document.getElementById('reset');
+         // resetBtn.addEventListener('click', function(){
+         //     // scene.gotoPosInTime(-0.741416,0.201064,-2.86262,-3.50276,91.3421, 500);
+         //     scene.clearRefine();
+         // });
+      });
+      function exploreFun() {
+         /* Fix for Screen reader calls out "collapsed" at the end of each section header even if it's expanded, so we get "… collapsed, expanded" */
+         if (document.getElementById('selectProductBtn')) {
+            document.getElementById('selectProductBtn').removeAttribute("aria-expanded");
+         }
+         if (document.getElementById('colorBtn')) {
+            document.getElementById('colorBtn').removeAttribute("aria-expanded");
+         }
+         if (document.getElementById('positionBtn')) {
+            document.getElementById('positionBtn').removeAttribute("aria-expanded");
+         }
+         if (document.getElementById('productViewBtn')) {
+            document.getElementById('productViewBtn').removeAttribute("aria-expanded");
+         }
+         if (document.getElementById('feature')) {
+            document.getElementById('feature').removeAttribute("aria-expanded");
+         }
+         /* Fix for Screen reader end */
+         if (document.getElementById('exploreButtton')) {
+            document.getElementById('exploreButtton').style.display = 'none';
+         }
+         if (document.getElementById('sliderRange')) {
+            document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor();
+         }
+         if (document.getElementById('mainload')) {
+            document.getElementById('mainload').style.display = "none";
+         }
+         if (document.getElementById('loader')) {
+            document.getElementById('loader').style.display = "none";
+         }
+         if (document.getElementById('LeftMenuWrapper')) {
+            window.document.getElementById('LeftMenuWrapper').setAttribute('aria-hidden','false');
+         }
+         if (document.getElementById('loaders')) {
+            document.getElementById('loaders').style.display = "none";
+         }
+         if (!mob && window.innerWidth >= 1026) {
+            setTimeout(function () { document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor(); },1000);
+         }
+
+         if (!(mob || isipad)) {
+            hideTabIndex();
+
+         }
+
+         // console.log('abc');
+
+         // document.getElementById('backlitOn').style.display="none";
+         resizeCanvas2();
+
+      }
+      function exploreFunMob() {
+         document.getElementById('exploreButtton').style.display = 'none';
+         document.getElementById('mainload').style.display = "none";
+         document.getElementById('loader').style.display = "none";
+         if (document.getElementById("sliderRange") !== null) {
+            document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor();
+            setTimeout(function () { document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor(); },500);
+         }
+         document.getElementById('loaders').style.display = "none";
+
+
+         // console.log('abc');
+      }
+
+      function hideTabIndex() {
+
+         for (let i = 0; i < hideIndexId.length; i++) {
+            if (window.document.getElementById(hideIndexId[i])) {
+               window.document.getElementById(hideIndexId[i]).setAttribute("tabindex","1");
+            }
+         }
+         // window.document.getElementById("colorBtn").setAttribute("tabindex", "1");
+         //     window.document.getElementById("selectProductBtn").setAttribute("tabindex", "1");
+         //     // window.document.getElementById("headerName").setAttribute("tabindex", "1");
+         //     // window.document.getElementById("productName").setAttribute("tabindex", "1");
+         //     // window.document.getElementById("closeIcon").setAttribute("tabindex", "1");
+         //     // window.document.getElementById("Howtouses").setAttribute("tabindex", "1");
+         //     // window.document.getElementById("Howtouses").style.display="none";
+
+         //     window.document.getElementById("productViewBtn").setAttribute("tabindex", "1");
+         //     window.document.getElementById("feature").setAttribute("tabindex", "1");
+         //     window.document.getElementById("animswtich").setAttribute("tabindex", "1");
+         //     window.document.getElementById("positionBtn").setAttribute("tabindex", "1");
+         //     window.document.getElementById("rLeft").setAttribute("tabindex", "2");
+         //     window.document.getElementById("rRight").setAttribute("tabindex", "2");
+         //     window.document.getElementById("zoomOut").setAttribute("tabindex", "2");
+         //     window.document.getElementById("sliderRange").setAttribute("tabindex", "2");
+         //     window.document.getElementById("zoomIn").setAttribute("tabindex", "2");
+         //     window.document.getElementById("previousView").setAttribute("tabindex", "2");
+         //     window.document.getElementById("resetView").setAttribute("tabindex", "2");
+         //     window.document.getElementById("nextView").setAttribute("tabindex", "2");
+         //     // window.document.getElementById("closeBtnHow").setAttribute("tabindex", "-1");
+         //     window.document.getElementById("howToUSE").setAttribute("tabindex", "-1");
+      }
+
+      // hotspot Functionality
+
+      var hotspotPoint = true;
+      var hotspotOn;
+      var clockWise = true;
+      var antiClockWise = true;
+      var portClick;
+      var setup;
+      var modal;
+      var port0 = "";
+      var port1 = 'Universal audio jack';
+      var port2 = 'USB 3.2 with PowerShare';
+      var port3 = 'USB 3.2';
+      var port4 = 'Noble wedge lock slot';
+      var port5 = 'HDMI';
+      var port6 = 'USB Type-C with power delivery';
+      var port7 = 'USB Type-C with power delivery';
+      var port8 = 'Multimedia/Flash card reader uSD 4.0';
+      var port9 = 'New click pad featuring quiet click and larger surface area for precise, glass-like feel';
+      var port10 = 'Modernized keyboard design';
+      var port11 = 'RGB HD camera with Dell Privacy Shutter';
+      var port12 = ' Available with FHD or 4K with low blue light';
+      var port13 = 'Optional Premium Active Pen';
+
+
+      function setHotSpot(divid,hotsoptName,leftNum,topNum,hotspotopacityspeed,text,maxwidth,fontsize,txtAligns) {
+         var viewCameraZV = [sceneViewMatrix[8],sceneViewMatrix[9],sceneViewMatrix[10]];
+         var hotspotopacityspeedConst = 3.0;
+         var pos2Dpoint = [];
+         var norm3Dpoint1 = scene.getObjectNormal(hotsoptName);
+         var hotspotopacity1 = infinityrt_dp(norm3Dpoint1,viewCameraZV) * hotspotopacityspeedConst - hotspotopacityspeed;
+
+         if (hotspotopacity1 > 0 && (hotspotOn == false)) hotspotopacity1 = 1.0;
+         if (hotspotopacity1 < 0.0) hotspotopacity1 = 1.0;
+         else if (hotspotopacity1 > 1.0) hotspotopacity1 = 1.0;
+
+         document.getElementById(divid).style.opacity = hotspotopacity1;
+         document.getElementById(divid).innerHTML = text;
+         var hotspotClass = document.getElementsByClassName("hotspots");
+         if (hotspotopacity1 == 0) {
+            document.getElementById(divid).style.display = "none";
+            document.getElementById(divid).setAttribute("tabindex","-1");
+            // for(var i=0; hotspotClass.length; i++){
+            //     console.log(hotspotClass[i])
+
+            //     hotspotClass[i].setAttribute("tabindex", "-1");
+            // }
+            // document.getElementsByClassName("hotspots").setAttribute("tabindex", "-1");
+         }
+         else {
+            document.getElementById(divid).style.display = "block";
+            document.getElementById(divid).setAttribute("tabindex","0");
+            // for(var i=0; hotspotClass.length; i++){
+            //     console.log(hotspotClass[i])
+            //     hotspotClass[i].setAttribute("tabindex", "0");
+            // }
+            // document.getElementsByClassName("hotspots").setAttribute("tabindex", "0");
+
+         }
+         pos2Dpoint = scene.projectPoint(scene.getObjectLocation(hotsoptName,true));
+         /*
+             var leftPosPoint = (pos2Dpoint[0] * 50) + leftNum;
+             var toptPosPoint = -((pos2Dpoint[1] * 50) - topNum);
+         
+         console.log('pos2Dpoint[1]', pos2Dpoint[1]);
+             console.log('toptPosPoint', toptPosPoint);
+             $("#" + divid).css('left', leftPosPoint + '%').css('top', toptPosPoint + '%');
+             */
+         canvasCallouts = window.document.getElementById("infinityrt-canvas");
+         //    ctxCallouts = canvasCallouts.getContext("2d");
+         pos2Dpoint[0] = pos2Dpoint[0] * 0.5 + 0.5;
+         pos2Dpoint[1] = pos2Dpoint[1] * 0.5 + 0.5;
+         pos2Dpoint[1] = 1.0 - pos2Dpoint[1];
+         pos2Dpoint[0] *= canvasCallouts.width;
+         pos2Dpoint[1] *= canvasCallouts.height;
+         // canvasCallouts.font = fontsize + "px " + font;
+
+         window.document.getElementById(divid).style.left = (pos2Dpoint[0] + leftNum + 'px');
+         window.document.getElementById(divid).style.top = (pos2Dpoint[1] + topNum + 'px');
+         window.document.getElementById(divid).style.width = (maxwidth + 'px');
+         document.getElementById(divid).style.fontSize = (fontsize + 'px');
+         window.document.getElementById(divid).style.visibility = "visible";
+         window.document.getElementById(divid).style.textAlign = txtAligns;
+
+         // $("#" + divid +"::after").css('left', pos2Dpoint[0] + leftNum + 'px').css('top', pos2Dpoint[1] + topNum + 'px');
+         /*if(hotspotopacity1==0) {
+         $("#point5,#point6,#point7,#point8,#point9,#point10,#point11,#point12,#point13,#point14,#point15,#point16,#point17,#point18,#point19,#point20,#point21,#point22,#point23,#point24,#point25,#point26,#point27,#point28,#point29,#point30,#point31,#point32").removeAttr("tabindex");
+         $(".annotation").removeAttr("tabindex");
+         
+         }*/
+         /*else{
+         $("#point5,#point6,#point7,#point8,#point9,#point10,#point11,#point12,#point13,#point14,#point15,#point16,#point17,#point18,#point19,#point20,#point21,#point22,#point23,#point24,#point25,#point26,#point27,#point28,#point29,#point30,#point31,#point32").removeAttr("tabindex");
+         $(".annotation").removeAttr("tabindex");
+             
+         }*/
+
+      }
+
+
+      function hotspotPosAsignment() {
+         /*New HotSpot Assignment*/
+         var currentPosition = window.localStorage.getItem("hotspot");
+         var currentLaptop = window.localStorage.getItem("laptop");
+         var colorHotspot = window.localStorage.getItem("color");
+
+         // console.log("hotspot")
+
+         if (ctxCallouts == null) {
+            canvasCallouts = window.document.getElementById("calloutcanvas");
+            ctxCallouts = canvasCallouts.getContext("2d");
+         }
+         ctxCallouts.resetTransform();
+         ctxCallouts.clearRect(0,0,canvasCallouts.width,canvasCallouts.height);
+         if (mob) {
+            if (innerWidth > innerHeight) {
+               console.log("landscap_mob")
+
+               if (currentPosition == 'left') {
+                  //port1 = "Power button
+                  // console.log('by');
+
+                  HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Right_hotspot_01Shape-0","",port1,"right",0,200,-15);
+                  HS_SimpleCallout([0,-100],0,-15,"DELL_360_A_Right_hotspot_0Shape2-0","",port2,"right",0,200,-15);
+                  HS_SimpleCallout([0,-105],0,-15,"DELL_360_A_Right_hotspot_0Shape3-0","",port3,"left",10,200,-10);
+                  HS_SimpleCallout([0,60],0,-10,"DELL_360_A_Right_hotspot_0Shape4-0","",port4,"center",10,200,0);
+
+               } else if (currentPosition == 'right') {
+                  //console.log('hello');
+                  HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Left_hotspot_0Shape1-0","",port5,"right",-5,200,-10);
+                  HS_SimpleCallout([0,-100],0,-20,"DELL_360_A_Left_hotspot_0Shape2-0","",port6,"left",10,300,0);
+                  HS_SimpleCallout([0,-70],0,-20,"DELL_360_A_Left_hotspot_0Shape3-0","",port7,"left",10,350,-10);
+                  HS_SimpleCallout([0,40],0,-15,"DELL_360_A_Left_hotspot_0Shape4-0","",port8,"left",10,200,-30);
+               }
+               else if (currentPosition == 'top') {
+                  HS_SimpleCallout([300,0],0,0,"DELL_360_A_Down_hotspot_0Shape1-0","",port9,"left",10,220,10);
+                  HS_SimpleCallout1([-140,0],0,0,"DELL_360_A_Down_hotspot_0Shape2-0","",port10,"right",5,0,350);
+
+               }
+               else if (currentPosition == 'front') {
+
+
+
+                  if (colorHotspot == "laptopBlack") {
+                     //    console.log("BlackHotspot")
+
+                     HS_SimpleCallout([0,-70],0,0,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
+
+
+                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
+                     HS_DrawText([200,65],port13,"Roboto",15,"center");
+
+                     // }
+
+                  } else {
+                     // console.log("SliverHotspot")
+                     // twoInOneLaptop = true;
+                     HS_SimpleCallout([0,-70],0,0,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
+                     HS_SimpleCallout([-20,0],10,0,"Hotspot_Screen_01","",port12,"left",5,200,40);
+                     // HS_SetOriginFromHotspot("Hotspot_Screen_01");
+                     //     HS_DrawLine([-10, 0], [35, 0]); //h
+                     //     HS_DrawLine([35, 0], [35, 210]); //h2
+                     //     HS_DrawLine([0, 210], [35, 210]); //v
+                     //     ctxCallouts.fillStyle = '#d8d8d8';
+                     //     ctxCallouts.fillStyle = 'black';
+                     //     HS_DrawText([-165, 210], port12, "Roboto", 15, "center");
+                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
+                     HS_DrawText([300,65],port13,"Roboto",15,"center");
+                  }
+               }
+            } else {
+               console.log("portrait_mob")
+
+               if (currentPosition == 'left') {
+                  //port1 = "Power button
+
+                  HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Right_hotspot_01Shape-0","",port1,"right",0,200,-15);
+                  HS_SimpleCallout([0,-100],0,-17,"DELL_360_A_Right_hotspot_0Shape2-0","",port2,"right",0,200,-15);
+                  HS_SimpleCallout([0,-105],0,-17,"DELL_360_A_Right_hotspot_0Shape3-0","",port3,"left",10,200,-10);
+                  HS_SimpleCallout([0,40],0,-10,"DELL_360_A_Right_hotspot_0Shape4-0","",port4,"center",10,200,0);
+
+
+               } else if (currentPosition == 'right') {
+                  //console.log('hello');
+                  HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Left_hotspot_0Shape1-0","",port5,"right",-5,200,-10);
+                  HS_SimpleCallout([0,-100],0,-20,"DELL_360_A_Left_hotspot_0Shape2-0","",port6,"left",10,300,0);
+                  HS_SimpleCallout([0,-70],0,-20,"DELL_360_A_Left_hotspot_0Shape3-0","",port7,"left",10,350,-10);
+                  HS_SimpleCallout([0,20],0,-15,"DELL_360_A_Left_hotspot_0Shape4-0","",port8,"left",10,200,-30);
+               }
+               else if (currentPosition == 'top') {
+                  HS_SimpleCallout([0,40],0,0,"DELL_360_A_Down_hotspot_0Shape1-0","",port9,"center",10,320,20);
+                  // HS_SimpleCallout1([-140, 0], 0, 0, "DELL_360_A_Down_hotspot_0Shape2-0", "", port10, "right", 5, 0, 350);
+
+                  HS_SetOriginFromHotspot("DELL_360_A_Down_hotspot_0Shape2-0");
+                  HS_DrawLine([0,0],[-90,0]); //h
+                  HS_DrawLine([-90,0],[-90,-175]); //h2
+                  HS_DrawLine([0,-175],[-90,-175]); //v
+                  ctxCallouts.fillStyle = '#d8d8d8';
+                  ctxCallouts.fillStyle = 'black';
+                  HS_DrawText([105,-175],port10,"Roboto",15,"center");
+               }
+               else if (currentPosition == 'front') {
+
+
+
+                  if (colorHotspot == "laptopBlack") {
+                     console.log("BlackHotspot")
+
+                     HS_SimpleCallout([0,-70],0,0,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
+
+
+                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
+                     HS_DrawText([200,65],port13,"Roboto",15,"center");
+
+                     // }
+
+                  } else {
+                     console.log("SliverHotspot")
+                     // twoInOneLaptop = true;
+                     HS_SimpleCallout([0,-70],0,-22,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
+                     // HS_SimpleCallout([-20, 0], 10, 0, "Hotspot_Screen_01", "", port12, "left", 5, 200, 40); 
+                     HS_SetOriginFromHotspot("Hotspot_Screen_01");
+                     HS_DrawLine([-10,0],[35,0]); //h
+                     HS_DrawLine([35,0],[35,190]); //h2
+                     HS_DrawLine([0,190],[35,190]); //v
+                     ctxCallouts.fillStyle = '#d8d8d8';
+                     ctxCallouts.fillStyle = 'black';
+                     HS_DrawText([-165,190],port12,"Roboto",15,"center");
+
+                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
+                     HS_DrawText([170,45],port13,"Roboto",15,"center");
+                  }
+               }
+            }
+         }
+         else if (isipad) {
+            if (window.innerWidth > window.innerHeight) {
+               console.log("lanscap_ipad");
+
+               if (currentPosition == 'front') {
+
+
+
+                  if (colorHotspot == "laptopBlack") {
+                     console.log("BlackHotspot")
+
+                     HS_SimpleCallout([0,-50],0,-30,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
+
+                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
+                     HS_DrawText([320,65],port13,"Roboto",15,"center");
+                     // }
+
+                  } else {
+                     console.log("SliverHotspot")
+                     // twoInOneLaptop = true;
+
+                     HS_SimpleCallout([0,-50],0,-30,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
+
+                     HS_SimpleCallout([-20,0],10,0,"Hotspot_Screen_01","",port12,"left",5,120,40);
+                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
+                     HS_DrawText([300,65],port13,"Roboto",15,"center");
+                  }
+               } else if (currentPosition == 'top') {
+                  HS_SimpleCallout([270,0],0,0,"DELL_360_A_Down_hotspot_0Shape1-0","",port9,"left",10,140,22);
+                  HS_SetOriginFromHotspot("DELL_360_A_Down_hotspot_0Shape2-0");
+                  HS_DrawLine([0,0],[-120,0]); //h
+                  HS_DrawLine([-120,0],[-120,-240]); //h2
+                  HS_DrawLine([0,-240],[-120,-240]); //v
+                  ctxCallouts.fillStyle = '#d8d8d8';
+                  ctxCallouts.fillStyle = 'black';
+                  HS_DrawText([105,-240],port10,"Roboto",15,"center",250);
+               }
+               else if (currentPosition == 'left') {
+                  //port1 = "Power button
+                  // console.log('by');
+
+                  HS_SimpleCallout([0,50],0,-15,"DELL_360_A_Right_hotspot_01Shape-0","",port1,"right",0,200,-15);
+
+                  HS_SimpleCallout([0,-100],0,-25,"DELL_360_A_Right_hotspot_0Shape2-0","",port2,"right",0,200,-15);
+
+                  HS_SimpleCallout([0,-105],0,-25,"DELL_360_A_Right_hotspot_0Shape3-0","",port3,"left",0,200,10);
+
+                  HS_SimpleCallout([0,40],0,0,"DELL_360_A_Right_hotspot_0Shape4-0","",port4,"left",0,150,20);
+
+               } else if (currentPosition == 'right') {
+                  //console.log('hello');
+
+                  HS_SimpleCallout([0,50],0,-5,"DELL_360_A_Left_hotspot_0Shape1-0","",port5,"right",9,200,22);
+
+                  HS_SimpleCallout([0,-100],0,0,"DELL_360_A_Left_hotspot_0Shape2-0","",port6,"left",5,300,0);
+
+                  HS_SimpleCallout([0,-70],0,0,"DELL_360_A_Left_hotspot_0Shape3-0","",port7,"left",5,350,-10);
+
+                  HS_SimpleCallout([0,40],0,0,"DELL_360_A_Left_hotspot_0Shape4-0","",port8,"left",0,400,10);
+               }
+            } else {
+               console.log("portrait_ipad");
+
+               if (currentPosition == 'left') {
+                  //port1 = "Power button
+
+                  HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Right_hotspot_01Shape-0","",port1,"right",0,200,-15);
+                  HS_SimpleCallout([0,-100],0,-17,"DELL_360_A_Right_hotspot_0Shape2-0","",port2,"right",0,200,-15);
+                  HS_SimpleCallout([0,-105],0,-17,"DELL_360_A_Right_hotspot_0Shape3-0","",port3,"left",10,200,-10);
+                  HS_SimpleCallout([0,60],0,-10,"DELL_360_A_Right_hotspot_0Shape4-0","",port4,"center",10,200,0);
+
+
+               } else if (currentPosition == 'right') {
+                  //console.log('hello');
+                  HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Left_hotspot_0Shape1-0","",port5,"right",-5,200,-10);
+                  HS_SimpleCallout([0,-100],0,-20,"DELL_360_A_Left_hotspot_0Shape2-0","",port6,"left",10,300,0);
+                  HS_SimpleCallout([0,-70],0,-20,"DELL_360_A_Left_hotspot_0Shape3-0","",port7,"left",10,350,-10);
+                  HS_SimpleCallout([0,40],0,-15,"DELL_360_A_Left_hotspot_0Shape4-0","",port8,"left",10,200,-30);
+               }
+               else if (currentPosition == 'top') {
+                  HS_SimpleCallout([0,80],0,0,"DELL_360_A_Down_hotspot_0Shape1-0","",port9,"center",10,320,20);
+                  // HS_SimpleCallout1([-140, 0], 0, 0, "DELL_360_A_Down_hotspot_0Shape2-0", "", port10, "right", 5, 0, 350);
+
+                  HS_SetOriginFromHotspot("DELL_360_A_Down_hotspot_0Shape2-0");
+                  HS_DrawLine([0,0],[-100,0]); //h
+                  HS_DrawLine([-100,0],[-100,-210]); //h2
+                  HS_DrawLine([0,-210],[-100,-210]); //v
+                  ctxCallouts.fillStyle = '#d8d8d8';
+                  ctxCallouts.fillStyle = 'black';
+                  HS_DrawText([105,-210],port10,"Roboto",15,"center");
+               }
+               else if (currentPosition == 'front') {
+
+
+
+                  if (colorHotspot == "laptopBlack") {
+                     console.log("BlackHotspot")
+
+                     HS_SimpleCallout([0,-70],0,0,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
+
+
+                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
+                     HS_DrawText([200,65],port13,"Roboto",15,"center");
+
+                     // }
+
+                  } else {
+                     console.log("SliverHotspot")
+                     // twoInOneLaptop = true;
+                     HS_SimpleCallout([0,-50],0,-22,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
+
+                     HS_SetOriginFromHotspot("Hotspot_Screen_01");
+                     HS_DrawLine([-10,0],[35,0]); //h
+                     HS_DrawLine([35,0],[35,275]); //h2
+                     HS_DrawLine([0,275],[35,275]); //v
+                     ctxCallouts.fillStyle = '#d8d8d8';
+                     ctxCallouts.fillStyle = 'black';
+                     HS_DrawText([-165,275],port12,"Roboto",15,"center");
+
+                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
+                     HS_DrawText([200,65],port13,"Roboto",15,"center");
+                  }
+               }
+            }
+         }
+         else {
+            // console.log("desktop");
+            if (currentPosition == 'front') {
+
+
+
+               if (colorHotspot == "laptopBlack") {
+                  //    console.log("BlackHotspot")
+                  setHotSpot('hotspot1demo','DELL_360_A_Front_hotspot_0Shape1-0',135,-120,1.0,port0,350,19);
+
+                  HS_SimpleCallout([0,-70],0,-40,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
+                  setHotSpot('hotspot11','DELL_360_A_Front_hotspot_0Shape1-0',200,-130,1.0,port11,350,19);
+
+                  HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
+                  HS_DrawText([320,65],port13,"Roboto",15,"center");
+                  setHotSpot('hotspot13','DELL_360_A_hotspot_pen_01',528,62,1.0,port13,250,19);
+                  // }
+
+               } else {
+                  // console.log("SliverHotspot")
+                  // twoInOneLaptop = true;
+                  setHotSpot('hotspot1demo','DELL_360_A_Front_hotspot_0Shape1-0',135,-120,1.0,port0,350,19);
+
+                  HS_SimpleCallout([0,-70],0,-40,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
+                  setHotSpot('hotspot11','DELL_360_A_Front_hotspot_0Shape1-0',200,-130,1.0,port11,350,19);
+
+                  HS_SimpleCallout([-20,0],10,0,"Hotspot_Screen_01","",port12,"left",5,200,40);
+                  setHotSpot('hotspot12','Hotspot_Screen_01',304,-15,1.0,port12,200,18);
+
+                  HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
+                  HS_DrawText([300,65],port13,"Roboto",15,"center");
+                  setHotSpot('hotspot13','DELL_360_A_hotspot_pen_01',528,62,1.0,port13,250,19);
+               }
+            } else if (currentPosition == 'top') {
+               // console.log("Desktop top")
+               if (window.innerWidth > 1280) {
+                  setHotSpot('hotspot1demo','DELL_360_A_Down_hotspot_0Shape1-0',730,-14,1.0,port0,400,19);
+
+                  HS_SimpleCallout([350,0],0,0,"DELL_360_A_Down_hotspot_0Shape1-0","",port9,"left",10,250,10);
+                  setHotSpot('hotspot9','DELL_360_A_Down_hotspot_0Shape1-0',730,-14,1.0,port9,300,19);
+                  HS_SimpleCallout1([-100,20],0,20,"DELL_360_A_Down_hotspot_0Shape2-0","",port10,"right",5,0,150);
+                  setHotSpot('hotspot10','DELL_360_A_Down_hotspot_0Shape2-0',-48,13,1.0,port10,200,19,"right");
+               } else {
+
+                  HS_SimpleCallout([270,0],0,0,"DELL_360_A_Down_hotspot_0Shape1-0","",port9,"left",10,150,10);
+                  HS_SimpleCallout1([-100,20],0,20,"DELL_360_A_Down_hotspot_0Shape2-0","",port10,"right",5,0,100);
+               }
+            }
+            else if (currentPosition == 'left') {
+               //port1 = "Power button
+               // console.log('by');
+               setHotSpot('hotspot1demo','DELL_360_A_Right_hotspot_01Shape-0',93,52,1.0,port0,170,19);
+
+               HS_SimpleCallout([0,50],0,-15,"DELL_360_A_Right_hotspot_01Shape-0","",port1,"right",0,200,-15);
+               setHotSpot('hotspot1','DELL_360_A_Right_hotspot_01Shape-0',93,52,1.0,port1,170,19);
+
+               HS_SimpleCallout([0,-100],0,-25,"DELL_360_A_Right_hotspot_0Shape2-0","",port2,"right",0,200,-15);
+               setHotSpot('hotspot2','DELL_360_A_Right_hotspot_0Shape2-0',52,-143,1.0,port2,220,19);
+
+               HS_SimpleCallout([0,-105],0,-25,"DELL_360_A_Right_hotspot_0Shape3-0","",port3,"left",0,200,10);
+               setHotSpot('hotspot3','DELL_360_A_Right_hotspot_0Shape3-0',294,-150,1.0,port3,80,19);
+
+               HS_SimpleCallout([0,60],0,-15,"DELL_360_A_Right_hotspot_0Shape4-0","",port4,"left",0,200,20);
+               setHotSpot('hotspot4','DELL_360_A_Right_hotspot_0Shape4-0',305,65,1.0,port4,200,19);
+
+            } else if (currentPosition == 'right') {
+               //console.log('hello');
+               setHotSpot('hotspot1demo','DELL_360_A_Left_hotspot_0Shape1-0',221,44,1.0,port0,50,18);
+
+               HS_SimpleCallout([0,50],0,-15,"DELL_360_A_Left_hotspot_0Shape1-0","",port5,"right",-5,200,-10);
+               setHotSpot('hotspot5','DELL_360_A_Left_hotspot_0Shape1-0',221,44,1.0,port5,50,18);
+
+               HS_SimpleCallout([0,-100],0,-28,"DELL_360_A_Left_hotspot_0Shape2-0","",port6,"left",10,300,0);
+               setHotSpot('hotspot6','DELL_360_A_Left_hotspot_0Shape2-0',278,-158,1.0,port6,270,19);
+
+               HS_SimpleCallout([0,-70],0,-28,"DELL_360_A_Left_hotspot_0Shape3-0","",port7,"left",10,350,-10);
+               setHotSpot('hotspot7','DELL_360_A_Left_hotspot_0Shape3-0',265,-120,1.0,port7,270,19);
+
+               HS_SimpleCallout([0,40],0,-25,"DELL_360_A_Left_hotspot_0Shape4-0","",port8,"left",0,400,10);
+               setHotSpot('hotspot8','DELL_360_A_Left_hotspot_0Shape4-0',292,39,1.0,port8,320,19);
+            }
+
+         }
+         //     }else if (portClick == 5) {
+         //         HS_SimpleCallout([0, -70], 0, 0, "DELL_360_A_Front_hotspot_0Shape1-0", "", port11, "center", 0, 300, 20);
+         //          HS_SimpleCallout([100, 0], 0, 0, "DELL_360_A_Front_hotspot_02", "", port12, "left", 0, 200, 20);
+         //     }
+         /*New HotSpot Assignment End*/
+      }
+
+
+      /*New HotSpot Assignment Functions*/
+
+      function HS_SimpleCallout1(pt,horizontalShift,verticalShift,hotspotname,txtNum,txtValue,txtAlign,txtDist,vrTextShift,maxWidth) {
+         // HS_DrawText_WrapText(txtValue);
+         //txtValue = txtValue.split('<br>');
+         var npt = [pt[0],pt[1]];
+         var nptlen = Math.sqrt(npt[0] * npt[0] + npt[1] * npt[1]);
+         npt[0] /= nptlen;
+         npt[1] /= nptlen;
+         HS_SetOriginFromHotspot(hotspotname);
+         HS_DrawLine(pt,[horizontalShift,verticalShift]);
+
+
+         if (txtNum != '') {
+
+            ctxCallouts.fillStyle = '#d8d8d8';
+            HS_DrawCircle([pt[0] + 5 * npt[0],pt[1] + 5 * npt[1]],13);
+            ctxCallouts.fillStyle = 'black';
+            HS_DrawText([pt[0] + 5 * npt[0] + 1,pt[1] + 5 * npt[1] + 1],txtNum,"Roboto",13,"center");
+         }
+
+         HS_DrawText([pt[0] + (txtDist) * npt[0],pt[1] + (5 + txtDist) * npt[1] - vrTextShift],txtValue,"Roboto",15,txtAlign,maxWidth);
+
+      }
+
+
+      function HS_F_smallAtStart_HrCallout(pt,vrLineHeight,distanceBtn2Vr,horizontalShift,verticalShift,hotspotname,txtNum,txtValue,vrTextShift,txtAlign,txtDist,maxWidth) {
+         if (vrTextShift == 'undefined') vrTextShift = 0;
+         //txtValue = txtValue.split('<br>');
+         var npt = [pt[0],pt[1]];
+         var nptlen = Math.sqrt(npt[0] * npt[0] + npt[1] * npt[1]);
+         npt[0] /= nptlen;
+         npt[1] /= nptlen;
+         HS_SetOriginFromHotspot(hotspotname);
+         HS_DrawLine([horizontalShift,vrLineHeight],[horizontalShift,verticalShift]);
+         HS_DrawLine([distanceBtn2Vr,vrLineHeight],[distanceBtn2Vr,verticalShift]);
+         HS_DrawLine(pt,[horizontalShift,vrLineHeight]);
+         if (txtNum != '') {
+            ctxCallouts.fillStyle = '#D8D8D8';
+            HS_DrawCircle([pt[0] + 5 * npt[0],pt[1] + 5 * npt[1]],13);
+            ctxCallouts.fillStyle = 'black';
+            // HS_DrawText([pt[0] + 5 * npt[0], pt[1] + 6 * npt[1]], txtNum, "Roboto", 14, "center");
+            HS_DrawText([pt[0] + 5 * npt[0] + 2,pt[1] + 5 * npt[1] + 1],txtNum,"Roboto",14,"center");
+         }
+         HS_DrawText([pt[0] + (txtDist) * npt[0],pt[1] + (5 + txtDist) * npt[1] - vrTextShift],txtValue,"Roboto",15,txtAlign,maxWidth);
+         /*
+         if (direction == 'vr') {
+             HS_DrawText([pt[0] + 5 * npt[0], pt[1] + 6 * npt[1]], txtNum, "Roboto", 14, "center");
+             for (let i = 1; i <= txtValue.length; i++) {
+                 if (i == 1) {
+                     HS_DrawText([pt[0] + ((i * 5) + txtDist) * npt[0], pt[1] + (5 + txtDist) * npt[1]], txtValue[i - 1], "Roboto", 15, txtAlign);
+                 } else if (i == 2) {
+                     HS_DrawText([pt[0] + (5 + txtDist) * npt[0], pt[1] + (23 + txtDist) + npt[1]], txtValue[i - 1], "Roboto", 15, txtAlign);
+                 } else if (i == 3) {
+                     HS_DrawText([pt[0] + (5 + txtDist) * npt[0], pt[1] + (20 + txtDist) + npt[1]], txtValue[i - 1], "Roboto", 15, txtAlign);
+                 }
+             }
+         } else if (direction == 'vr-hr') {
+             HS_DrawText([pt[0] + 5 * npt[0], pt[1] + 5 * npt[1]], txtNum, "Roboto", 14, "center");
+             for (let i = 1; i <= txtValue.length; i++) {
+                 if (i == 1) {
+                     HS_DrawText([pt[0] + ((i * 5) + txtDist) * npt[0], pt[1] + (5 + txtDist) * npt[1]], txtValue[i - 1], "Roboto", 15, txtAlign);
+                 } else if (i == 2) {
+                     HS_DrawText([pt[0] + (5 + txtDist) * npt[0], pt[1] + (12 + txtDist) + npt[1]], txtValue[i - 1], "Roboto", 15, txtAlign);
+                 } else if (i == 3) {
+                     HS_DrawText([pt[0] + (5 + txtDist) * npt[0], pt[1] + (20 + txtDist) + npt[1]], txtValue[i - 1], "Roboto", 15, txtAlign);
+                 }
+             }
+         } else {
+             HS_DrawText([pt[0] + 5 * npt[0], (pt[1] + 5 * npt[1]) + 1], txtNum, "Roboto", 14, "center");
+     
+             for (let i = 1; i <= txtValue.length; i++) {
+                 if (i == 1) {
+                     HS_DrawText([pt[0] + ((i * 5) + txtDist) * npt[0], (pt[1] + (5 + txtDist) * npt[1]) - vrTextShift], txtValue[i - 1], "Roboto", 15, txtAlign);
+                 } else if (i == 2) {
+                     HS_DrawText([pt[0] + (5 + txtDist) * npt[0], pt[1] + (3 + txtDist) + npt[1]], txtValue[i - 1], "Roboto", 15, txtAlign);
+                 } else if (i == 3) {
+                     HS_DrawText([pt[0] + (5 + txtDist) * npt[0], pt[1] + (20 + txtDist) + npt[1]], txtValue[i - 1], "Roboto", 15, txtAlign);
+                 }
+             }
+         } */
+
+      }
+
+      function HS_U_HrCallout(pt,hrLineWidth,vrLineHeight,hrShift,vrshift,hotspotname,txtNum,txtValue,vrTextShift,txtAlign,txtDist,maxWidth) {
+         var npt = [pt[0],pt[1]];
+         var nptlen = Math.sqrt(npt[0] * npt[0] + npt[1] * npt[1]);
+         npt[0] /= nptlen;
+         npt[1] /= nptlen;
+         HS_SetOriginFromHotspot(hotspotname);
+         HS_DrawLine([hrLineWidth,vrshift],[0,vrshift]);
+         HS_DrawLine([hrLineWidth,vrshift],[hrLineWidth,vrLineHeight]);
+         HS_DrawLine([hrLineWidth,vrLineHeight],[0,vrLineHeight]);
+         HS_DrawLine([pt[0],(vrLineHeight / 2) + vrshift / 2],[-vrLineHeight,(vrLineHeight / 2) + vrshift / 2]);
+
+         // HS_SetOriginFromHotspot(hotspotname);
+         // HS_DrawLine([hrLineWidth, 0], [0, 0]);
+         // HS_DrawLine([hrLineWidth, 0], [hrLineWidth, vrLineHeight]);
+         // HS_DrawLine([hrLineWidth, vrLineHeight], [0, vrLineHeight]);
+         // HS_DrawLine([pt[0], vrLineHeight / 2], [-vrLineHeight, vrLineHeight / 2]);
+         if (txtNum != '') {
+            ctxCallouts.fillStyle = '#d8d8d8';
+            HS_DrawCircle([pt[0] + 5 * npt[0],(pt[1] + 5 * npt[1]) + (vrshift / 2)],13);
+
+            ctxCallouts.fillStyle = 'black';
+            HS_DrawText([pt[0] + 5 * npt[0] + 2,(pt[1] + 5 * npt[1] + 1) + (vrshift / 2)],txtNum,"Roboto",14,"center");
+         }
+         HS_DrawText([pt[0] + (txtDist) * npt[0],(pt[1] + (5 + txtDist) * npt[1]) + (vrshift / 2) - vrTextShift],txtValue,"Roboto",15,txtAlign,maxWidth);
+
+      }
+
+      function HS_L_smallAtStart_HrCallout(pt,vrLineHeight,horizontalShift,verticalShift,hotspotname,txtNum,txtValue,vrTextShift,txtAlign,txtDist,maxWidth) {
+         if (vrTextShift == 'undefined') vrTextShift = 0;
+         var npt = [pt[0],pt[1]];
+         var nptlen = Math.sqrt(npt[0] * npt[0] + npt[1] * npt[1]);
+         npt[0] /= nptlen;
+         npt[1] /= nptlen;
+         HS_SetOriginFromHotspot(hotspotname);
+         HS_DrawLine([0,vrLineHeight],[horizontalShift,verticalShift]);
+         HS_DrawLine(pt,[0,vrLineHeight]);
+         if (txtNum != '') {
+            ctxCallouts.fillStyle = '#d8d8d8';
+            HS_DrawCircle([pt[0] + 5 * npt[0],pt[1] + 5 * npt[1]],13);
+
+            ctxCallouts.fillStyle = 'black';
+            HS_DrawText([pt[0] + 5 * npt[0] + 2,pt[1] + 5 * npt[1] + 1],txtNum,"Roboto",14,"center");
+         }
+         HS_DrawText([pt[0] + (txtDist) * npt[0],pt[1] + (5 + txtDist) * npt[1] - vrTextShift],txtValue,"Roboto",15,txtAlign,maxWidth);
+
+      }
+
+      function HS_SimpleCallout(pt,horizontalShift,verticalShift,hotspotname,txtNum,txtValue,txtAlign,txtDist,maxWidth,textHorizontalShift) {
+         // HS_DrawText_WrapText(txtValue);
+         //txtValue = txtValue.split('<br>');
+         if (textHorizontalShift == undefined) textHorizontalShift = 0;
+         var npt = [pt[0],pt[1]];
+         var nptlen = Math.sqrt(npt[0] * npt[0] + npt[1] * npt[1]);
+         npt[0] /= nptlen;
+         npt[1] /= nptlen;
+         HS_SetOriginFromHotspot(hotspotname);
+         HS_DrawLine(pt,[horizontalShift,verticalShift]);
+         if (txtNum != '') {
+            ctxCallouts.fillStyle = '#d8d8d8';
+            HS_DrawCircle([pt[0] + 5 * npt[0],pt[1] + 5 * npt[1]],13);
+            ctxCallouts.fillStyle = 'black';
+            HS_DrawText([pt[0] + 5 * npt[0] + 1,pt[1] + 5 * npt[1] + 1],txtNum,"Roboto",13,"center");
+         }
+         HS_DrawText([pt[0] + ((txtDist) * npt[0]) + textHorizontalShift,pt[1] + (5 + txtDist) * npt[1]],txtValue,"Roboto",15,txtAlign,maxWidth);
+      }
+      var lineHeight = 20;
+
+      function HS_SetOriginFromHotspot(name) {
+         var pos2D = scene.projectPoint(scene.getObjectLocation(name,true));
+         pos2D[0] = pos2D[0] * 0.5 + 0.5;
+         pos2D[1] = pos2D[1] * 0.5 + 0.5;
+         pos2D[1] = 1.0 - pos2D[1];
+         pos2D[0] *= canvasCallouts.width;
+         pos2D[1] *= canvasCallouts.height;
+         HS_SetOrigin(pos2D);
+      }
+
+      function HS_SetOrigin(pt) {
+         ctxCallouts.resetTransform();
+         ctxCallouts.translate(pt[0],pt[1]);
+         var scale = canvasCallouts.height / 800;
+         ctxCallouts.scale(scale,scale);
+      }
+
+      function HS_DrawLine(pt0,pt1) {
+         ctxCallouts.beginPath();
+         ctxCallouts.moveTo(pt0[0],pt0[1]);
+         ctxCallouts.lineTo(pt1[0],pt1[1]);
+         ctxCallouts.stroke();
+         //ctxCallouts.strokeStyle = '#0076CE';
+         ctxCallouts.strokeStyle = '#979797';
+      }
+
+      function HS_DrawCircle(pt,radius) {
+         ctxCallouts.beginPath();
+         ctxCallouts.ellipse(pt[0],pt[1],radius,radius,0,0,2 * Math.PI);
+         ctxCallouts.fill();
+      }
+
+      function HS_DrawText(pt,text,font,fontsize,txtalign,maxWidth) {
+
+         ctxCallouts.font = fontsize + "px " + font;
+         ctxCallouts.textAlign = txtalign;
+         ctxCallouts.textBaseline = 'middle';
+         //if(text.indexOf("<br>")) {console.log(text.indexOf("<br>"))};
+         var words = text.split(' ');
+         // if (calloutsRTL == true) {
+         //     if (words.length == 1) {
+         //         ctxCallouts.direction = 'ltr';
+         //     } else {
+         //         ctxCallouts.direction = 'rtl';
+         //     }
+         // }
+         var line = '';
+         //console.log(words)
+         for (var n = 0; n < words.length; n++) {
+            var testLine = line + words[n] + ' ';
+            var metrics = ctxCallouts.measureText(testLine);
+            var testWidth = metrics.width;
+            if (testWidth > maxWidth && n > 0 || words[n] == '<br>') {
+               if (words[n] == '<br>') words[n] = '';
+               ctxCallouts.fillText(line,pt[0],pt[1]);
+
+               if (words[n] != '<br>') {
+                  line = words[n] + ' ';
+               }
+               pt[1] += lineHeight;
+            } else {
+               line = testLine;
+            }
+         }
+
+         ctxCallouts.fillText(line,pt[0],pt[1]);
+
+      }
+
+
+
+
+      var canvasCallouts = null,
+         ctxCallouts = null;
+      // /*New HotSpot Assignment Functions End*/
+
+      var userLang;
+      var isUserLang = false;
+
+
+      var XMLHttpFactories = [
+         function () {
+            return new XMLHttpRequest()
+         },
+         function () {
+            return new ActiveXObject("Msxml3.XMLHTTP")
+         },
+         function () {
+            return new ActiveXObject("Msxml2.XMLHTTP.6.0")
+         },
+         function () {
+            return new ActiveXObject("Msxml2.XMLHTTP.3.0")
+         },
+         function () {
+            return new ActiveXObject("Msxml2.XMLHTTP")
+         },
+         function () {
+            return new ActiveXObject("Microsoft.XMLHTTP")
+         }
+      ];
+      function createXMLHTTPObject() {
+         var xmlhttp = false;
+         for (var i = 0; i < XMLHttpFactories.length; i++) {
+            try {
+               xmlhttp = XMLHttpFactories[i]();
+            } catch (e) {
+               continue;
+            }
+            break;
+         }
+         return xmlhttp;
+      }
+      var finalLangues;
+      function getLangUrl() {
+         console.log("langUrl called");
+         var queryString = window.location.href.split('?')[1];
+         console.log("queryString",queryString);
+         if (queryString) {
+            // alert("iff...");
+
+            var params = queryString.split('&');
+            for (var i = 0; i < params.length; i++) {
+               if (params[i].toLowerCase().indexOf("locale=") >= 0) {
+                  userLang = params[i].replace("locale=","");
+                  isUserLang = true;
+                  break;
+               }
+            }
+            if (!isUserLang) {
+               // alert("else111..");
+
+               userLang = "EN";
+            }
+         } else {
+            // alert("else..")
+            userLang = "EN";
+         }
+         setTimeout(getLangTranscript,1000)
+         // getLangTranscript();
+      }
+
+      function getLangTranscript() {
+         var xmlhttp = createXMLHTTPObject();
+         // alert();
+         // console.log("xmlhttp",xmlhttp);
+         xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+
+               var ldata = JSON.parse(this.responseText);
+               var splitLang = userLang.toLowerCase().split("-")[0];
+
+               // console.log("ldata",ldata);
+               // console.log("finalLangues called...",userLang.toLowerCase());
+               for (var j = 0; j < ldata.config.length; j++) {
+                  if (ldata.config[j].lang.toLowerCase() == userLang.toLowerCase()) {
+                     finalLangues = ldata.config[j];
+                     break;
+                  } else if (ldata.config[j].lang.toLowerCase() == splitLang.toLowerCase()) {
+                     finalLangues = ldata.config[j];
+                     break;
+                  } else {
+                     finalLangues = ldata.config[0];
+                  }
+               }
+               window.checkgetLangTranscript(true);
+               // console.log("finalLangues called...",userLang.toLowerCase())
+               // if (!finalLangues) {
+               //    console.log("false finallanguage");
+               //     var splitLang = userLang.toLowerCase().split("-")[0];
+
+               //     for (var k = 0; k < ldata.config.length; k++) {
+               //         if (ldata.config[k].lang.toLowerCase() == splitLang.toLowerCase()) {
+               //             finalLangues = ldata.config[k];
+               //             break;
+               //         }
+               //     }
+               // }
+
+               if (finalLangues) {
+                  //  alert();
+                  window.document.getElementById("move_text").innerHTML = finalLangues.move;
+                  window.document.getElementById("move_text_mob").innerHTML = finalLangues.move;
+                  // // document.getElementById("mobmove").innerHTML = finalLangues.move;
+                  document.getElementById("rotate_text").innerHTML = finalLangues.rotate;
+                  document.getElementById("rotate_text_mob").innerHTML = finalLangues.rotate;
+                  // // document.getElementById("mobRotate").innerHTML = finalLangues.rotate;
+                  document.getElementById("zoom_text").innerHTML = finalLangues.zoom;
+                  document.getElementById("zoom_text_mob").innerHTML = finalLangues.zoom;
+
+                  // document.getElementById("mobZoom").innerHTML = finalLangues.zoom;
+
+                  document.querySelector(".exploreBtnCls").innerHTML = finalLangues.exploreProductIn3D;
+                  document.querySelector(".exploreBtnClsMob").innerHTML = finalLangues.exploreProductIn3D;
+
+
+                  port1 = finalLangues.port1;
+                  port2 = finalLangues.port2;
+                  port3 = finalLangues.port3;
+                  port4 = finalLangues.port4;
+                  port5 = finalLangues.port5;
+                  port6 = finalLangues.port6;
+                  port7 = finalLangues.port7;
+                  port8 = finalLangues.port8;
+                  port9 = finalLangues.port9;
+                  port10 = finalLangues.port10;
+                  port11 = finalLangues.port11;
+                  port12 = finalLangues.port12;
+                  port13 = finalLangues.port13;
+
+                  // if (finalLangues.lang.toLowerCase() == "ar-eg") {
+                  //     $("#color_container #clr_text, #pos_container #pos_text, #righttxt1 li:nth-child(1), #righttxt1 li:nth-child(2), #righttxt1 li:nth-child(3), #reset, #headingTop,#menu3,#hot39_text,#hot40_text,#hot41_text,#menu4,#hot3_text,#hot03_text,#hot9_text,#hot2_text,#hot02_text,#hot002_text,#hot32_text,#menu5,#hot7_text,#hot07_text,#hot1_text,#hot18_text,#hot19_text,#menu11,#hot20_text,#hot21_text,#menu12,#hot22_text,#hot2201_text,#hot2202_text,#hot029_text,#hot0029_text,#hot00029_text,#hot030_text,#hot0030_text,#hot031_text,#hot031_text,#menu15,#hot35_text").attr("dir", "rtl");
+                  // } else if (finalLangues.lang.toLowerCase() == "ko-kr" || finalLangues.lang.toLowerCase() == "ko" || finalLangues.lang.toLowerCase() == "pt" || finalLangues.lang.toLowerCase() == "pt-br") {
+                  //     $("#color_container").css("display", "none");
+                  //     $("#pos_container").css("padding-top", "0");
+                  // }
+                  if (userLang.toLowerCase() === "es") {
+                     // alert();
+                     //   console.log("userLang is:" + userLang);
+                     setTimeout(function () {
+                        document.querySelector(".onOff").style.top = '-17px';
+                     },3000);
+
+
+                  } else if (userLang.toLowerCase() === "fr-ca") {
+                     setTimeout(function () {
+                        // document.querySelector(".onOff").style.top = '-20px';
+                        document.querySelector(".onOff").style.fontSize = '12px';
+
+                     },3000);
+                  }
+               }
+            }
+         };
+         xmlhttp.open("GET","locale.json",true);
+         xmlhttp.send();
+
+      }
+      getLangUrl();
+
+   </script>
+   <style>
+      #hotspot1demo {
+         display: none !important;
+      }
+   </style>
+</head>
+
+<body onload="InfinityRTStart();">
+   <div id="mainload">
+      <div id="Scalable">
+         <div class="desktop">
+            <div id="loading" tabindex="1">
+               <!-- <input type="text" style="border:none" id="setFocus" /> -->
+               <div tabindex="1" id="move" aria-label="by swiping with two fingers on touchscreen or by clicking the right mouse button">
+                  <span id="move_text"></span><br>
+                  <img style="margin-top: 40px; height: 96px; width: 210px;" src="./img/move.svg" />
+               </div>
+
+               <div tabindex="1" id="rotate" style="margin: 0 137px;">
+                  <span id="rotate_text"></span><br><img style="margin-top: 40px; height: 96px; width: 230px;" src="./img/rotate.svg" />
+               </div>
+               <div tabindex="1" id="zoom"><span id="zoom_text"></span><br><img style="margin-top: 40px; height: 96px; width: 210px;" src="./img/zoom.svg" aria-label="by using two fingers to pinch and expand or by using the scroll wheel on the mouse" /></div>
+               <div id="loader" style="display: none; position:absolute; background: #ffffff; border: 1px; border-style: solid; border-color: #c1c1c1;">
+                  <div id="loaderbar" style="position:absolute; width:0px; height:5px; overflow:hidden; background: #0076CE;"></div>
+               </div>
+               <button tabindex="1" id="exploreButtton" class="exploreBtnCls" aria-label="clickable Explore Product in 3D" onclick="exploreFun()">Explore Product in 3D <img style="height: 20px; width: 24px; padding-left: 12px;" src="./img/arrowIcon.png" alt="aroowIndexs" /></button></button>
+            </div>
+         </div>
+         <div class="mobile">
+            <div id="loading">
+               <div style="">
+                  <div id="mobMove" style="display: flex; justify-content: space-between; align-items: end;"><span style="padding-right:43px; margin-top:70px;" id="move_text_mob" style="position: relative;  top: -29px;"></span><img style="margin-top: 44px;  height: 76px; width: 146px;" src="./img/move.svg" alt="movesIndex" /></div>
+                  <div id="mobRotate" style="display: flex; justify-content: space-between; align-items: end;"><span style="padding-right:43px; margin-top:70px;" id="rotate_text_mob" style="position: relative;  top: -29px;"></span><img style="margin-top: 44px;  height: 76px; width: 146px;" src="./img/rotate.svg" alt="rotateIndex" /></div>
+                  <div id="mobZoom" style="display: flex; justify-content: space-between; align-items: end;"><span style="padding-right:43px; margin-top:70px;" id="zoom_text_mob" style="position: relative;  top: -29px;"></span><img style="margin-top: 44px; height: 76px; width: 146px;" src="./img/zoom.svg" alt="zoomIndex" /></div>
+                  <div id="loaders" style="display: block; position:absolute; background: #ffffff; border: 1px; border-style: solid; border-color: #c1c1c1;height: 5px;left: 10px;">
+                     <div id="loaderbar" style="position:absolute; width:0px; height:5px; overflow:hidden; background: #0076CE;"></div>
+                  </div>
+                  <button id="exploreButtton" class="exploreBtnClsMob" onclick="exploreFunMob()" disabled>Explore Product in 3D <img style="height: 20px; width: 24px; padding-left: 12px;" src="./img/arrowIcon.png" alt="ArrowIndex" /></button>
+
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+   <div id='root' style="position: absolute;height: 100%; visibility: hidden;" data-camera='false'></div>
+
+   <canvas id='infinityrt-canvas' style='border: none;' width='100%' height='100%'></canvas>
+   <canvas id='calloutcanvas' style="margin:0px;left:0px;top:0px;position:absolute;" width='100%' height='100%'></canvas>
+
+
+   <div id="hotspot_container">
+      <div class="hotspots" id="hotspot1demo" arial-hidden="true" tabindex="-1" style=""></div>
+      <div class="hotspots" id="hotspot1" tabindex="-1"></div>
+      <div class="hotspots" id="hotspot2" tabindex="-1"></div>
+
+      <div class="hotspots" id="hotspot3" tabindex="-1"></div>
+
+
+      <div class="hotspots" id="hotspot4" tabindex="-1"></div>
+
+      <div class="hotspots" id="hotspot5" tabindex="-1"></div>
+
+      <div class="hotspots" id="hotspot6" tabindex="-1"></div>
+
+      <div class="hotspots" id="hotspot7" tabindex="-1"></div>
+
+      <div class="hotspots" id="hotspot8" tabindex="-1"></div>
+      <div class="hotspots" id="hotspot10" tabindex="-1"></div>
+      <div class="hotspots" id="hotspot9" tabindex="-1"></div>
+
+
+      <div class="hotspots" id="hotspot11" tabindex="-1"></div>
+
+      <div class="hotspots" id="hotspot12" tabindex="-1"></div>
+
+      <div class="hotspots" id="hotspot13" tabindex="-1"></div>
+   </div>
+   <div id="howTousePopup" style="display: none;"></div>
+
+   <div id="footerControlDesk" style="display: block;position: absolute;bottom: 73px;left: 11px; z-index: 2;visibility: hidden;"></div>
+
+   <div id="footerControMob" style="display: block;position: absolute;bottom: 73px;left: 11px; z-index: 2;visibility: hidden;"></div>
+   <div id="footerControIpad" style="display: block;position: absolute;visibility: hidden;"></div>
+   <div id="howTousePopupDesk" style="position: absolute;z-index: 99;" tabindex="-1;"></div>
+
+
+</body>
+
+</html>

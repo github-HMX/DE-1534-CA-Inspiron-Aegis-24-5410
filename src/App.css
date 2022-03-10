@@ -1,0 +1,1956 @@
+.App {
+  text-align: left;
+  
+}
+.Menu{
+  text-align: center;
+  padding: 8px 46px 16px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: -15px,
+}
+.Menuheader{
+  cursor: pointer;
+  padding: 2px 0px 0px;
+
+  border: none;
+  border-radius: none;
+  margin-bottom: -15px,
+}
+.RadioHeader{
+  padding-left: 51px;
+  padding-right: 6px;
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-right: 1px solid #c7c7c7;
+  font-weight: 650;
+  background-color: #fff;
+}
+.Radio {
+    text-align: center;
+    padding: 2px 46px 2px;
+    margin: -7px 0px 2px;
+    cursor: pointer;
+    padding: 8px 0px 0px 0px;
+    
+  }
+  #selectProduct{
+    padding: 0px 0px 0px 0px !important;
+
+  }
+  .MuiAccordionDetails-root{
+    display: flex;
+    /* padding: 16px 16px 16px 43px !important; */
+    padding: 13px 0px 13px 43px !important;
+
+  }
+
+  .MuiCollapse-wrapperInner{
+    margin-bottom: 20px !important;
+    margin-top: 10px !important;
+  }
+   /* #tentBtn{
+    display: flex;
+    padding: 12px 15px 0px 43px !important;
+
+  }
+  #tabletBtn
+    padding: 11px 15px 0px 43px !important;
+  } */
+.Accordians{
+ 
+  border-top: 1px solid #c7c7c7;
+  /* border-bottom: 1px solid #c7c7c7; */
+  border-radius: 0%;
+  border-Right: 1px solid #c7c7c7;
+
+}
+.AccordiansHeader{
+  padding-left: 13px;
+  font-weight: 600;
+}
+/* .MuiCollapse-container.MuiCollapse-entered {
+  padding-bottom: 33px;
+} */
+.AcoordiansContent{
+  padding-left: 23px;
+    padding-top: 0px;
+    cursor: pointer;
+}
+.AccordianImg{
+  margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+ul.MuiList-root.NestedList-root-7.MuiList-padding{
+  display: none;
+}
+.statebtn{
+  right: 0;
+  width:100%;
+  margin-left:2px;
+  border: 1px solid #c7c7c7;
+    border-radius: 0;
+}
+.HowToUseHeader{
+  padding-left: 43px;
+  padding-right: 60px;
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+  padding-top: 5.27px;
+    padding-bottom: 5.28px;
+  border-right: 1px solid #c7c7c7;
+  font-weight: 650;
+  background-color: #fff;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.Mui-disabled {
+  background-color: #EEEEEE !important;
+  /* opacity: 0.3 !important; */
+  /* pointer-events: auto !important; */
+  cursor: pointer;
+}
+
+#blackBtn.Mui-disabled .menubtn:hover > button{
+  cursor: default;
+}
+#howToUSE {
+  width: 100px;
+  height: 100px;
+  height: 498px;
+  width: 381px;
+  top: 100px;
+  background-color: red;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.25, 0.25, 0, 1);
+  position:absolute;
+  left:272px;
+  top:100px;
+}
+
+@keyframes example {
+  0%   {left: 312px;opacity: 1;}
+  
+  100% {left: 272px; opacity: 0;}
+}
+
+@keyframes example1 {
+  0%   {left:232px;opacity: 0;}
+  
+  100% {left: 322px; opacity: 1;}
+}
+
+/* #blackBtn:hover{
+  cursor: default !important;
+border: 1px solid red;
+} */
+.active {
+  background-color: #CCE5F1;
+  font-weight: 1000 !important;
+}
+.select{
+  background-color: #CCE5F1;
+  font-weight: 1000 !important;
+}
+.menubtn .MuiButton-contained:active{
+  background-color: #CCE5F1 !important;
+  font-weight: 1000 !important;
+}
+.menubtn .MuiButton-contained:selected{
+  background-color: #CCE5F1 !important;
+  font-weight: 1000 !important;
+}
+.menubtn .MuiButton-contained:focus{
+  background-color: #CCE5F1 !important;
+  font-weight: 1000 !important;
+}
+.active span.MuiButton-label {
+  font-weight: bold;
+}
+.MuiPaper-root.MuiDrawer-paper.makeStyles-drawerPaper-2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0{
+  border: none;
+  /* background: #f8f6f6; */
+  top: 100px !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 70%;
+  /* padding-right:1px; */
+
+  background-color: #f9f9f9;
+}
+.MuiPaper-root.MuiDrawer-paper.jss2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0{
+  border: none;
+  overflow: auto;
+  height: 70%;
+  top: 100px !important;
+  /* padding-right:1px; */
+  /* left: 60px;
+    top: 177px; */
+    background-color: #f9f9f9;
+    overflow-x:hidden
+
+}
+.ul.MuiList-root.jss39.MuiList-padding{
+  display: none;
+  visibility: hidden;
+}
+.MuiAccordionSummary-content.Mui-expanded{
+  margin: 14px 0 !important;
+}
+.MuiButtonBase-root.MuiAccordionSummary-root{
+  max-height: 39.0px !important;
+    min-height: 38.52px !important;
+    padding: 0px 31.27px !important;
+
+}
+/* .ProductViewHeader{
+      border-bottom: 1px solid #c7c7c7;
+      min-height:52px;
+  } */
+
+  .MuiPaper-elevation1{
+    box-shadow: none!important;
+  }
+  
+  /* .ClassAvtarimg .MuiAvatar-root.MuiAvatar-square{
+    height: 21px !important;
+    width: 169px !important;
+    margin-top: -20px !important;
+  } */
+
+  .maniHeader .MuiAvatar-root.MuiAvatar-square{
+    /* height: 24.75px !important; */
+    width: 232px !important;
+    margin-top: -25px !important;
+    height: 32px !important;
+    margin-left: 21px !important;
+  }
+  img.MuiAvatar-img{
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: contain !important;
+  }
+  .MuiButtonBase-root.MuiAccordionSummary-root.Mui-expanded{
+    /* border-left: 4px solid #3287c1; */
+    box-shadow: inset 4px 0px 0px #3287c1;
+    font-weight: bold !important;
+  }
+  
+  .MuiPaper-root.MuiAccordion-root.Mui-expanded.MuiAccordion-rounded.MuiPaper-elevation1.MuiPaper-rounded .MuiButtonBase-root.MuiAccordionSummary-root.Mui-expanded .MuiAccordionSummary-content.Mui-expanded p.MuiTypography-root.accordion-headers.AccordiansHeader.MuiTypography-body1{
+    font-weight: bold!important;
+  }
+
+  /* .MuiAccordionDetails-root:hover {
+    font-weight: bold;
+    background-color: #CCE5F1;
+
+} */
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.Btnsubmenu.MuiButton-containedSecondary {
+  margin-left: 0 !important;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right:0px;
+  margin-right: 5px !important;
+}
+.Btnsubmenus{
+  display:none;
+}
+span.MuiButton-label {
+  font-family: Roboto;
+font-style: normal;
+/* font-weight: bold; */
+font-size: 14px;
+line-height: 24px;
+text-transform: capitalize;
+/* identical to box height, or 150% */
+
+letter-spacing: 0.005em;
+}
+/* .threebtns span.MuiButton-label{
+  font-size: 14px;
+
+} */
+/* .Avatar{
+  marginLeft:"18px",width: "22px",height: "22px"
+  margin-left: 18px;
+  width: 22px;
+  height: 22px
+} */
+.pop-up{
+  width:100%;
+  height: 100%;
+  border-radius: 0%;
+}
+#footerControls {
+  position: fixed;
+  left: 50%;
+  transform: translate(-28%, 0%);
+  bottom: 20px;
+}
+/* .threebtns{
+  position: absolute;
+    left: 40%;
+    bottom: 91px;
+}  */
+#zoomIn {
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  cursor: pointer;
+  min-width: 43px !important;
+}
+#zoomSlider {
+  top: 4px;
+    left: 40px;
+    width: 97px;
+    height: 28px;
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  z-index: 4;
+}
+#zoomOut {
+  
+    position: absolute;
+    left: 133px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    min-width: 43px !important;
+    cursor: pointer;
+}
+/* #zoomIn:hover{ */
+  /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border: 1px solid red;
+  box-sizing: border-box;
+  color:red */
+/* } */
+.zoomBtn {
+  position: absolute;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+}
+.onOff {
+  position: relative;
+    left: 8px;
+    top: 3px;
+    font-size: 15px;
+    color: #ffffff;
+}
+span.MuiSwitch-root {
+  width: 70px;
+  height: 44px;
+}
+span.MuiSwitch-track {
+  background-color: #767676;
+  opacity: 1;
+}
+span.MuiButtonBase-root.MuiIconButton-root.PrivateSwitchBase-root-14.MuiSwitch-switchBase.MuiSwitch-colorPrimary.PrivateSwitchBase-checked-15.Mui-checked {
+  color: #ffffff;
+}
+
+.switch {
+  position: relative;
+  left: 5px;
+  top: -5px;
+  display: inline-block;
+  width: 62px;
+  height: 28px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #767676;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 6px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #006BBD;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.rangeslider{
+  
+    position: absolute;
+    top: 3px;
+    left: -3px;
+}
+
+.myslider {
+  -webkit-appearance: none;
+    background: #ffffff00;
+    height: 20px;
+    opacity: 2;
+    width: 94px;
+ }
+
+
+.myslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-image: url('images/zoombutton.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 26.25px;
+  height: 47px;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.makeStyles-newBtns-8.MuiButton-outlinedPrimary.MuiButton-outlinedSizeSmall.MuiButton-sizeSmall{
+  height: 47px;
+  width: 62px;
+}
+
+.myslider:hover {
+  opacity: 1;
+}
+svg.MuiSvgIcon-root {
+  width: 24px;
+  height: 20.39px;
+  cursor: pointer;
+  color: #006BBD;
+}
+span.MuiButton-startIcon.MuiButton-iconSizeMedium{
+  margin-right: 16px;
+}
+span.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1{
+  margin-left: 15px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+/* identical to box height, or 150% */
+  letter-spacing: 0.005em;
+}
+.threeButtons {
+  font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    background-color: #FFFFFF;
+    height: 47px;
+    width: 143px;
+    margin: 21px 19px 20px 19px;
+    border: 2px solid #CCCCCC;
+}
+.zoombarandRotateContainer {
+  width: 400px;
+  height: 50px;
+  margin: auto;
+}
+.ProductName {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 40px;
+  margin-top: 0;
+  color: #000000;
+}
+#closeIcon{
+  margin-right: 55px !important;
+  margin-top: -3px !important;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  height: 32px;
+  float: right;
+  width: 32px;
+  }
+/* .MuiTouchRipple-root:focus-visible{
+  outline: none;
+} */
+/* #zoomIn:focus-visible{
+  outline: none !important;
+} */
+/* #zoomOut:focus-visible{
+  outline: none !important;
+} */
+.MuiAccordion-root.Mui-expanded {
+  margin: 0 !important;
+}
+/* div#openCloseBtn:focus-visible{
+  outline: none;  
+  background-color: #cce5f1;
+}
+div#backlitBtn:focus-visible{
+  outline: none;  
+  background-color: #cce5f1;
+} */
+/* #headerName:focus,#animswtich:focus,#closeIcon:focus,.tabIndexStyle:focus,.myslider:focus {
+  outline: 1px solid #0076ce;
+} */
+
+/* .HowToUseHeader:focus{
+  outline: none;
+  border: 1px solid #0076ce;
+} */
+
+.mobthreeButtonsIpad{
+     font-family: Roboto !important;
+     font-style: normal !important;
+     font-weight: 500 !important;
+     font-size: 16px !important;
+     line-height: 24px !important;
+     letter-spacing: 0.005em !important;
+     background-color: #ffffff !important;
+    height: 47px !important;
+     width: 143px !important;
+    margin: 21px 19px 20px 19px !important;
+     border: 2px solid #CCCCCC !important;
+}
+.openCloseBar {
+  position: absolute !important;
+  left: 0 !important;
+  top: 186px !important;
+  z-index: -1 !important;
+  border: 1px solid #E1E1E1 !important;
+  height: 858px !important;
+  width: 60px !important;
+  background-color: #FFFFFF !important;
+}
+
+#ipadNavForDesktop .openCloseBar {
+  position: absolute !important;
+  left: 0 !important;
+  top: -1px !important;
+  z-index: -1 !important;
+  border: 1px solid #E1E1E1 !important;
+  height: 588px !important;
+  width: 40px !important;
+  background-color: #FFFFFF !important;
+}
+
+.MuiTooltip-popper {
+  z-index: 1500;
+  /* pointer-events: none; */
+}
+.MuiTooltip-popperInteractive {
+  pointer-events: auto;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow {
+  top: 40;
+  left: 0;
+  margin-top: 0.71em;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow {
+  left: 0;
+  bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: -0.71em;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow {
+  left: 0;
+  width: 0.71em;
+  height: 1em;
+  margin-top: 4px;
+  margin-left: -0.71em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow {
+  right: 0;
+  width: 0.71em;
+  height: 1em;
+  margin-top: 4px;
+  margin-right: -0.71em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow::before {
+  transform-origin: 0 0;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow::before {
+  transform-origin: 100% 100%;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow::before {
+  transform-origin: 100% 0;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow::before {
+  transform-origin: 20% 100%;
+}
+.MuiTooltip-tooltip {
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.625rem;
+  max-width: 300px;
+  word-wrap: break-word;
+  /* font-family: "Roboto", "Helvetica", "Arial", sans-serif; */
+  font-weight: 500;
+  line-height: 1.4em;
+  border-radius: 4px;
+  background-color: rgba(105, 186, 218, 0.9) !important;
+}
+.MuiTooltip-tooltipArrow {
+  margin: 0;
+  position: relative;
+}
+.MuiTooltip-arrow {
+  color: rgba(105, 186, 218, 0.9) !important;
+  width: 1em;
+  height: 0.71em;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.MuiTooltip-arrow::before {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  content: "";
+  display: block;
+  transform: rotate(45deg);
+  background-color: currentColor;
+}
+.MuiTooltip-touch {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.14286em;
+}
+.MuiTooltip-tooltipPlacementLeft {
+  margin: 0 24px ;
+  transform-origin: right center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementLeft {
+    margin: 0 14px;
+  }
+  .mobHowToUse{
+    display: none !important;
+    position: fixed !important;
+        top: 0 !important;
+        height: 100vh !important;
+        width: 100% !important;
+        background-color: white !important;
+        z-index:2 !important;
+  }
+  /* #howToUSE{
+ margin-top: -100%;
+  } */
+}
+.MuiTooltip-tooltipPlacementRight {
+  margin: 0 24px;
+  transform-origin: left center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementRight {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementTop {
+  margin: 24px 0;
+  transform-origin: center bottom;
+}
+/* @media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementTop {
+    margin: 14px 0;
+  }
+}
+.MuiTooltip-tooltipPlacementBottom {
+  margin: 24px 0;
+  transform-origin: center top;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementBottom {
+    margin: 14px 0;
+  }
+} */
+ul.MuiList-root.NestedList-root-21.MuiList-padding{
+  display: none;
+}
+#laptop2in1,#laptop{
+  width: 245px;
+    margin-left: -3px;
+    padding-left: 39px;
+    margin-right: 0px;
+}
+@media only screen and (max-width: 725px){
+  ul.MuiList-root.jss7.MuiList-padding {
+    display: none;
+    visibility: hidden;
+  }
+ 
+}
+
+@media screen and (max-width: 600px){
+  .ProductName{
+    margin-top: 50%;
+    width: 270px;
+    margin-left: -91px;
+    font-size: 16px;
+    margin-top: 50px;
+    margin-left: -37%;
+  }
+  .threebtns > div {
+    display: flex !important;;
+    justify-content: center;
+  }
+  #howToUSE {
+    /* display: none;
+    position: fixed !important;
+        top: 0 !important;
+        height: 100vh !important;
+        width: 100% !important;
+        background-color: white !important;
+        z-index:2 !important; */
+    left: 0px;
+}
+  ul.MuiList-root.jss7.MuiList-padding {
+    display: none;
+    visibility: hidden;
+  }
+  #footerControls {
+    position: absolute !important;;
+    left: 50.4% !important;;
+    transform: translate(-1%, -50%) !important;;
+    /* min-width: 100%; */
+    bottom: -61px;
+  }
+  .MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-3{
+    padding-top: 0 !important;
+  }
+  ul.MuiList-root.jss7.MuiList-padding {
+    display: none;
+    visibility: hidden;
+  }
+
+  .MuiPaper-root.MuiDrawer-paper.makeStyles-drawerPaper-2.MuiDrawer-paperAnchorBottom.MuiDrawer-paperAnchorDockedBottom.MuiPaper-elevation0{
+    max-width: 105vh;
+    height: 30%;
+  
+  }
+  .MuiDrawer-paperAnchorBottom{
+    top: 50% !important;
+    overflow: scroll;
+    overflow-x: hidden;
+    
+  }
+  /* .MuiPaper-root.MuiDrawer-paper.MuiDrawer-paperAnchorBottom.MuiDrawer-paperAnchorDockedBottom.MuiPaper-elevation0 {
+    overflow: visible;
+  } */
+  .CloseBtn {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    z-index: 1;
+  }
+  .useImg{
+    height: 498px !important;
+        width: 381px !important;
+        top: 185px !important;
+  }
+  .closeIcon{
+    margin-right: -5px !important;
+  }
+  .MainMenu{
+    bottom: -558px !important;
+  }
+  #loading{
+    width: auto;
+}
+#loading #zoom, #loading #move, #loading #rotate{
+    width: max-content;
+}
+  .maniHeader .MuiAvatar-root.MuiAvatar-square {
+    width: 250px !important;
+    margin-top: -25px !important;
+    height: 32px !important;
+    margin-left: 39px !important;
+    overflow: visible !important;
+}
+.dellLogo img.MuiAvatar-img{
+  height: 100% !important;
+    width: 66% !important;
+    position: absolute !important;
+    left: -18px !important;
+    top: 5px !important;
+    object-fit: contain !important;
+}
+}
+
+/* @media only screen 
+and (device-width: 390px) 
+and (device-height: 844px) 
+and (-webkit-device-pixel-ratio: 3) { 
+  .MuiDrawer-paperAnchorBottom{
+    top:47% !important;
+    overflow: scroll;
+    padding-top: 40px;
+  }
+
+} */
+@media only screen and (max-width : 380px){
+  button.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.makeStyles-margin-37.MuiButton-outlinedPrimary{
+    width: 115px !important;
+    margin: 4px !important;
+  }
+  span.MuiButton-label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: capitalize;
+    letter-spacing: 0.005em;
+}
+ul.MuiList-root.jss7.MuiList-padding {
+  display: none;
+  visibility: hidden;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.makeStyles-margin-37.MuiButton-outlinedPrimary{
+  width: 115px !important;
+  margin: 4px !important;
+}
+ul.MuiList-root.jss7.MuiList-padding {
+  display: none;
+  visibility: hidden;
+}
+}
+@media only screen and (max-width : 411px){
+  #footerControls {
+    position: absolute !important;
+    left: 50.4% !important;
+    transform: translate(-1%, -50%) !important;
+    /* min-width: 100%; */
+    bottom: -61px;
+  }
+  .NestedList-root-25,.MuiList-padding,.ul.MuiList-root.jss7.MuiList-padding,.ul.MuiList-root.NestedList-root-89.MuiList-padding {
+   
+    display: none !important;
+}
+}
+@media only screen and (max-width : 375px){
+#footerControls {
+  position: absolute !important;
+  left: 50.4% !important;
+  transform: translate(-1%, -50%) !important;
+  /* min-width: 100%; */
+  bottom: -61px;
+}
+.NestedList-root-25,.MuiList-padding,.ul.MuiList-root.jss7.MuiList-padding,.ul.MuiList-root.NestedList-root-89.MuiList-padding {
+   
+  display: none !important;
+}
+}
+@media only screen and (max-width : 360px){
+  #footerControls {
+    position: absolute !important;
+    left: 50.4% !important;
+    transform: translate(-3%, -50%) !important;
+    /* min-width: 100%; */
+    bottom: -61px;
+}
+.NestedList-root-25,.MuiList-padding,.ul.MuiList-root.jss7.MuiList-padding,.ul.MuiList-root.NestedList-root-89.MuiList-padding {
+   
+  display: none !important;
+}
+}
+/* @media only screen and (max-height : 450px){
+  #howToUSE {
+    
+    height: 358px;
+    width: 301px;
+    top: 185px;
+    background-color: red;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.25, 0.25, 0, 1);
+    position:absolute;
+    left:272px;
+    top:0px;
+  }
+} */
+
+.makeStyles-margin-37,.MuiButton-outlinedPrimar {
+  margin: 21px 6px 20px !important;
+  font-size: 0.7em;
+  border-radius: 0.1em;
+  text-transform: none;
+  width: 113px !important;
+}
+
+
+@media screen and (min-width: 950px) and (max-width: 1100px){
+
+  .mobthreeButtonsIpad {
+    font-family: Roboto !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.005em !important;
+    background-color: #ffffff !important;
+    height: 47px !important;
+    width: 130px !important;
+    margin: 21px 14px 20px !important;
+    border: 2px solid #CCCCCC !important;
+}
+.ul.MuiList-root.jss39.MuiList-padding{
+  display: none;
+  visibility: hidden;
+}
+  /* .button.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.jss37.MuiButton-outlinedPrimary{
+
+  } */
+  .makeStyles-margin-37,.MuiButton-outlinedPrimar {
+    margin: 21px 6px 20px !important;
+    font-size: 0.7em;
+    border-radius: 0.1em;
+    text-transform: none;
+  }
+  ul.MuiList-root.NestedList-root-21.MuiList-padding{
+    display: none;
+  }
+  .zoombarandRotateContainer {
+    width: 387px;
+    height: 50px;
+    margin: auto;
+}
+.MuiPaper-root.MuiDrawer-paper.makeStyles-drawerPaper-2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0 {
+  border: none;
+  /* background: #f8f6f6; */
+  top: 130px !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 72%;
+}
+.openCloseBar {
+  position: absolute !important;
+  left: 0 !important;
+  top: 186px !important;
+  z-index: -1 !important;
+  border: 1px solid #E1E1E1 !important;
+  height: 488px !important;
+  width: 60px !important;
+  background-color: #FFFFFF !important;
+}
+.ProductName {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 0px;
+  line-height: 40px;
+  margin-top: 8px;
+  color: #000000;
+  margin-left: -22px;
+}
+.NestedList-root-25,.MuiList-padding,.ul.MuiList-root.jss7.MuiList-padding,.ul.MuiList-root.NestedList-root-89.MuiList-padding {
+   
+  display: none !important;
+}
+/* .MuiButton-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  width: 113px !important;
+  padding: 5px 15px;
+} */
+}
+@media screen and (min-width: 800px) and (max-width: 950px){
+  .mobthreeButtonsIpad {
+    font-family: Roboto !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.005em !important;
+    background-color: #ffffff !important;
+    height: 47px !important;
+    width: 117px !important;
+    margin: 21px 8px 20px !important;
+    border: 2px solid #CCCCCC !important;
+}
+.ul.MuiList-root.jss39.MuiList-padding{
+  display: none;
+  visibility: hidden;
+}
+.zoombarandRotateContainer {
+  width: 380px;
+  height: 50px;
+  margin: auto;
+}
+.NestedList-root-25,.MuiList-padding,.ul.MuiList-root.jss7.MuiList-padding,.ul.MuiList-root.NestedList-root-89.MuiList-padding {
+   
+  display: none !important;
+}
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px){
+  .zoombarandRotateContainer {
+    width: 377px;
+    height: 50px;
+    margin: auto;
+}
+
+.mobthreeButtonsIpad {
+  font-family: Roboto !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  letter-spacing: 0.005em !important;
+  background-color: #ffffff !important;
+  height: 47px !important;
+  width: 130px !important;
+  margin: 21px 6px 20px !important;
+  border: 2px solid #CCCCCC !important;
+}
+.ul.MuiList-root.jss39.MuiList-padding{
+  display: none;
+  visibility: hidden;
+}
+.MuiPaper-root.MuiDrawer-paper.makeStyles-drawerPaper-2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0 {
+  border: none;
+  /* background: #f8f6f6; */
+  top: 130px !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 69%;
+}
+.openCloseBar {
+  position: absolute !important;
+  left: 0 !important;
+  top: 186px !important;
+  z-index: -1 !important;
+  border: 1px solid #E1E1E1 !important;
+  height: 588px !important;
+  width: 60px !important;
+  background-color: #FFFFFF !important;
+}
+.ProductName {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 40px;
+  margin-top: 0;
+  margin-bottom: 0px;
+  color: #000000;
+  /* margin-left: 89px; */
+}
+.NestedList-root-25,.MuiList-padding,.ul.MuiList-root.jss7.MuiList-padding,.ul.MuiList-root.NestedList-root-89.MuiList-padding {
+   
+  display: none !important;
+}
+}
+
+
+@media screen and (min-width: 600px)  and (max-width: 960px) and (orientation : landscape){
+  .openCloseBar {
+    position: absolute !important;
+    left: 0 !important;
+    top: -1px !important;
+    z-index: -1 !important;
+    border: 1px solid #E1E1E1 !important;
+    height: 588px !important;
+    width: 40px !important;
+    background-color: #FFFFFF !important;
+  }
+  .MuiButton-outlined {
+    /* border: 1px solid rgba(0, 0, 0, 0.23); */
+    padding: 5px 0px !important;
+  }
+  #closeIcon{
+    margin-right: 35px !important;
+    margin-top: -24px !important;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    height: 32px;
+    float: right;
+    width: 32px;
+    }
+    .closeUseMob {
+      position: fixed;
+      right: 8px !important;
+      top: 7px !important;
+      color: #CCCCCC;
+      height: 32px;
+      width: 32px;
+      cursor: pointer;
+  }
+  .openCloseBtn {
+    display: block !important;
+    /* border: 1px solid rgb(225, 225, 225) !important; */
+    position: absolute;
+    border: none !important;
+    border-top: 1px solid #e5e5e5 !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+    padding: 0px !important;
+    padding-left: 34px !important;
+    top: -49px !important;
+    padding-top: 7px !important;
+    /* margin-left: 13px !important; */
+    margin: 0px !important;
+    margin-top: 31px !important;
+    width: 60px !important;
+    border-radius: 0 !important;
+    left: -21px !important;
+}
+.closeBtn{
+  display: block !important;
+  border: 1px solid #E1E1E1 !important;
+  position: absolute !important;
+  top: 0px !important;
+  left: -64px !important;
+   margin: 0 !important;
+   background-color: #FFFFFF !important;
+   padding-bottom: 16px !important;
+   width: 60px !important;
+}
+
+  .maniHeader .MuiAvatar-root.MuiAvatar-square {
+    /* height: 24.75px !important; */
+    width: 250px !important;
+    margin-top: -56px !important;
+    height: 30px !important;
+    margin-left: 26px !important;
+}
+.dellLogo img.MuiAvatar-img {
+  height: 80% !important;
+  width: 100% !important;
+  object-fit: contain !important;
+}
+.ProductName {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 40px;
+  margin-top: -2px !important;
+  color: #000000;
+  margin-left: -169%;
+}
+.MuiPaper-root.MuiDrawer-paper.makeStyles-drawerPaper-2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0 {
+  border: none;
+  /* background: #f8f6f6; */
+  top: 0px !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  left: 42px;
+}
+#footerControls {
+  position: fixed;
+  left: 54%;
+  transform: translate(-28%, 0%);
+  bottom: 5px;
+  width: 100%;
+}
+.zoombarandRotateContainer {
+  width: 377px;
+  height: 50px;
+  margin: auto;
+  display: none;
+}
+#exploreButtton {
+  position: absolute;
+  left: 50%;
+  top: 341px;
+  transform: translate(-50%, 100%);
+  z-index: 1200;
+  cursor: pointer;
+  height: 74px;
+  width: 947px;
+  background: #80808057;
+  border-radius: 2px;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  color: #FFFFFF;
+  border: 0;
+}
+.MuiPaper-root.MuiDrawer-paper.jss2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0 {
+  border: none;
+  overflow: auto;
+  height: 95%;
+  top: 35px!important;
+  padding-right: 1px;
+  background-color: #f9f9f9;
+  z-index: 99999;
+  }
+
+}
+
+@media screen and (max-width: 736px) and (orientation : landscape){
+  .ProductName {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    /* font-size: 20px; */
+    line-height: 40px;
+    margin-top: 6px;
+    color: #000000;
+    margin-left: -153%;
+  }
+}
+@media screen and (max-width: 667px) and (orientation : landscape){
+  .ProductName {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    /* font-size: 20px; */
+    line-height: 40px;
+    margin-top: 6px;
+    color: #000000;
+    margin-left: -139%;
+  }
+  
+}
+@media screen and (max-width: 640px) and (orientation : landscape){
+  .ProductName {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    /* font-size: 20px; */
+    line-height: 40px;
+    margin-top: 6px;
+    color: #000000;
+    margin-left: -131%;
+  }
+ 
+}
+/* @media screen and (min-width: 750px) and (max-width: 1100px){
+
+.ProductName {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 27px;
+  line-height: 40px;
+  margin-top: 0px;
+  color: #000000;
+}
+} */
+#mobHowToUseText{
+  top: -21%;
+}
+.closeUseMob {
+  position: fixed;
+  right: 0px;
+    top: -22% !important;
+  color: #CCCCCC;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+@media screen and (max-width: 414px) and (orientation : portrait){
+  .ProductName{
+    
+    margin-left: -88%;
+  }
+  .ul.MuiList-root.jss39.MuiList-padding{
+    display: none;
+    visibility: hidden;
+  }
+  button.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.makeStyles-margin-19.MuiButton-outlinedPrimary {
+    height: 48px  !important;
+    width: 118px !important;
+    margin: 5px !important;
+}
+.HowToUseHeader {
+  margin-top: 56px;
+  padding-left: 47px;
+  padding-top: 10px;
+  padding-right: 110px;
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+  /* padding-top: 15px; */
+  padding-bottom: 10px;
+  border-right: 1px solid #c7c7c7;
+  font-weight: 650;
+  background-color: #fff;
+  margin-bottom: -3px;
+  cursor: pointer;
+}
+#howToUSE{
+  opacity:1;
+  display: block;
+  transition: opacity 2s;
+}
+.RadioHeader{
+  padding-left: 52px;
+  padding-right: 80px;
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-right: 1px solid #c7c7c7;
+  font-weight: 700;
+  background-color: #fff;
+}
+.Radio {
+  text-align: center;
+  padding: 2px 46px 2px;
+  margin: -7px -6px 2px;
+  cursor: pointer;
+  padding: 8px 16px 0px 21px;
+  
+}
+#laptop2in1,#laptop{
+  margin-left:-61px;
+  padding-left: 48px;
+  width:420px;
+}
+.NestedList-root-25,.MuiList-padding,.ul.MuiList-root.jss7.MuiList-padding,.ul.MuiList-root.NestedList-root-89.MuiList-padding {
+   
+  display: none !important;
+}
+}
+@media screen and (max-width: 411px) and (orientation : portrait){
+  .ProductName{
+    margin-left: -77%;
+    margin-top: 46%;
+  }
+  .ul.MuiList-root.jss39.MuiList-padding{
+    display: none;
+    visibility: hidden;
+  }
+  button.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.makeStyles-margin-19.MuiButton-outlinedPrimary {
+    height: 48px  !important;
+    width: 118px !important;
+    margin: 5px !important;
+}
+.NestedList-root-25,.MuiList-padding,.ul.MuiList-root.jss7.MuiList-padding,.ul.MuiList-root.NestedList-root-89.MuiList-padding {
+   
+  display: none !important;
+}
+
+}
+/* @media screen and (min-width: 400px) and (max-width: 536px){
+  .HowToUseHeader {
+    padding-left: 27px !important;
+    padding-right: 80px !important;
+    border-top: 1px solid #c7c7c7;
+    border-bottom: 1px solid #c7c7c7;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-right: 1px solid #c7c7c7;
+    font-weight: 650;
+    background-color: #fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+} */
+@media screen and (max-width: 375px){
+  .ProductName{
+    
+    margin-left: -103%;
+    margin-top: 70%;
+  }
+  .ul.MuiList-root.jss39.MuiList-padding{
+    display: none;
+    visibility: hidden;
+  }
+  .NestedList-root-25,.MuiList-padding,.ul.MuiList-root.jss7.MuiList-padding,.ul.MuiList-root.NestedList-root-89.MuiList-padding {
+   
+    display: none !important;
+}
+}
+@media screen and (max-width: 360px){
+  .ProductName{
+    margin-left: -114%;
+    margin-top: 80%;
+  }
+  .closeUseMob {
+    right: 15px !important;
+    top: -12.4% !important;  
+  }
+  .ul.MuiList-root.jss39.MuiList-padding{
+    display: none;
+    visibility: hidden;
+  }
+  .NestedList-root-25,.MuiList-padding,.ul.MuiList-root.jss7.MuiList-padding,.ul.MuiList-root.NestedList-root-89.MuiList-padding {
+   
+    display: none !important;
+}
+}
+/* @media screen and (min-width: 590px) and (max-width: 700px){
+  button.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.makeStyles-margin-37.MuiButton-outlinedPrimary{
+    font-family: Roboto !important;
+      font-style: normal !important;
+      font-weight: 500 !important;
+      font-size: 16px !important;
+      line-height: 24px !important;
+      letter-spacing: 0.005em !important;
+      background-color: rgb(255, 255, 255) !important;
+      height: 47px !important;
+      width: 113px !important;
+      margin: 21px 10px 20px !important;
+      border: 2px solid rgb(204, 204, 204) !important;
+  }
+  } */
+  /* button.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.makeStyles-margin-19.MuiButton-outlinedPrimary{
+    font-family: Roboto !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.005em !important;
+    background-color: rgb(255, 255, 255) !important;
+    height: 47px !important;
+    width: 153px !important;
+    margin: 21px 10px 20px !important;
+    border: 2px solid rgb(204, 204, 204) !important;
+  } */
+  @media only screen and (min-device-width: 769px) and (max-device-width: 1366px) and (orientation : landscape){
+
+  /* .MuiPaper-root.MuiDrawer-paper.makeStyles-drawerPaper-2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0 {
+    border: none;
+    top: 130px !important;
+    overflow-x: visible;
+    overflow-y: auto;
+    height: 52%;
+    background-color: #e5e5e5;
+} */
+/* #footerControls {
+  position: fixed;
+  left: 43%;
+  transform: translate(-28%, 0%);
+  bottom: 20px;
+} */
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1025px) and (orientation : portrait){
+    .threebtns{text-align: center;}
+    .zoombarandRotateContainer {
+      width: fit-content;
+      height: 50px;
+      /* margin-left: 45px; */
+      /* margin-bottom: 11px; */
+  
+    }
+    .ul.MuiList-root.jss39.MuiList-padding{
+      display: none;
+      visibility: hidden;
+    }
+   /* .zoombar{
+   } */
+   ul.MuiList-root.NestedList-root-21.MuiList-padding{
+     display: none;
+   }
+    .MuiPaper-root.MuiDrawer-paper.jss2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0{
+      border: none;
+      background: #f8f6f6;
+      top: 176px;
+      left: 64px;
+      overflow: inherit;
+      /* height: 70%; */
+      width: 280px;
+      height: 858px;
+      box-shadow: 2px 2px 2px rgb(0 43 85 / 8%), 4px 4px 4px rgb(0 43 85 / 8%), 8px 8px 8px rgb(0 43 85 / 8%);
+      background: #ffff;
+    }
+    .openCloseBtn{
+      display: block !important;
+    border: 1px solid rgb(225, 225, 225) !important;
+    position: absolute !important;
+    top: 100px !important;
+    left: 0px !important;
+    margin: 0px !important;
+    width: 60px !important;
+    }
+    .closeBtn{
+      display: block !important;
+      border: 1px solid #E1E1E1 !important;
+      position: absolute !important;
+      top: 0px !important;
+      left: -64px !important;
+       margin: 0 !important;
+       background-color: #FFFFFF !important;
+       padding-bottom: 16px !important;
+       width: 60px !important;
+    }
+    #laptop2in1,#laptop{
+      width: 230px;
+      margin-left: 0px;
+      padding-left: 49px;
+    }
+    .MuiPaper-root.MuiDrawer-paper.makeStyles-drawerPaper-2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0{
+      top: 186px !important;
+      left: 64px;
+      border-left: 1px solid #5d5858;
+      overflow: inherit;
+      width: 280px;
+      height: 860px;
+      box-shadow: 2px 2px 2px rgb(0 43 85 / 8%), 4px 4px 4px rgb(0 43 85 / 8%), 8px 8px 8px rgb(0 43 85 / 8%);
+      background: #fff;
+    }
+    svg.MuiSvgIcon-root {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      color: #006BBD;
+    }
+    #footerControls {
+      position: fixed;
+      left: 22%;
+      transform: translate(11%, 70%);
+      top: 59%;
+      /* z-index: 55555;
+      display: block; */
+  }
+  .dellLogo, .ProductName, .closeIcon {
+    margin-top: 20px;
+    font-size: 26px;
+  }
+  .openCloseBar{
+    position:absolute !important; 
+    left:0 !important; 
+    top: 100px !important;
+    z-index:-1 !important;
+    border: 1px solid #E1E1E1 !important;
+    height: 858px !important;
+     width: 60px !important; 
+    background-color:#FFFFFF !important;
+  }
+  .makeStyles-margin-37 {
+    margin: 16px !important;
+    font-size: 0.7em;
+    border-radius: 0.1em;
+    text-transform: none;
+  }
+  .NestedList-root-25,.MuiList-padding,.ul.MuiList-root.jss7.MuiList-padding,.ul.MuiList-root.NestedList-root-89.MuiList-padding {
+   
+    display: none !important;
+}
+  }
+
+  @media only screen and (min-device-width: 767px) and (max-device-width: 880px) and (orientation : portrait){
+    .openCloseBar{
+      height:659px!important;
+    }
+    .MuiPaper-root.MuiDrawer-paper.makeStyles-drawerPaper-2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0{
+      height: 659px !important;
+    }
+    .zoombarandRotateContainer {
+      width: fit-content;
+      height: 50px;
+      margin-left: -7px;
+  
+    }
+    #laptop2in1,#laptop{
+      width: 220px;
+      margin-left: -3px;
+      padding-left: 49px;
+    }
+
+    .mobthreeButtonsIpad {
+      font-family: Roboto !important;
+      font-style: normal !important;
+      font-weight: 500 !important;
+      font-size: 16px !important;
+      line-height: 24px !important;
+      letter-spacing: 0.005em !important;
+      background-color: #ffffff !important;
+      height: 47px !important;
+      width: 110px !important;
+      margin: 21px 35px 20px -9px !important;
+      border: 2px solid #CCCCCC !important;
+  }
+    .MuiPaper-root.MuiDrawer-paper.jss2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0{
+      height: 659px !important;
+
+    }
+  }
+
+  @media only screen and (min-device-width: 600px) and (max-device-width: 767px) and (orientation : portrait){
+    #footerControls {
+      position: fixed;
+      left: 9%;
+      transform: translate(11%, 70%);
+      top: 59%;
+  }
+  .openCloseBtn{
+    display: block !important;
+  border: 1px solid rgb(225, 225, 225) !important;
+  position: absolute !important;
+  top: 186px !important;
+  left: 0px !important;
+  margin: 0px !important;
+  width: 60px !important;
+  }
+  .closeBtn{
+    display: block !important;
+    border: 1px solid #E1E1E1 !important;
+    position: absolute !important;
+    top: 0px !important;
+    left: -64px !important;
+     margin: 0 !important;
+     background-color: #FFFFFF !important;
+     padding-bottom: 16px !important;
+     width: 60px !important;
+  }
+  .ul.MuiList-root.jss39.MuiList-padding{
+    display: none;
+    visibility: hidden;
+  }
+  .zoombarandRotateContainer {
+    width: 600px;
+    height: 50px;
+    margin-left: 68px;
+    /* margin-bottom: 11px; */
+  
+  }
+  
+  .MuiPaper-root.MuiDrawer-paper.jss2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0{
+    border: none;
+    background: #f8f6f6;
+    top: 186px;
+    left: 60px;
+    overflow: auto;
+    /* height: 70%; */
+    width: 280px;
+    height: 860px;
+    box-shadow: 2px 2px 2px rgb(0 43 85 / 8%), 4px 4px 4px rgb(0 43 85 / 8%), 8px 8px 8px rgb(0 43 85 / 8%);
+    background: #ffff;
+  }
+  .MuiPaper-root.MuiDrawer-paper.makeStyles-drawerPaper-2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0{
+    top: 186px !important;
+    left: 60px;
+    border-left: 1px solid #5d5858;
+    overflow: auto;
+    width: 280px;
+    height: 659px;
+    box-shadow: 2px 2px 2px rgb(0 43 85 / 8%), 4px 4px 4px rgb(0 43 85 / 8%), 8px 8px 8px rgb(0 43 85 / 8%);
+    background: #fff;
+  }
+  svg.MuiSvgIcon-root {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    color: #006BBD;
+  }
+  
+  .dellLogo, .ProductName, .closeIcon {
+  margin-top: 45px;
+  font-size: 24px;
+  }
+  .maniHeader .MuiAvatar-root.MuiAvatar-square {
+    /* height: 24.75px !important; */
+    width: 250px !important;
+    margin-top: -25px !important;
+    height: 32px !important;
+    margin-left: 21px !important;
+  }
+  .openCloseBar{
+    position:absolute !important; 
+    left:0 !important; 
+    top: 186px !important;
+    z-index:-1 !important;
+    border: 1px solid #E1E1E1 !important;
+    height: 658px !important;
+     width: 60px !important; 
+    background-color:#FFFFFF !important;
+  }
+  button.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.makeStyles-margin-37.MuiButton-outlinedPrimary{
+    width: 113px !important;
+      margin: 21px 9px 20px !important;
+  }
+  /* #mobthreeButtonsIpad{
+    font-family: Roboto !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.005em !important;
+    /* background-color: #7a6161 !important; */
+   /* height: 47px !important;
+    width: 143px !important;
+   margin: 21px 19px 20px 19px !important;
+    border: 2px solid #CCCCCC !important; */
+  /* }  */
+  .mainDiv button{
+    font-family: Roboto !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.005em !important;
+    /* background-color: #7a6161 !important; */
+   height: 47px !important;
+    width: 143px !important;
+   margin: 21px 19px 20px 19px !important;
+    border: 2px solid #CCCCCC !important;
+  }
+  .makeStyles-margin-37 {
+    margin: 16px !important;
+    font-size: 0.7em;
+    border-radius: 0.1em;
+    text-transform: none;
+  }
+  .NestedList-root-25,.MuiList-padding,.ul.MuiList-root.jss7.MuiList-padding,.ul.MuiList-root.NestedList-root-89.MuiList-padding {
+   
+    display: none !important;
+}
+
+  }
+ 
+
+.NestedList-root-25,.MuiList-padding,.ul.MuiList-root.jss7.MuiList-padding,.ul.MuiList-root.NestedList-root-89.MuiList-padding {
+   
+    display: none !important;
+}
+
+.oneFiftyPercent .menuBtnoneFiftyPercent{
+  display: block !important;
+    /* border: 1px solid rgb(225, 225, 225) !important; */
+    position: absolute;
+    border: none !important;
+    border-top: 1px solid #e5e5e5 !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+    padding: 0px !important;
+    padding-left: 34px !important;
+    top: -120px !important;
+    padding-top: 7px !important;
+    /* margin-left: 13px !important; */
+    margin: 0px !important;
+    width: 60px !important;
+    border-radius: 0 !important;
+    left: -21px !important;
+
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #c5c4c4;
+outline: 1px solid rgb(215, 225, 235);
+}
+
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    *:focus {
+      outline: none;
+  }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  
+{ 
+  *:focus {
+    outline: none;
+}
+
+/* #howToUSE{transform: scale(0.8) translate(5px);} */
+
+}
+
+@media only screen 
+and (min-device-width : 640px) 
+and (max-device-width : 768px)  
+{ 
+  *:focus {
+    outline: none;
+}
+
+#howToUSE{ transform: scale(1.0) translate(0px,0px);}
+
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 825px)  
+and (orientation: landscape){ 
+  *:focus {
+    outline: none;
+}
+
+/* #howToUSE{ transform: scale(0.6) translate(-91px,-148px);} */
+
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  
+and (orientation: portrait) {
+
+#howToUSE{transform: scale(0.8) translate(0px);top: 52px!important;}
+
+}
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    #howToUSE{top: 52px!important;height: 400px!important;left: 357px !important; transform: scale(0.8) translate(-00px);}
+}
+
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    #howToUSE{top: 56px!important;height: 400px!important;transform: scale(0.8) translate(-30px);}
+}
+
+
+@media only screen 
+and (min-height: 640px)
+  and (max-height: 665px)
+  and (orientation: portrait) 
+  {
+    .closeUseMob {
+      right: 0px;
+          top: -56px ;
+      
+  }
+  
+}
+@media only screen 
+and (min-height: 666px)
+  and (max-height: 667px)
+  and (orientation: portrait) 
+  {
+    .closeUseMob {
+      right: 0px !important;
+      top: -14.5% !important;
+      
+    } 
+ 
+}
+@media only screen 
+and (min-height: 668px)
+  and (max-height: 731px)
+  and (orientation: portrait) 
+  {
+    .closeUseMob {
+    right: 0px;
+    top: -20% !important;
+  }
+  
+  }
+  @media only screen 
+and (min-height: 732px)
+  and (max-height: 736px)
+  and (orientation: portrait) 
+  {
+    
+  .closeUseMob {
+    right: 0px !important;
+    top: -20% !important;
+    
+  } 
+ 
+}
+@media only screen 
+and (min-height: 737px)
+  and (max-height: 812px)
+  and (orientation: portrait) 
+  {
+    .closeUseMob {
+      right: 0px ;
+      top: -27% !important;
+      
+  }
+ 
+}
+  @media only screen 
+and (min-height: 813px)
+  and (max-height: 823px)
+  and (orientation: portrait) 
+  {
+    .closeUseMob {
+      right: 0px;
+      top: -27% !important;
+      
+  } 
+ 
+  }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    #animation1 {
+      display:none;
+    }
+  }
+  #howToUSE + #howToUSE {z-index: -99;display:none;} 
+  #onlyForDesktopResizeOpen, #onlyForDesktopResizeClose {
+    display: block !important;
+    /* border: 1px solid rgb(225, 225, 225) !important; */
+    position: absolute;
+    border: none !important;
+    border-top: 1px solid #e5e5e5 !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+    padding: 0px !important;
+    padding-left: 34px !important;
+    top: -31px !important;
+    padding-top: 7px !important;
+    /* margin-left: 13px !important; */
+    margin: 0px !important;
+    margin-top: 31px !important;
+    width: 60px !important;
+    border-radius: 0 !important;
+    left: -21px !important;
+}

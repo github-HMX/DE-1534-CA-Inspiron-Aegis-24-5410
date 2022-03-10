@@ -1,0 +1,134 @@
+{
+    "displaylayers": [ "Backlit_ON_OFF", "GP_ON_OFF", "UntitledGroup55", "dynamic", "screen_fill", "screen_rotate", "silver_check" ],
+    "positions": {
+        "Close_Cam_F158_Close": {
+            "doffocusdist": 5.000000,
+            "fovy": 22.618999,
+            "pos": [ 0.658941, 0.380717, 3.173206, 3.897657, 108.930893, 0.005745 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Close_Cam_F158_Close1": {
+            "doffocusdist": 5.000000,
+            "fovy": 21.457001,
+            "pos": [ 0.696634, -0.142797, 1.049385, 8.578363, 99.319260, 0.024158 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F01_FL": {
+            "doffocusdist": 5.000000,
+            "fovy": 37.849300,
+            "pos": [ 0.996696, -0.039647, 1.371178, 10.144666, 72.316101, 0.001571 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F100_Stand": {
+            "doffocusdist": 5.000000,
+            "fovy": 22.619900,
+            "pos": [ 0.571615, 0.157087, -0.324665, 7.598965, 114.337540 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F122_Flat": {
+            "doffocusdist": 5.000000,
+            "fovy": 22.619900,
+            "pos": [ 7.225852, -0.874532, 6.908714, 3.567253, 105.106628, 1.088040 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F194_L": {
+            "doffocusdist": 5.000000,
+            "fovy": 9.354840,
+            "pos": [ 7.911047, -0.037239, -0.163385, 7.970252, 205.087280 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F194_R": {
+            "doffocusdist": 5.000000,
+            "fovy": 9.354000,
+            "pos": [ 4.655326, -0.037218, -0.794279, 7.910544, 204.225113 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F194_Rear": {
+            "doffocusdist": 5.000000,
+            "fovy": 13.039600,
+            "pos": [ 3.141597, 0.000831, -0.000001, 8.305112, 180.463318 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F196_JD": {
+            "doffocusdist": 5.000000,
+            "fovy": 17.492300,
+            "pos": [ 6.283192, 0.085084, -0.018400, 9.144564, 136.080399 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F198_Top": {
+            "doffocusdist": 5.000000,
+            "fovy": 24.472200,
+            "pos": [ 0.000000, 1.539380, 0.012002, 0.514965, 116.971291 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F25_L": {
+            "doffocusdist": 5.000000,
+            "fovy": 9.354840,
+            "pos": [ 7.911002, -0.037246, -0.163385, 7.970252, 205.087280 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Tent_Cam_F53_Tent": {
+            "doffocusdist": 5.000000,
+            "fovy": 20.407000,
+            "pos": [ 3.763798, -0.003219, 0.476604, 10.331213, 117.666458, -0.007095 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "hmxBack": {
+            "fovy": 37.849300,
+            "pos": [ 3.141600, 0.000004, 0.000000, 0.000000, 361.838226 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "hmxFront": {
+            "fovy": 37.849300,
+            "pos": [ 6.283167, 0.000024, 0.000000, 0.000000, 361.838226 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "hmxHero": {
+            "fovy": 37.849300,
+            "pos": [ 0.996715, -0.039676, 1.371178, 10.144666, 72.316101, 0.001583 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "hmxLeft": {
+            "fovy": 37.849300,
+            "pos": [ -1.570759, 0.000019, 0.000000, 0.000000, 361.838226 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "hmxRight": {
+            "fovy": 37.849300,
+            "pos": [ 1.570788, 0.000039, 0.000000, 0.000000, 361.838226 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "hmxTop": {
+            "fovy": 37.849300,
+            "pos": [ 3.141593, 1.539380, 0.000000, 0.000000, 361.838226 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "side1": {
+            "doffocusdist": 5.000000,
+            "fovy": 11.051200,
+            "pos": [ 1.570788, 0.000000, 2.554076, -0.025579, 1000.429993 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        }
+    },
+    "states": [ "Backlit_OFF", "Backlit_ON", "Black_Close_mode", "Black_FL_mode", "Black_Flat_mode", "Black_Front_mode", "Black_L_mode", "Black_R_mode", "Black_Rear_mode", "Black_Stand_mode", "Black_Tablet_mode", "Black_Tent_mode", "Black_Top_mode", "Carbon_Black", "Carbon_Black_", "Carbon_Black_old", "Carbon_Fibre_180A", "Carbon_Fibre_180A_old", "GP_close", "GP_open", "GP_stand", "GP_tent", "all_GP_off", "Silver", "Silver_180", "Silver_180_", "Silver_180_old", "Silver_Close_mode", "Silver_FL_mode", "Silver_Flat_mode", "Silver_Front_mode", "Silver_L_mode", "Silver_R_mode", "Silver_Rear_mode", "Silver_Stand_mode", "Silver_Tablet_mode", "Silver_Tent_mode", "Silver_Top_mode", "UntitledGroup53", "UntitledGroup56", "dynamic_close", "dynamic_open", "dynamic_reset", "screenfill_180", "screenfill_360", "screen_180", "screen_360" ],
+    "ver": "v2.0.484"
+}
