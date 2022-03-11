@@ -39,9 +39,10 @@
 			"touchControl": "Touch Control", 
 			"mouseControl": "Mouse Control",
 			
-			"port1": "Universal audio jack",
-			"port2": "USB 3.2 with PowerShare",
-			"port4": "Noble wedge lock slot",
+			"port1": "Infrared Camera",
+			"port2": "Camera",
+			"port3": "Infrared emitter",
+			"port4": "Camera-status light",
 			"port5": "HDMI",
 			"port6": "USB Type-C with power delivery",
 			"port7": "USB Type-C with power delivery",
@@ -49,7 +50,6 @@
             "port10": "Modernized keyboard design",
             "port9": "New click pad featuring quiet click and larger surface area for precise, glass-like feel",
 			"port11": "RGB HD camera with Dell Privacy Shutter",
-			"port3": "USB 3.2",
 			"port12": "Available with FHD or 4K with low blue light",
 			"port13": "Optional Premium Active Pen",
             "port14": "Or"

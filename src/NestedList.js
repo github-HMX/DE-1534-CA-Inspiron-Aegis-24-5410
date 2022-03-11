@@ -231,7 +231,7 @@ class NestedList extends React.Component {
 
         //Check if it is a Camera
         for(var c=0; c<this.state.cameraName.length; c++){
-            if(e===this.state.cameraName[c]){
+            if(e===this.state.cameraName[c]){ 
                 check = true
                 
                 window.scene.gotoPosInTime(this.state.cameraPos[c].pos[0],

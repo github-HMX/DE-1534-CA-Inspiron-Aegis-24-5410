@@ -470,7 +470,7 @@
 
       }
       var config = {
-         name: "laptop-7410-chromebook"
+         name: "inspiron-24-all-in-one-&-aegis"
       }
       var hideIndexId = ["colorBtn","selectProductBtn","closeIcon","productViewBtn","feature","animswtich","positionBtn","rLeft","rRight","zoomOut","sliderRange","previousView","zoomIn","resetView","nextView","HowToUseHeader"];
 
@@ -509,6 +509,8 @@
          window.localStorage.removeItem('hotspot');
          window.scene.groupApplyState("keyboard_on");
          window.scene.groupApplyState("mouse_on");
+         window.scene.groupApplyState("keyboard_refle_on");
+         window.scene.groupApplyState("mouse_refle_on");
          GotoPosInTimeNamedValue('Render_Cam_F01_FL');
          window.localStorage.setItem('Animation','on');
          window.localStorage.setItem("laptop","laptop360");
@@ -633,7 +635,7 @@
          if (bGotoPosUpdate)
             scene.clearRefine();
          // if(!mob){
-         //if (drawn) hotspotPosAsignment();
+         if (drawn) hotspotPosAsignment();
          // }
          // document.getElementById("hotspot1").style.display="none"
          // document.getElementById("hotspot2").style.display="none"
@@ -1005,7 +1007,7 @@
          var deltaScene = delta * 4.3;
 
          if (s._nav.NavChangeDolly(deltaScene,true)) {
-            console.log(s._nav._navDolly);
+           // console.log(s._nav._navDolly);
             document.getElementById("sliderRange").value = s._nav.getZoomFactor();
             s.clearRefine();
          }
@@ -1266,21 +1268,11 @@
       var portClick;
       var setup;
       var modal;
-      var port0 = "";
-      var port1 = 'Universal audio jack';
-      var port2 = 'USB 3.2 with PowerShare';
-      var port3 = 'USB 3.2';
-      var port4 = 'Noble wedge lock slot';
-      var port5 = 'HDMI';
-      var port6 = 'USB Type-C with power delivery';
-      var port7 = 'USB Type-C with power delivery';
-      var port8 = 'Multimedia/Flash card reader uSD 4.0';
-      var port9 = 'New click pad featuring quiet click and larger surface area for precise, glass-like feel';
-      var port10 = 'Modernized keyboard design';
-      var port11 = 'RGB HD camera with Dell Privacy Shutter';
-      var port12 = ' Available with FHD or 4K with low blue light';
-      var port13 = 'Optional Premium Active Pen';
 
+      var port1 = 'Infrared Camera';
+      var port2 = 'Camera';
+      var port3 = 'Infrared emitter';
+      var port4 = 'Camera-status light';
 
       function setHotSpot(divid,hotsoptName,leftNum,topNum,hotspotopacityspeed,text,maxwidth,fontsize,txtAligns) {
          var viewCameraZV = [sceneViewMatrix[8],sceneViewMatrix[9],sceneViewMatrix[10]];
@@ -1378,116 +1370,42 @@
                   //port1 = "Power button
                   // console.log('by');
 
-                  HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Right_hotspot_01Shape-0","",port1,"right",0,200,-15);
-                  HS_SimpleCallout([0,-100],0,-15,"DELL_360_A_Right_hotspot_0Shape2-0","",port2,"right",0,200,-15);
-                  HS_SimpleCallout([0,-105],0,-15,"DELL_360_A_Right_hotspot_0Shape3-0","",port3,"left",10,200,-10);
-                  HS_SimpleCallout([0,60],0,-10,"DELL_360_A_Right_hotspot_0Shape4-0","",port4,"center",10,200,0);
+                  // HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Right_hotspot_01Shape-0","",port1,"right",0,200,-15);
+                  // HS_SimpleCallout([0,-100],0,-15,"DELL_360_A_Right_hotspot_0Shape2-0","",port2,"right",0,200,-15);
+                  // HS_SimpleCallout([0,-105],0,-15,"DELL_360_A_Right_hotspot_0Shape3-0","",port3,"left",10,200,-10);
+                  // HS_SimpleCallout([0,60],0,-10,"DELL_360_A_Right_hotspot_0Shape4-0","",port4,"center",10,200,0);
 
                } else if (currentPosition == 'right') {
                   //console.log('hello');
-                  HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Left_hotspot_0Shape1-0","",port5,"right",-5,200,-10);
-                  HS_SimpleCallout([0,-100],0,-20,"DELL_360_A_Left_hotspot_0Shape2-0","",port6,"left",10,300,0);
-                  HS_SimpleCallout([0,-70],0,-20,"DELL_360_A_Left_hotspot_0Shape3-0","",port7,"left",10,350,-10);
-                  HS_SimpleCallout([0,40],0,-15,"DELL_360_A_Left_hotspot_0Shape4-0","",port8,"left",10,200,-30);
+                  // HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Left_hotspot_0Shape1-0","",port5,"right",-5,200,-10);
+                  // HS_SimpleCallout([0,-100],0,-20,"DELL_360_A_Left_hotspot_0Shape2-0","",port6,"left",10,300,0);
+                  // HS_SimpleCallout([0,-70],0,-20,"DELL_360_A_Left_hotspot_0Shape3-0","",port7,"left",10,350,-10);
+                  // HS_SimpleCallout([0,40],0,-15,"DELL_360_A_Left_hotspot_0Shape4-0","",port8,"left",10,200,-30);
                }
                else if (currentPosition == 'top') {
-                  HS_SimpleCallout([300,0],0,0,"DELL_360_A_Down_hotspot_0Shape1-0","",port9,"left",10,220,10);
-                  HS_SimpleCallout1([-140,0],0,0,"DELL_360_A_Down_hotspot_0Shape2-0","",port10,"right",5,0,350);
+                  // HS_SimpleCallout([300,0],0,0,"DELL_360_A_Down_hotspot_0Shape1-0","",port9,"left",10,220,10);
+                  // HS_SimpleCallout1([-140,0],0,0,"DELL_360_A_Down_hotspot_0Shape2-0","",port10,"right",5,0,350);
 
                }
                else if (currentPosition == 'front') {
+                  HS_SimpleCallout([0,50],0,-10,"hotspot_11","",port1,"right",0,200,-15);
+                  HS_SimpleCallout([0,-100],0,-17,"hotspot_12","",port2,"right",0,200,-15);
+                  // HS_SimpleCallout([0,-105],0,-17,"DELL_360_A_Right_hotspot_0Shape3-0","",port3,"left",10,200,-10);
+                  // HS_SimpleCallout([0,40],0,-10,"DELL_360_A_Right_hotspot_0Shape4-0","",port4,"center",10,200,0);
 
-
-
-                  if (colorHotspot == "laptopBlack") {
-                     //    console.log("BlackHotspot")
-
-                     HS_SimpleCallout([0,-70],0,0,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
-
-
-                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
-                     HS_DrawText([200,65],port13,"Roboto",15,"center");
-
-                     // }
-
-                  } else {
-                     // console.log("SliverHotspot")
-                     // twoInOneLaptop = true;
-                     HS_SimpleCallout([0,-70],0,0,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
-                     HS_SimpleCallout([-20,0],10,0,"Hotspot_Screen_01","",port12,"left",5,200,40);
-                     // HS_SetOriginFromHotspot("Hotspot_Screen_01");
-                     //     HS_DrawLine([-10, 0], [35, 0]); //h
-                     //     HS_DrawLine([35, 0], [35, 210]); //h2
-                     //     HS_DrawLine([0, 210], [35, 210]); //v
-                     //     ctxCallouts.fillStyle = '#d8d8d8';
-                     //     ctxCallouts.fillStyle = 'black';
-                     //     HS_DrawText([-165, 210], port12, "Roboto", 15, "center");
-                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
-                     HS_DrawText([300,65],port13,"Roboto",15,"center");
-                  }
                }
             } else {
                console.log("portrait_mob")
 
                if (currentPosition == 'left') {
-                  //port1 = "Power button
-
-                  HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Right_hotspot_01Shape-0","",port1,"right",0,200,-15);
-                  HS_SimpleCallout([0,-100],0,-17,"DELL_360_A_Right_hotspot_0Shape2-0","",port2,"right",0,200,-15);
-                  HS_SimpleCallout([0,-105],0,-17,"DELL_360_A_Right_hotspot_0Shape3-0","",port3,"left",10,200,-10);
-                  HS_SimpleCallout([0,40],0,-10,"DELL_360_A_Right_hotspot_0Shape4-0","",port4,"center",10,200,0);
 
 
                } else if (currentPosition == 'right') {
-                  //console.log('hello');
-                  HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Left_hotspot_0Shape1-0","",port5,"right",-5,200,-10);
-                  HS_SimpleCallout([0,-100],0,-20,"DELL_360_A_Left_hotspot_0Shape2-0","",port6,"left",10,300,0);
-                  HS_SimpleCallout([0,-70],0,-20,"DELL_360_A_Left_hotspot_0Shape3-0","",port7,"left",10,350,-10);
-                  HS_SimpleCallout([0,20],0,-15,"DELL_360_A_Left_hotspot_0Shape4-0","",port8,"left",10,200,-30);
                }
                else if (currentPosition == 'top') {
-                  HS_SimpleCallout([0,40],0,0,"DELL_360_A_Down_hotspot_0Shape1-0","",port9,"center",10,320,20);
-                  // HS_SimpleCallout1([-140, 0], 0, 0, "DELL_360_A_Down_hotspot_0Shape2-0", "", port10, "right", 5, 0, 350);
-
-                  HS_SetOriginFromHotspot("DELL_360_A_Down_hotspot_0Shape2-0");
-                  HS_DrawLine([0,0],[-90,0]); //h
-                  HS_DrawLine([-90,0],[-90,-175]); //h2
-                  HS_DrawLine([0,-175],[-90,-175]); //v
-                  ctxCallouts.fillStyle = '#d8d8d8';
-                  ctxCallouts.fillStyle = 'black';
-                  HS_DrawText([105,-175],port10,"Roboto",15,"center");
                }
                else if (currentPosition == 'front') {
 
-
-
-                  if (colorHotspot == "laptopBlack") {
-                     console.log("BlackHotspot")
-
-                     HS_SimpleCallout([0,-70],0,0,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
-
-
-                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
-                     HS_DrawText([200,65],port13,"Roboto",15,"center");
-
-                     // }
-
-                  } else {
-                     console.log("SliverHotspot")
-                     // twoInOneLaptop = true;
-                     HS_SimpleCallout([0,-70],0,-22,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
-                     // HS_SimpleCallout([-20, 0], 10, 0, "Hotspot_Screen_01", "", port12, "left", 5, 200, 40); 
-                     HS_SetOriginFromHotspot("Hotspot_Screen_01");
-                     HS_DrawLine([-10,0],[35,0]); //h
-                     HS_DrawLine([35,0],[35,190]); //h2
-                     HS_DrawLine([0,190],[35,190]); //v
-                     ctxCallouts.fillStyle = '#d8d8d8';
-                     ctxCallouts.fillStyle = 'black';
-                     HS_DrawText([-165,190],port12,"Roboto",15,"center");
-
-                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
-                     HS_DrawText([170,45],port13,"Roboto",15,"center");
-                  }
                }
             }
          }
@@ -1497,205 +1415,50 @@
 
                if (currentPosition == 'front') {
 
-
-
-                  if (colorHotspot == "laptopBlack") {
-                     console.log("BlackHotspot")
-
-                     HS_SimpleCallout([0,-50],0,-30,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
-
-                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
-                     HS_DrawText([320,65],port13,"Roboto",15,"center");
-                     // }
-
-                  } else {
-                     console.log("SliverHotspot")
-                     // twoInOneLaptop = true;
-
-                     HS_SimpleCallout([0,-50],0,-30,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
-
-                     HS_SimpleCallout([-20,0],10,0,"Hotspot_Screen_01","",port12,"left",5,120,40);
-                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
-                     HS_DrawText([300,65],port13,"Roboto",15,"center");
-                  }
                } else if (currentPosition == 'top') {
-                  HS_SimpleCallout([270,0],0,0,"DELL_360_A_Down_hotspot_0Shape1-0","",port9,"left",10,140,22);
-                  HS_SetOriginFromHotspot("DELL_360_A_Down_hotspot_0Shape2-0");
-                  HS_DrawLine([0,0],[-120,0]); //h
-                  HS_DrawLine([-120,0],[-120,-240]); //h2
-                  HS_DrawLine([0,-240],[-120,-240]); //v
-                  ctxCallouts.fillStyle = '#d8d8d8';
-                  ctxCallouts.fillStyle = 'black';
-                  HS_DrawText([105,-240],port10,"Roboto",15,"center",250);
+                 
                }
                else if (currentPosition == 'left') {
-                  //port1 = "Power button
-                  // console.log('by');
-
-                  HS_SimpleCallout([0,50],0,-15,"DELL_360_A_Right_hotspot_01Shape-0","",port1,"right",0,200,-15);
-
-                  HS_SimpleCallout([0,-100],0,-25,"DELL_360_A_Right_hotspot_0Shape2-0","",port2,"right",0,200,-15);
-
-                  HS_SimpleCallout([0,-105],0,-25,"DELL_360_A_Right_hotspot_0Shape3-0","",port3,"left",0,200,10);
-
-                  HS_SimpleCallout([0,40],0,0,"DELL_360_A_Right_hotspot_0Shape4-0","",port4,"left",0,150,20);
 
                } else if (currentPosition == 'right') {
-                  //console.log('hello');
-
-                  HS_SimpleCallout([0,50],0,-5,"DELL_360_A_Left_hotspot_0Shape1-0","",port5,"right",9,200,22);
-
-                  HS_SimpleCallout([0,-100],0,0,"DELL_360_A_Left_hotspot_0Shape2-0","",port6,"left",5,300,0);
-
-                  HS_SimpleCallout([0,-70],0,0,"DELL_360_A_Left_hotspot_0Shape3-0","",port7,"left",5,350,-10);
-
-                  HS_SimpleCallout([0,40],0,0,"DELL_360_A_Left_hotspot_0Shape4-0","",port8,"left",0,400,10);
                }
             } else {
                console.log("portrait_ipad");
 
                if (currentPosition == 'left') {
-                  //port1 = "Power button
-
-                  HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Right_hotspot_01Shape-0","",port1,"right",0,200,-15);
-                  HS_SimpleCallout([0,-100],0,-17,"DELL_360_A_Right_hotspot_0Shape2-0","",port2,"right",0,200,-15);
-                  HS_SimpleCallout([0,-105],0,-17,"DELL_360_A_Right_hotspot_0Shape3-0","",port3,"left",10,200,-10);
-                  HS_SimpleCallout([0,60],0,-10,"DELL_360_A_Right_hotspot_0Shape4-0","",port4,"center",10,200,0);
-
 
                } else if (currentPosition == 'right') {
-                  //console.log('hello');
-                  HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Left_hotspot_0Shape1-0","",port5,"right",-5,200,-10);
-                  HS_SimpleCallout([0,-100],0,-20,"DELL_360_A_Left_hotspot_0Shape2-0","",port6,"left",10,300,0);
-                  HS_SimpleCallout([0,-70],0,-20,"DELL_360_A_Left_hotspot_0Shape3-0","",port7,"left",10,350,-10);
-                  HS_SimpleCallout([0,40],0,-15,"DELL_360_A_Left_hotspot_0Shape4-0","",port8,"left",10,200,-30);
                }
                else if (currentPosition == 'top') {
-                  HS_SimpleCallout([0,80],0,0,"DELL_360_A_Down_hotspot_0Shape1-0","",port9,"center",10,320,20);
-                  // HS_SimpleCallout1([-140, 0], 0, 0, "DELL_360_A_Down_hotspot_0Shape2-0", "", port10, "right", 5, 0, 350);
-
-                  HS_SetOriginFromHotspot("DELL_360_A_Down_hotspot_0Shape2-0");
-                  HS_DrawLine([0,0],[-100,0]); //h
-                  HS_DrawLine([-100,0],[-100,-210]); //h2
-                  HS_DrawLine([0,-210],[-100,-210]); //v
-                  ctxCallouts.fillStyle = '#d8d8d8';
-                  ctxCallouts.fillStyle = 'black';
-                  HS_DrawText([105,-210],port10,"Roboto",15,"center");
                }
                else if (currentPosition == 'front') {
 
-
-
-                  if (colorHotspot == "laptopBlack") {
-                     console.log("BlackHotspot")
-
-                     HS_SimpleCallout([0,-70],0,0,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
-
-
-                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
-                     HS_DrawText([200,65],port13,"Roboto",15,"center");
-
-                     // }
-
-                  } else {
-                     console.log("SliverHotspot")
-                     // twoInOneLaptop = true;
-                     HS_SimpleCallout([0,-50],0,-22,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
-
-                     HS_SetOriginFromHotspot("Hotspot_Screen_01");
-                     HS_DrawLine([-10,0],[35,0]); //h
-                     HS_DrawLine([35,0],[35,275]); //h2
-                     HS_DrawLine([0,275],[35,275]); //v
-                     ctxCallouts.fillStyle = '#d8d8d8';
-                     ctxCallouts.fillStyle = 'black';
-                     HS_DrawText([-165,275],port12,"Roboto",15,"center");
-
-                     HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
-                     HS_DrawText([200,65],port13,"Roboto",15,"center");
-                  }
                }
             }
          }
          else {
             // console.log("desktop");
             if (currentPosition == 'front') {
+               //setHotSpot('hotspot1demo','DELL_360_A_Left_hotspot_0Shape1-0',221,44,1.0,port0,50,18);
 
+               HS_SimpleCallout([0,-100],0,0,"hotspot_11","",port1,"right",10,200,0);
+               setHotSpot('hotspot5','hotspot_11',221,44,1.0,port2,50,18);
 
+               HS_SimpleCallout([0,-100],0,0,"hotspot_12","",port2,"left",10,300,0);
+               setHotSpot('hotspot6','hotspot_12',278,-158,1.0,port2,270,19);
 
-               if (colorHotspot == "laptopBlack") {
-                  //    console.log("BlackHotspot")
-                  setHotSpot('hotspot1demo','DELL_360_A_Front_hotspot_0Shape1-0',135,-120,1.0,port0,350,19);
+               // HS_SimpleCallout([0,-70],0,-28,"DELL_360_A_Left_hotspot_0Shape3-0","",port7,"left",10,350,-10);
+               // setHotSpot('hotspot7','DELL_360_A_Left_hotspot_0Shape3-0',265,-120,1.0,port7,270,19);
 
-                  HS_SimpleCallout([0,-70],0,-40,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
-                  setHotSpot('hotspot11','DELL_360_A_Front_hotspot_0Shape1-0',200,-130,1.0,port11,350,19);
-
-                  HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
-                  HS_DrawText([320,65],port13,"Roboto",15,"center");
-                  setHotSpot('hotspot13','DELL_360_A_hotspot_pen_01',528,62,1.0,port13,250,19);
-                  // }
-
-               } else {
-                  // console.log("SliverHotspot")
-                  // twoInOneLaptop = true;
-                  setHotSpot('hotspot1demo','DELL_360_A_Front_hotspot_0Shape1-0',135,-120,1.0,port0,350,19);
-
-                  HS_SimpleCallout([0,-70],0,-40,"DELL_360_A_Front_hotspot_0Shape1-0","",port11,"center",20,300,20);
-                  setHotSpot('hotspot11','DELL_360_A_Front_hotspot_0Shape1-0',200,-130,1.0,port11,350,19);
-
-                  HS_SimpleCallout([-20,0],10,0,"Hotspot_Screen_01","",port12,"left",5,200,40);
-                  setHotSpot('hotspot12','Hotspot_Screen_01',304,-15,1.0,port12,200,18);
-
-                  HS_SetOriginFromHotspot("DELL_360_A_hotspot_pen_01");
-                  HS_DrawText([300,65],port13,"Roboto",15,"center");
-                  setHotSpot('hotspot13','DELL_360_A_hotspot_pen_01',528,62,1.0,port13,250,19);
-               }
+               // HS_SimpleCallout([0,40],0,-25,"DELL_360_A_Left_hotspot_0Shape4-0","",port8,"left",0,400,10);
+               // setHotSpot('hotspot8','DELL_360_A_Left_hotspot_0Shape4-0',292,39,1.0,port8,320,19);
+ 
             } else if (currentPosition == 'top') {
-               // console.log("Desktop top")
-               if (window.innerWidth > 1280) {
-                  setHotSpot('hotspot1demo','DELL_360_A_Down_hotspot_0Shape1-0',730,-14,1.0,port0,400,19);
-
-                  HS_SimpleCallout([350,0],0,0,"DELL_360_A_Down_hotspot_0Shape1-0","",port9,"left",10,250,10);
-                  setHotSpot('hotspot9','DELL_360_A_Down_hotspot_0Shape1-0',730,-14,1.0,port9,300,19);
-                  HS_SimpleCallout1([-100,20],0,20,"DELL_360_A_Down_hotspot_0Shape2-0","",port10,"right",5,0,150);
-                  setHotSpot('hotspot10','DELL_360_A_Down_hotspot_0Shape2-0',-48,13,1.0,port10,200,19,"right");
-               } else {
-
-                  HS_SimpleCallout([270,0],0,0,"DELL_360_A_Down_hotspot_0Shape1-0","",port9,"left",10,150,10);
-                  HS_SimpleCallout1([-100,20],0,20,"DELL_360_A_Down_hotspot_0Shape2-0","",port10,"right",5,0,100);
-               }
             }
             else if (currentPosition == 'left') {
-               //port1 = "Power button
-               // console.log('by');
-               setHotSpot('hotspot1demo','DELL_360_A_Right_hotspot_01Shape-0',93,52,1.0,port0,170,19);
-
-               HS_SimpleCallout([0,50],0,-15,"DELL_360_A_Right_hotspot_01Shape-0","",port1,"right",0,200,-15);
-               setHotSpot('hotspot1','DELL_360_A_Right_hotspot_01Shape-0',93,52,1.0,port1,170,19);
-
-               HS_SimpleCallout([0,-100],0,-25,"DELL_360_A_Right_hotspot_0Shape2-0","",port2,"right",0,200,-15);
-               setHotSpot('hotspot2','DELL_360_A_Right_hotspot_0Shape2-0',52,-143,1.0,port2,220,19);
-
-               HS_SimpleCallout([0,-105],0,-25,"DELL_360_A_Right_hotspot_0Shape3-0","",port3,"left",0,200,10);
-               setHotSpot('hotspot3','DELL_360_A_Right_hotspot_0Shape3-0',294,-150,1.0,port3,80,19);
-
-               HS_SimpleCallout([0,60],0,-15,"DELL_360_A_Right_hotspot_0Shape4-0","",port4,"left",0,200,20);
-               setHotSpot('hotspot4','DELL_360_A_Right_hotspot_0Shape4-0',305,65,1.0,port4,200,19);
+               
 
             } else if (currentPosition == 'right') {
-               //console.log('hello');
-               setHotSpot('hotspot1demo','DELL_360_A_Left_hotspot_0Shape1-0',221,44,1.0,port0,50,18);
-
-               HS_SimpleCallout([0,50],0,-15,"DELL_360_A_Left_hotspot_0Shape1-0","",port5,"right",-5,200,-10);
-               setHotSpot('hotspot5','DELL_360_A_Left_hotspot_0Shape1-0',221,44,1.0,port5,50,18);
-
-               HS_SimpleCallout([0,-100],0,-28,"DELL_360_A_Left_hotspot_0Shape2-0","",port6,"left",10,300,0);
-               setHotSpot('hotspot6','DELL_360_A_Left_hotspot_0Shape2-0',278,-158,1.0,port6,270,19);
-
-               HS_SimpleCallout([0,-70],0,-28,"DELL_360_A_Left_hotspot_0Shape3-0","",port7,"left",10,350,-10);
-               setHotSpot('hotspot7','DELL_360_A_Left_hotspot_0Shape3-0',265,-120,1.0,port7,270,19);
-
-               HS_SimpleCallout([0,40],0,-25,"DELL_360_A_Left_hotspot_0Shape4-0","",port8,"left",0,400,10);
-               setHotSpot('hotspot8','DELL_360_A_Left_hotspot_0Shape4-0',292,39,1.0,port8,320,19);
             }
 
          }

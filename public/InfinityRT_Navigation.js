@@ -9,13 +9,13 @@ var infinityrt_navigation = function (scene, w, h) {
     this._zoomFactor = 0.0;
     this._navEnabled = true;
     this._navMode = 2;
-    this._navMinDolly = 14.0; //50
-    this._navMaxDolly = 28.0; //110
+    this._navMinDolly = 25.0; //50
+    this._navMaxDolly = 58.0; //110
     this._zoomMaxFactor = this._navMaxDolly + 1 * (this._navMinDolly-this._navMaxDolly); 
     this._zoomMinFactor = this._navMaxDolly + 0 * (this._navMinDolly-this._navMaxDolly); 
     
     //DESKTOP NAVIGATION VALUES*************************
-    this._navRotationSpeed = 0.015;
+    this._navRotationSpeed = 0.008;
     this._navDollySpeed=0.00015;
     this._navPanSpeed=0.04;
     this._navDecay = 0.3;

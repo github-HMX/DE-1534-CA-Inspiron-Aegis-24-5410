@@ -246,6 +246,17 @@ const MainMenu = (props) => {
 
 
    //MenuSelectProduct
+
+   const [onWebCam,setonWebCam] = useState(false);
+
+   const [onBack,setonBack] = useState(false);
+
+   const [onFront,setonFront] = useState(false);
+
+   const [onLeft,setonLeft] = useState(false);
+
+   const [onRight,setonRight] = useState(false);
+
    const [laptop360,setlaptop360] = useState(true);
 
    const [laptop180,setlaptop180] = useState(false);
@@ -549,6 +560,11 @@ const MainMenu = (props) => {
       }
       console.log("Webcam");
       reverseAll();
+      setonFront(false);
+      setonLeft(false);
+      setonRight(false);
+      setonWebCam(true);
+      setonBack(false);
       //   var alreadySelected = document.querySelector('.MuiAccordionDetails-root.active');
       //    alreadySelected.classList.remove('active');
       // document.getElementById('frontBtn').classList.add('active');
@@ -586,8 +602,9 @@ const MainMenu = (props) => {
 
       window.scene.groupApplyState("dynamic_reset");
 
-      GotoPosInTimeNamedValue('Render_Cam_F02_F',function () {
-         window.localStorage.setItem('hotspot','front')
+      GotoPosInTimeNamedValue('Render_Cam_F05_Cam_Closeup',function () {
+         window.scene.animPlayInTime("Main_Camera",0.2083333);
+         window.localStorage.setItem('hotspot','front');
 
          if (isNextPrevious != true) {
             // alert("isNextPrevious");
@@ -638,113 +655,22 @@ const MainMenu = (props) => {
    }
 
 
-   // const onFrontClick = (isNextPrevious) => {
 
-   //    //Update ZoomBar
-   //    var slider = document.getElementById("sliderRange");
-
-   //    if (slider != null) {
-   //       document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor();
-   //       setTimeout(function () { document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor(); },1000);
-   //    }
-   //    console.log("Front");
-   //    reverseAll();
-   //    window.scene.groupApplyState("mouse_on");
-   //    window.scene.groupApplyState("keyboard_on");
-   //    //   var alreadySelected = document.querySelector('.MuiAccordionDetails-root.active');
-   //    //    alreadySelected.classList.remove('active');
-   //    // document.getElementById('frontBtn').classList.add('active');
-
-   //    var alreadySelected = document.querySelector('.MuiAccordionDetails-root.active');
-   //    if (alreadySelected != null) {
-   //       alreadySelected.classList.remove('active');
-   //    }
-   //    document.getElementById('frontBtn').classList.add('active');
-   //    window.localStorage.setItem("position","reset");
-   //    window.scene.groupApplyState("screen_180");
-   //    window.scene.groupApplyState("GP_open");
-   //    var currentPosName = position.currentPos;
-
-
-   //    selectedButton = 'onFrontClick';
-   //    if (!(mob || isipad)) {
-   //       document.getElementById('previousView').setAttribute('aria-label','Front view');
-
-   //       document.getElementById('nextView').setAttribute('aria-label','Front view');
-   //    }
-   //    if (laptop180) {
-   //       window.scene.groupApplyState("screenfill_180");
-   //    } else {
-   //       window.scene.groupApplyState("screenfill_360");
-   //    }
-
-
-   //    window.localStorage.removeItem('hotspot');
-
-   //    window.scene.clearRefine();
-   //    resetBacklitCloseImg();
-
-   //    window.scene.groupApplyState("Backlit_OFF");
-
-   //    window.scene.groupApplyState("dynamic_reset");
-
-   //    GotoPosInTimeNamedValue('Render_Cam_F02_F',function () {
-   //       window.scene.animPlayInTime("Windsor_KM5221W",0.0833333);
-
-   //       if (isNextPrevious != true) {
-   //          // alert("isNextPrevious");
-   //          window.document.getElementById("hotspot1demo").focus();
-   //       }
-   //    })
-   //    if (!(window.isipad || window.mob)) {
-   //       document.getElementById("hotspot1").setAttribute("tabindex","-1");
-   //       document.getElementById("hotspot2").setAttribute("tabindex","-1");
-   //       document.getElementById("hotspot3").setAttribute("tabindex","-1");
-   //       document.getElementById("hotspot4").setAttribute("tabindex","-1");
-   //       document.getElementById("hotspot5").setAttribute("tabindex","-1");
-   //       document.getElementById("hotspot6").setAttribute("tabindex","-1");
-   //       document.getElementById("hotspot7").setAttribute("tabindex","-1");
-   //       document.getElementById("hotspot8").setAttribute("tabindex","-1");
-   //       document.getElementById("hotspot9").setAttribute("tabindex","-1");
-   //       document.getElementById("hotspot10").setAttribute("tabindex","-1");
-
-   //       document.getElementById("hotspot11").setAttribute("tabindex","1");
-   //       document.getElementById("hotspot12").setAttribute("tabindex","1");
-   //       document.getElementById("hotspot13").setAttribute("tabindex","1");
-   //       document.getElementById("rLeft").setAttribute("tabindex","0");
-   //       document.getElementById("rRight").setAttribute("tabindex","0");
-   //       document.getElementById("zoomOut").setAttribute("tabindex","0");
-   //       document.getElementById("sliderRange").setAttribute("tabindex","0");
-   //       document.getElementById("zoomIn").setAttribute("tabindex","0");
-   //       document.getElementById("previousView").setAttribute("tabindex","0");
-   //       document.getElementById("resetView").setAttribute("tabindex","0");
-   //       document.getElementById("nextView").setAttribute("tabindex","0");
-
-   //    }
-   //    if (position.nintyDegree == position[currentPosName]) { position.currentPos = 'nintyDegree'; return; }
-   //    if (position.currentPos == 'theatre' || position.currentPos == 'tablet') {
-   //       console.log("Theater")
-   //       window.scene.animPlayAllChildrenInTime("Latitude_7410_Chromebook_Enterprise_360_Version1",position.nintyDegree,animTime,undefined,undefined,undefined,true,position[currentPosName],10);
-   //       window.scene.animPlayAllChildrenInTime("Latitude_7410_Chromebook_Enterprise_360_Version2",position.nintyDegree,animTime,undefined,undefined,undefined,true,position[currentPosName],10);
-   //    }
-   //    else {
-   //       console.log("else")
-   //       window.scene.animPlayAllChildrenInTime("Latitude_7410_Chromebook_Enterprise_360_Version1",position.nintyDegree,animTime,undefined,undefined,undefined,true,position[currentPosName],0);
-   //       window.scene.animPlayAllChildrenInTime("Latitude_7410_Chromebook_Enterprise_360_Version2",position.nintyDegree,animTime,undefined,undefined,undefined,true,position[currentPosName],0);
-   //    }
-
-   //    window.RT_RecordEvent("Product Type","Front",window.config.name);
-   //    window.scene.clearRefine();
-   //    position.currentPos = 'nintyDegree';
-
-   // }
 
    const onFrontClick = (isNextPrevious) => {
       //Update ZoomBar
          console.log("Front");
-      reverseAll();
+         reverseAll();
+         setonFront(true);
+         setonLeft(false);
+         setonRight(false);
+         setonWebCam(false);
+         setonBack(false);
+      
       window.scene.groupApplyState("mouse_on");
       window.scene.groupApplyState("keyboard_on");
+      window.scene.groupApplyState("mouse_refle_on");
+      window.scene.groupApplyState("keyboard_refle_on");
 
       if (slider != null) {
          document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor();
@@ -838,7 +764,11 @@ const MainMenu = (props) => {
       //Update ZoomBar
       console.log("Right");
       reverseAll();
-
+      setonFront(false);
+      setonLeft(false);
+      setonRight(true);
+      setonWebCam(false);
+         setonBack(false);
       if (slider != null) {
          document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor();
          setTimeout(function () { document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor(); },1000);
@@ -876,6 +806,7 @@ const MainMenu = (props) => {
 
       GotoPosInTimeNamedValue('Render_Cam_F05_R',function () {
          window.scene.groupApplyState("keyboard_on");
+      window.scene.groupApplyState("keyboard_refle_on");
          window.scene.animPlayInTime("Windsor_KM5221W",0.2083333);
         // window.localStorage.setItem('hotspot','right')
          if (isNextPrevious != true) {
@@ -932,6 +863,11 @@ const MainMenu = (props) => {
       //Update ZoomBar
       console.log("Left");
       reverseAll();
+      setonFront(false);
+      setonLeft(true);
+      setonRight(false);
+      setonWebCam(false);
+         setonBack(false);
       var slider = document.getElementById("sliderRange");
 
       if (slider != null) {
@@ -970,6 +906,7 @@ const MainMenu = (props) => {
       GotoPosInTimeNamedValue('Render_Cam_F04_L',function () {
          //window.localStorage.setItem('hotspot','left')
          window.scene.groupApplyState("keyboard_on");
+         window.scene.groupApplyState("keyboard_refle_on");
          window.scene.animPlayInTime("Windsor_KM5221W",0.1666667);
          
          if (isNextPrevious != true) {
@@ -1024,7 +961,11 @@ const MainMenu = (props) => {
 
       console.log("Back");
       reverseAll();
-
+      setonFront(false);
+      setonLeft(false);
+      setonWebCam(false);
+      setonBack(true);
+      setonRight(false);
       var slider = document.getElementById("sliderRange");
 
       if (slider != null) {
@@ -1069,7 +1010,7 @@ const MainMenu = (props) => {
 
       GotoPosInTimeNamedValue('Render_Cam_F02_Rear',function () {
 
-         window.localStorage.setItem('hotspot','top')
+         //window.localStorage.setItem('hotspot','top')
          if (isNextPrevious != true) {
             window.document.getElementById("hotspot1demo").focus();
          }
@@ -1140,7 +1081,7 @@ const MainMenu = (props) => {
 
       var fromPos = window.localStorage.getItem('hotspot')
       window.localStorage.removeItem('hotspot');
-      window.localStorage.setItem('closeMode','on');
+      //window.localStorage.setItem('closeMode','on');
       var alreadySelected = document.querySelector('.MuiAccordionDetails-root.active');
       if (alreadySelected != null) {
          alreadySelected.classList.remove('active');
@@ -1357,6 +1298,48 @@ const MainMenu = (props) => {
    const color1Click = () => {
       reverseAll();
       console.log("color1");
+      window.scene.groupApplyState("mouse_on");
+      window.scene.groupApplyState("keyboard_on");
+      window.scene.groupApplyState("keyboard_black");
+      window.scene.groupApplyState("mouse_black");
+      window.scene.groupApplyState("keyboard_refle_on");
+         window.scene.groupApplyState("mouse_refle_on");
+
+      
+      if (onWebCam) {
+         window.scene.animPlayInTime("Main_Camera",0.2083333);
+         window.scene.groupApplyState("mouse_off");
+         window.scene.groupApplyState("keyboard_off");
+         window.scene.groupApplyState("keyboard_refle_off");
+         window.scene.groupApplyState("mouse_refle_off");
+      }
+      
+      if (onFront) {
+         window.scene.groupApplyState("mouse_on");
+         window.scene.groupApplyState("keyboard_on");
+         window.scene.groupApplyState("keyboard_black");
+         window.scene.groupApplyState("mouse_black");
+         window.scene.groupApplyState("keyboard_refle_on");
+         window.scene.groupApplyState("mouse_refle_on");
+      }
+
+      
+      if (onBack) {
+         window.scene.groupApplyState("mouse_off");
+         window.scene.groupApplyState("keyboard_off");
+         window.scene.groupApplyState("keyboard_refle_off");
+         window.scene.groupApplyState("mouse_refle_off");
+      }
+
+
+      if (onLeft || onRight) {
+         window.scene.groupApplyState("keyboard_on");
+         window.scene.groupApplyState("keyboard_refle_on");
+         window.scene.groupApplyState("mouse_off");
+         window.scene.groupApplyState("mouse_refle_off");
+         window.scene.groupApplyState("keyboard_black");
+      }
+
       window.scene.groupApplyState("Ascent_Solid");
       var alreadySelecte = document.querySelector('.MuiAccordionDetails-root.select');
       if (alreadySelecte != null) {
@@ -1405,6 +1388,42 @@ const MainMenu = (props) => {
 
    const color2Click = () => {
       reverseAll();
+      console.log("color2");
+          window.scene.groupApplyState("mouse_on");
+          window.scene.groupApplyState("keyboard_on");
+          window.scene.groupApplyState("keyboard_white");
+          window.scene.groupApplyState("mouse_white");
+          window.scene.groupApplyState("keyboard_refle_on");
+          window.scene.groupApplyState("mouse_refle_on");
+
+      if (onWebCam) {
+            window.scene.animPlayInTime("Main_Camera",0.2083333);
+            window.scene.groupApplyState("mouse_off");
+            window.scene.groupApplyState("keyboard_off");
+            window.scene.groupApplyState("keyboard_refle_off");
+            window.scene.groupApplyState("mouse_refle_off");
+      }
+      if (onFront) {
+         window.scene.groupApplyState("mouse_on");
+         window.scene.groupApplyState("keyboard_on");
+          window.scene.groupApplyState("keyboard_white");
+          window.scene.groupApplyState("mouse_white");
+          window.scene.groupApplyState("keyboard_refle_on");
+         window.scene.groupApplyState("mouse_refle_on");
+      }
+      if (onBack) {
+         window.scene.groupApplyState("mouse_off");
+         window.scene.groupApplyState("keyboard_off");
+         window.scene.groupApplyState("keyboard_refle_off");
+         window.scene.groupApplyState("mouse_refle_off");
+   }
+      if (onLeft || onRight) {
+         window.scene.groupApplyState("keyboard_on");
+         window.scene.groupApplyState("keyboard_refle_on");
+         window.scene.groupApplyState("mouse_off");
+         window.scene.groupApplyState("mouse_refle_off");
+         window.scene.groupApplyState("keyboard_white");
+      }
       console.log("color2");
       window.scene.groupApplyState("Pearl_White");
       window.localStorage.setItem("position","reset");
@@ -1620,6 +1639,9 @@ const MainMenu = (props) => {
    const reverseAll = () =>{
       window.scene.groupApplyState("mouse_off");
       window.scene.groupApplyState("keyboard_off");
+      window.scene.groupApplyState("mouse_refle_off");
+      window.scene.groupApplyState("keyboard_refle_off");
+      window.scene.animPlayInTime("Main_Camera",0);
    }
    const resetMode = () => {
       selectedButton = 'onResetMode';

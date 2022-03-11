@@ -50,6 +50,13 @@
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 1000
         },
+        "Render_Cam_F05_Cam_Closeup": {
+            "doffocusdist": 5.000000,
+            "fovy": 20.407948,
+            "pos": [ 0.000000, -0.000000, -1.249851, 38.112415, 102.790611 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
         "Render_Cam_F05_R": {
             "doffocusdist": 5.000000,
             "fovy": 33.398487,
