@@ -42,6 +42,7 @@ const MainMenu = (props) => {
    const [expandedPanel,setExpandedPanel] = useState(false);
    const [displayed,setDisplayed] = useState(false);
    const [hidden,setHidden] = useState(true);
+   const [webCam,setwebCam] = useState("./img/webCam.png");
    const [laptop360FrontImg,setLaptop360FrontImg] = useState("./img/front360.png");
    const [laptop360TopImg,setLaptop360TopImg] = useState("./img/top360.png");
    const [laptop360LeftImg,setLaptop360LefttImg] = useState("./img/360_left.png");
@@ -283,8 +284,9 @@ const MainMenu = (props) => {
       window.scene.groupApplyState("GP_open");
       window.scene.groupApplyState("dynamic_reset");
       window.scene.groupApplyState("screenfill_180");
-
-      setLaptop360FrontImg("./img/front180White.png");
+      
+      setwebCam("./img/webCamWhite.png");
+      setLaptop360FrontImg("./img/front180Black.png");
       setLaptop360TopImg("./img/top180White.png");
       setLaptop360LefttImg("./img/180_white_left.png");
       setLaptop360RightImg("./img/180_white_right.png");
@@ -489,7 +491,7 @@ const MainMenu = (props) => {
       document.getElementById("hotspot12").setAttribute("tabindex","-1");
       document.getElementById("hotspot13").setAttribute("tabindex","-1");
 
-
+      setwebCam("./img/webCam.png");
       setLaptop360FrontImg("./img/front360.png");
       setLaptop360TopImg("./img/top360.png");
       setLaptop360LefttImg("./img/360_left.png");
@@ -1360,10 +1362,11 @@ const MainMenu = (props) => {
       setOpenClose("./img/Lid_open.svg");
       setBackliteOnOff(false);
       setBacklite("./img/Backlite_Off.svg");
-      setLaptop360FrontImg("./img/front180White.png");
-      setLaptop360TopImg("./img/top180White.png");
-      setLaptop360LefttImg("./img/180_white_left.png");
-      setLaptop360RightImg("./img/180_white_right.png");
+      setwebCam("./img/webCamWhite.png");
+      setLaptop360FrontImg("./img/front180Black.png");
+      setLaptop360TopImg("./img/top180Black.png");
+      setLaptop360LefttImg("./img/180_black_left.png");
+      setLaptop360RightImg("./img/180_black_right.png");
       window.scene.groupApplyState("screenfill_180");
       window.localStorage.setItem("color","laptopSilver");
       setPort4Click(false);
@@ -1435,10 +1438,11 @@ const MainMenu = (props) => {
       setOpenClose("./img/Lid_open.svg");
       setBackliteOnOff(false);
       setBacklite("./img/Backlite_Off.svg");
-      setLaptop360FrontImg("./img/front180Black.png");
-      setLaptop360TopImg("./img/top180Black.png");
-      setLaptop360LefttImg("./img/180_black_left.png");
-      setLaptop360RightImg("./img/180_black_right.png");
+      setwebCam("./img/webCamBlack.png");
+      setLaptop360FrontImg("./img/front180White.png");
+      setLaptop360TopImg("./img/top180White.png");
+      setLaptop360LefttImg("./img/180_white_left.png");
+      setLaptop360RightImg("./img/180_white_right.png");
       window.scene.groupApplyState("screenfill_180");
       setPort2Click(false);
       setPort1Click(false);
@@ -2111,7 +2115,7 @@ const MainMenu = (props) => {
          <MenuColors name={window.finalLangues.colors} tabIndex="1" onWhiteBtnClick={color1Click} onBlackBtnClick={color2Click} expanded={expandedPanel === 'panel4'} onChanged={handleAccordionChange('panel4')} />
          {/* </userContext.Provider> */}
          <MenuPositions name={window.finalLangues.position} tabIndex="1" onTentMode={TentModeClick} onTheaterMode={TheaterModeClick} onTabletMode={TabletModeClick} expanded={expandedPanel === 'panel2'} onChanged={handleAccordionChange('panel2')} />
-         <MenuProductView tabIndex="1" onWebCamBtnClick={onWebCamClick} onFrontBtnClick={onFrontClick} onTopBtnClick={onTopClick} onLeftBtnClick={onLeftClick} onRightBtnClick={onRightClick} imgfront={laptop360FrontImg} imgtop={laptop360TopImg} imgleft={laptop360LeftImg} imgright={laptop360RightImg} name={window.finalLangues.productview} expanded={expandedPanel === 'panel1'} onChanged={handleAccordionChange('panel1')} />
+         <MenuProductView tabIndex="1" onWebCamBtnClick={onWebCamClick} onFrontBtnClick={onFrontClick} onTopBtnClick={onTopClick} onLeftBtnClick={onLeftClick} onRightBtnClick={onRightClick} imgWebCam={webCam} imgfront={laptop360FrontImg} imgtop={laptop360TopImg} imgleft={laptop360LeftImg} imgright={laptop360RightImg} name={window.finalLangues.productview} expanded={expandedPanel === 'panel1'} onChanged={handleAccordionChange('panel1')} />
 
          <MenuFeatures name={window.finalLangues.feature} tabIndex="1" tobechange={opneClose} tobeChanged={backlit} openClosedClicked={openCloseClick} onOffBackliteClicked={backliteClick} expanded={expandedPanel === 'panel3'} onChanged={handleAccordionChange('panel3')} />
 

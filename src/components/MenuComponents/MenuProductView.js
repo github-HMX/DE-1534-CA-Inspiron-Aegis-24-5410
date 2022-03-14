@@ -31,7 +31,7 @@ const MenuProductView =(props)=>{
         <Typography id="productviewass" className="accordion-headers AccordiansHeader" style={{fontWeight:"700", margin:"0px 0px"}}>{props.name}</Typography>
         </AccordionSummary >
         <AccordionDetails tabIndex="1" aria-label="WebCam" id="webCamBtn" onKeyPress={ props.onwebCamClick} onClick={props.onWebCamBtnClick}>
-        <MenuBtn aria-hidden="true" style={AccordianIcons} submenu="Webcam"  source={props.imgfront}/>
+        <MenuBtn aria-hidden="true" style={AccordianIcons} submenu="Webcam"  source={props.imgWebCam}/>
         </AccordionDetails>  
         <AccordionDetails tabIndex="1" aria-label="Front" id="frontBtn" onKeyPress={ props.onFrontBtnClick} onClick={props.onFrontBtnClick}>
         <MenuBtn aria-hidden="true" style={AccordianIcons} submenu="Front" source={props.imgfront}/>

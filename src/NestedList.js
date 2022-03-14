@@ -187,7 +187,7 @@ class NestedList extends React.Component {
         
 
         //Update Json
-         const fetchJson = async () => {
+         const fetchJson = async () => { 
            
         const response = await fetch('./model_gl/config.json'
         ,{
@@ -220,6 +220,13 @@ class NestedList extends React.Component {
            
           waitForGlobal("scene", fetchJson); 
     }
+
+    componentWillUnmount() {
+        // fix Warning: Can't perform a React state update on an unmounted component
+        this.setState = (state,callback) => {
+           return;
+        };
+     }
 
     state = {};
     
