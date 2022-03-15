@@ -562,6 +562,13 @@ const MainMenu = (props) => {
       }
       console.log("Webcam");
       reverseAll();
+      window.scene._nav.tempfRotMinLimit = 0.48;
+      window.scene._nav._navMinDolly = 15;
+      window.scene._nav._navMaxDolly = 60;
+           
+      window.scene._nav._panMax = [16, 40];    //[left, bottom];
+      window.scene._nav._panMin = [-16, -2];  //[right, top];
+      // window.scene._nav._panMax
       setonFront(false);
       setonLeft(false);
       setonRight(false);
@@ -605,8 +612,12 @@ const MainMenu = (props) => {
       window.scene.groupApplyState("dynamic_reset");
 
       GotoPosInTimeNamedValue('Render_Cam_F05_Cam_Closeup',function () {
-         window.scene.animPlayInTime("Main_Camera",0.2083333);
-         window.localStorage.setItem('hotspot','front');
+         window.scene.animPlayInTime("Main_Camera",0.2083333,2000);
+
+         
+         setTimeout(function () {
+            window.localStorage.setItem('hotspot','front');
+            },3000);
 
          if (isNextPrevious != true) {
             // alert("isNextPrevious");
@@ -710,7 +721,7 @@ const MainMenu = (props) => {
       window.scene.groupApplyState("Backlit_OFF");
 
       GotoPosInTimeNamedValue('Render_Cam_F02_F',function () {
-               window.scene.animPlayInTime("Windsor_KM5221W",0.0833333);
+               window.scene.animPlayInTime("Windsor_KM5221W",0.0833333,2000);
         // window.localStorage.setItem('hotspot','right')
          if (isNextPrevious != true) {
             window.document.getElementById("hotspot1demo").focus();
@@ -809,7 +820,7 @@ const MainMenu = (props) => {
       GotoPosInTimeNamedValue('Render_Cam_F05_R',function () {
          window.scene.groupApplyState("keyboard_on");
       window.scene.groupApplyState("keyboard_refle_on");
-         window.scene.animPlayInTime("Windsor_KM5221W",0.2083333);
+         window.scene.animPlayInTime("Windsor_KM5221W",0.2083333,2000);
         // window.localStorage.setItem('hotspot','right')
          if (isNextPrevious != true) {
             window.document.getElementById("hotspot1demo").focus();
@@ -909,7 +920,7 @@ const MainMenu = (props) => {
          //window.localStorage.setItem('hotspot','left')
          window.scene.groupApplyState("keyboard_on");
          window.scene.groupApplyState("keyboard_refle_on");
-         window.scene.animPlayInTime("Windsor_KM5221W",0.1666667);
+         window.scene.animPlayInTime("Windsor_KM5221W",0.1666667,2000);
          
          if (isNextPrevious != true) {
             window.document.getElementById("hotspot1demo").focus();
@@ -1309,7 +1320,7 @@ const MainMenu = (props) => {
 
       
       if (onWebCam) {
-         window.scene.animPlayInTime("Main_Camera",0.2083333);
+         window.scene.animPlayInTime("Main_Camera",0.2083333,2000);
          window.scene.groupApplyState("mouse_off");
          window.scene.groupApplyState("keyboard_off");
          window.scene.groupApplyState("keyboard_refle_off");
@@ -1400,7 +1411,7 @@ const MainMenu = (props) => {
           window.scene.groupApplyState("mouse_refle_on");
 
       if (onWebCam) {
-            window.scene.animPlayInTime("Main_Camera",0.2083333);
+            window.scene.animPlayInTime("Main_Camera",0.2083333,2000);
             window.scene.groupApplyState("mouse_off");
             window.scene.groupApplyState("keyboard_off");
             window.scene.groupApplyState("keyboard_refle_off");
@@ -1645,7 +1656,11 @@ const MainMenu = (props) => {
       window.scene.groupApplyState("keyboard_off");
       window.scene.groupApplyState("mouse_refle_off");
       window.scene.groupApplyState("keyboard_refle_off");
-      window.scene.animPlayInTime("Main_Camera",0);
+      window.scene.animPlayInTime("Main_Camera",0,2000);
+      window.scene._nav.tempfRotMinLimit = 0.01;
+      window.scene._nav._navMinDolly = 25;
+      window.scene._nav._navMaxDolly = 58;
+
    }
    const resetMode = () => {
       selectedButton = 'onResetMode';

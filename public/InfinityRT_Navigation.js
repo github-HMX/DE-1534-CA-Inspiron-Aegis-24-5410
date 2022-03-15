@@ -3,6 +3,7 @@
 var M_PI = 3.1415926535897932384626433832795028841968;
 
 var infinityrt_navigation = function (scene, w, h) {
+    this.tempfRotMinLimit = 0.001;
     this._scene = scene;
     this._navMX = this._midx = w / 2;
     this._navMY = this._midy = h / 2;
@@ -17,14 +18,14 @@ var infinityrt_navigation = function (scene, w, h) {
     //DESKTOP NAVIGATION VALUES*************************
     this._navRotationSpeed = 0.008;
     this._navDollySpeed=0.00015;
-    this._navPanSpeed=0.04;
+    this._navPanSpeed=0.04; 
     this._navDecay = 0.3;
     this._navMode2DecayHalflife = 150;	// General decay
     this._navDesiredTargetSpeed=0.1;
     //MOBILE NAVIGATION VALUES**************************
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if (isMobile) {
-            this._navRotationSpeed = 0.02;
+            this._navRotationSpeed = 0.002;
             this._navDollySpeed=0.002;
             this._navPanSpeed=0.04;
             this._navDecay = 0.75;
@@ -506,7 +507,7 @@ infinityrt_navigation.prototype.NavCreateViewMatrix = function (initialViewMatri
                 this._navXAng += this._navDXAng;
                 this._navYAng += this._navDYAng;
                 var fRotLimit = M_PI * 0.48;
-                var fRotMinLimit = -M_PI * 0.48;
+                var fRotMinLimit = -M_PI * this.tempfRotMinLimit;
                 if (this._navXAng > fRotLimit)
                     this._navXAng = fRotLimit;
                 else if (this._navXAng < fRotMinLimit)
