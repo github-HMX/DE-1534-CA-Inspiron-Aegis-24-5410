@@ -750,10 +750,12 @@ infinityrt_navigation.prototype.NavCreateViewMatrix = function (initialViewMatri
     return this._navMatLastView;
 };
 
-infinityrt_navigation.prototype.enableEllipticalNav = function (valueA, valueB) {
+infinityrt_navigation.prototype.enableEllipticalNav = function (valueA, valueB, valueCOpt) {
     this._ellipticalNav = true;
     this._navMinDollyX = valueA;
     this._navMinDollyZ = valueB;
+    if(valueCOpt)
+        this._navMinDollyOpt = valueCOpt
 }
 
 infinityrt_navigation.prototype.NavCreateModelMatrix = function (initialViewMatrix) {
@@ -936,14 +938,24 @@ infinityrt_navigation.prototype.NavRotation = function (mpos, mdelta) {
 
     //If Elliptical Zoom is called
     if (this._ellipticalNav === true) {
+        
         var q = this._navYAng;
+        var p = this._navXAng;
+
         if (q > M_PI) q -= M_PI;
+        if (p > M_PI) p -= M_PI;
         
         var blendfac = Math.min(q, M_PI - q) / (0.5 * M_PI);
+        var blendfac2 = Math.min(p, M_PI - p) / (0.5 * M_PI);
+
         this._navMinDolly = blendfac * this._navMinDollyX + (1.0 - blendfac) * this._navMinDollyZ;
 
+        if(this._navMinDollyOpt && blendfac2 > 0)
+            this._navMinDolly = blendfac2 * this._navMinDollyOpt + (1.0 - blendfac2) * this._navMinDolly;
+
         if(this._navDolly < this._navMinDolly) this._navDolly = this._navMinDolly;
-    }
+
+    } 
 
     if (!this._axisAllow[0])
         mdelta[0] = 0;

@@ -1,5 +1,5 @@
 {
-    "displaylayers": [ "Stand_on_off", "color_swap", "keyboard_on_off", "keyboard_refle_on_off", "mouse_on_off", "mouse_refl_on_off" ],
+    "displaylayers": [ "Stand_on_off", "color_swap", "keyboard_on_off", "mouse_on_off" ],
     "positions": {
         "Render_Cam_F01_FL": {
             "doffocusdist": 5.000000,
@@ -66,13 +66,13 @@
         },
         "hmxBack": {
             "fovy": 28.841000,
-            "pos": [ -3.141593, 0.000000, 0.000000, 0.000000, 135.064423 ],
+            "pos": [ -3.141593, 0.000000, 0.000000, 0.000000, 444.426788 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 0
         },
         "hmxFront": {
             "fovy": 28.841000,
-            "pos": [ 0.000000, 0.000000, 0.000000, 0.000000, 135.064423 ],
+            "pos": [ 0.000000, 0.000000, 0.000000, 0.000000, 444.426788 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 0
         },
@@ -84,23 +84,23 @@
         },
         "hmxLeft": {
             "fovy": 28.841000,
-            "pos": [ -1.570796, 0.000000, 0.000000, 0.000000, 135.064423 ],
+            "pos": [ -1.570796, 0.000000, 0.000000, 0.000000, 444.426788 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 0
         },
         "hmxRight": {
             "fovy": 28.841000,
-            "pos": [ -4.712389, 0.000000, 0.000000, 0.000000, 135.064423 ],
+            "pos": [ -4.712389, 0.000000, 0.000000, 0.000000, 444.426788 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 0
         },
         "hmxTop": {
             "fovy": 28.841000,
-            "pos": [ 0.000000, 1.570796, 0.000000, 0.000000, 135.064423 ],
+            "pos": [ 0.000000, 1.570796, 0.000000, 0.000000, 444.426788 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 0
         }
     },
-    "states": [ "Ascent_Solid", "Pearl_White", "keyboard_black", "keyboard_off", "keyboard_on", "keyboard_white", "keyboard_refle_off", "keyboard_refle_on", "mouse_black", "mouse_off", "mouse_on", "mouse_white", "mouse_refle_off", "mouse_refle_on" ],
-    "ver": "v2.0.509"
+    "states": [ "Ascent_Solid", "Pearl_White", "keyboard_black", "keyboard_off", "keyboard_on", "keyboard_white", "mouse_black", "mouse_off", "mouse_on", "mouse_white" ],
+    "ver": "v2.0.520"
 }

@@ -162,23 +162,18 @@ const MainMenu = (props) => {
 
    }
    const resetTimeline1 = (revers90Degree = true) => {
-      //window.scene.instanceSet("GP_Close_360", "visible", false);
-      //window.scene.instanceSet("GP_Stand", "visible", false);
-      //window.scene.instanceSet("GP_Tent", "visible", false);
-      //window.scene.instanceSet("GP_Tablet", "visible", false);
-      if (window.scene.animIsPlaying('Screen_90_degree')) window.scene.getAnim("Screen_90_degree").stop();
-      if (window.scene.animIsPlaying('Screen_grp_timeline_01_A')) window.scene.getAnim("Screen_grp_timeline_01_A").stop();
-      if (window.scene.animIsPlaying('Hinge_grp_timeline_01_A')) window.scene.getAnim("Hinge_grp_timeline_01_A").stop();
-      if (window.scene.animIsPlaying('Main_grp_timeline_01_A')) window.scene.getAnim("Main_grp_timeline_01_A").stop();
+      if (window.scene.animIsPlaying('DE_CA_Pro_Wireless_Keyboard_Windsor_KM5221W')) window.scene.getAnim("DE_CA_Pro_Wireless_Keyboard_Windsor_KM5221W").stop();
+      if (window.scene.animIsPlaying('Stand_01')) window.scene.getAnim("Stand_01").stop();
+      if (window.scene.animIsPlaying('Stand_02')) window.scene.getAnim("Stand_02").stop();
 
-      if (revers90Degree) {
-         // window.scene.animPlayInTime("Screen_90_degree", 0, 0);
-         // window.scene.animPlayInTime("Screen_90_to_close180", 0, 0);
-         // window.scene.animPlayInTime("Screen_90_to_close360", 0, 0);
-      }
-      window.scene.animPlayInTime("Screen_grp_timeline_01_A",0,0);
-      window.scene.animPlayInTime("Hinge_grp_timeline_01_A",0,0);
-      window.scene.animPlayInTime("Main_grp_timeline_01_A",0,0);
+      // if (revers90Degree) {
+      //    // window.scene.animPlayInTime("Screen_90_degree", 0, 0);
+      //    // window.scene.animPlayInTime("Screen_90_to_close180", 0, 0);
+      //    // window.scene.animPlayInTime("Screen_90_to_close360", 0, 0);
+      // }
+      // window.scene.animPlayInTime("Screen_grp_timeline_01_A",0,0);
+      // window.scene.animPlayInTime("Hinge_grp_timeline_01_A",0,0);
+      // window.scene.animPlayInTime("Main_grp_timeline_01_A",0,0);
       window.scene.clearRefine();
    }
    const resetTimeline2 = (revers90Degree = true) => {
@@ -674,6 +669,7 @@ const MainMenu = (props) => {
       //Update ZoomBar
          console.log("Front");
          reverseAll();
+         resetTimeline1();
          setonFront(true);
          setonLeft(false);
          setonRight(false);
@@ -684,6 +680,7 @@ const MainMenu = (props) => {
       window.scene.groupApplyState("keyboard_on");
       window.scene.groupApplyState("mouse_refle_on");
       window.scene.groupApplyState("keyboard_refle_on");
+      window.scene.animPlayInTime("Windsor_KM5221W",0,0);
 
       if (slider != null) {
          document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor();
@@ -719,9 +716,9 @@ const MainMenu = (props) => {
       resetBacklitCloseImg();
 
       window.scene.groupApplyState("Backlit_OFF");
-
+         
       GotoPosInTimeNamedValue('Render_Cam_F02_F',function () {
-               window.scene.animPlayInTime("Windsor_KM5221W",0.0833333,2000);
+               window.scene.animPlayInTime("Windsor_KM5221W",0.0833333,0);
         // window.localStorage.setItem('hotspot','right')
          if (isNextPrevious != true) {
             window.document.getElementById("hotspot1demo").focus();
@@ -777,11 +774,14 @@ const MainMenu = (props) => {
       //Update ZoomBar
       console.log("Right");
       reverseAll();
+      resetTimeline1();
       setonFront(false);
       setonLeft(false);
       setonRight(true);
       setonWebCam(false);
          setonBack(false);
+         
+        // window.scene.animPlayInTime("Windsor_KM5221W",0,0);
       if (slider != null) {
          document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor();
          setTimeout(function () { document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor(); },1000);
@@ -820,7 +820,13 @@ const MainMenu = (props) => {
       GotoPosInTimeNamedValue('Render_Cam_F05_R',function () {
          window.scene.groupApplyState("keyboard_on");
       window.scene.groupApplyState("keyboard_refle_on");
-         window.scene.animPlayInTime("Windsor_KM5221W",0.2083333,2000);
+         window.scene.animPlayInTime("Windsor_KM5221W",0.2083333,0);
+         window.scene.animPlayInTime("DE_CA_Pro_Wireless_Keyboard_Windsor_KM5221W",0.2083333,1000);
+         window.scene.animPlayInTime("Stand_01",0.2083333,1000);
+         window.scene.animPlayInTime("Stand_02",0.2083333,1000);
+         window.scene.animPlayInTime("DE_CA_Pro_Wireless_Keyboard_Windsor_KM5221W._refle",0.2083333,1000);
+         window.scene.animPlayInTime("Stand_01_refle",0.2083333,1000);
+         window.scene.animPlayInTime("Stand_02_refle",0.2083333,1000);
         // window.localStorage.setItem('hotspot','right')
          if (isNextPrevious != true) {
             window.document.getElementById("hotspot1demo").focus();
@@ -876,11 +882,13 @@ const MainMenu = (props) => {
       //Update ZoomBar
       console.log("Left");
       reverseAll();
+      resetTimeline1();
       setonFront(false);
       setonLeft(true);
       setonRight(false);
       setonWebCam(false);
          setonBack(false);
+         //window.scene.animPlayInTime("Windsor_KM5221W",0,0);
       var slider = document.getElementById("sliderRange");
 
       if (slider != null) {
@@ -920,7 +928,13 @@ const MainMenu = (props) => {
          //window.localStorage.setItem('hotspot','left')
          window.scene.groupApplyState("keyboard_on");
          window.scene.groupApplyState("keyboard_refle_on");
-         window.scene.animPlayInTime("Windsor_KM5221W",0.1666667,2000);
+         window.scene.animPlayInTime("Windsor_KM5221W",0.1666667,0);
+         window.scene.animPlayInTime("DE_CA_Pro_Wireless_Keyboard_Windsor_KM5221W",0.2083333,1000);
+         window.scene.animPlayInTime("Stand_01",0.2083333,1000);
+         window.scene.animPlayInTime("Stand_02",0.2083333,1000);
+         window.scene.animPlayInTime("DE_CA_Pro_Wireless_Keyboard_Windsor_KM5221W._refle",0.2083333,1000);
+         window.scene.animPlayInTime("Stand_01_refle",0.2083333,1000);
+         window.scene.animPlayInTime("Stand_02_refle",0.2083333,1000);
          
          if (isNextPrevious != true) {
             window.document.getElementById("hotspot1demo").focus();
@@ -1656,10 +1670,18 @@ const MainMenu = (props) => {
       window.scene.groupApplyState("keyboard_off");
       window.scene.groupApplyState("mouse_refle_off");
       window.scene.groupApplyState("keyboard_refle_off");
-      window.scene.animPlayInTime("Main_Camera",0,2000);
+      // window.scene.animPlayInTime("Windsor_KM5221W",0,0);
+       window.scene.animPlayInTime("Main_Camera",0,0);
+      window.scene.animPlayInTime("DE_CA_Pro_Wireless_Keyboard_Windsor_KM5221W",0,0);
+      window.scene.animPlayInTime("Stand_01",0,0);
+      window.scene.animPlayInTime("Stand_02",0,0);
+      window.scene.animPlayInTime("DE_CA_Pro_Wireless_Keyboard_Windsor_KM5221W._refle",0,0);
+         window.scene.animPlayInTime("Stand_01_refle",0,0);
+         window.scene.animPlayInTime("Stand_02_refle",0,0);
       window.scene._nav.tempfRotMinLimit = 0.01;
       window.scene._nav._navMinDolly = 25;
       window.scene._nav._navMaxDolly = 58;
+
 
    }
    const resetMode = () => {

@@ -109,10 +109,8 @@ ul.MuiList-root.NestedList-root-7.MuiList-padding{
   cursor: pointer;
 }
 .Mui-disabled {
-  background-color: #EEEEEE !important;
-  /* opacity: 0.3 !important; */
-  /* pointer-events: auto !important; */
-  cursor: pointer;
+  /* background-color: #EEEEEE !important;
+  cursor: pointer; */
 }
 
 #blackBtn.Mui-disabled .menubtn:hover > button{
