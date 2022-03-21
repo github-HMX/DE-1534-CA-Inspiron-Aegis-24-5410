@@ -716,9 +716,9 @@ const MainMenu = (props) => {
       resetBacklitCloseImg();
 
       window.scene.groupApplyState("Backlit_OFF");
-         
+      window.scene.animPlayInTime("Windsor_KM5221W",0.0833333,0);
       GotoPosInTimeNamedValue('Render_Cam_F02_F',function () {
-               window.scene.animPlayInTime("Windsor_KM5221W",0.0833333,0);
+               
         // window.localStorage.setItem('hotspot','right')
          if (isNextPrevious != true) {
             window.document.getElementById("hotspot1demo").focus();
