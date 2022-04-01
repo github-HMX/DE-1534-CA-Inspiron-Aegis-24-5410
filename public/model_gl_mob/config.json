@@ -4,7 +4,7 @@
         "Render_Cam_F01_FL": {
             "doffocusdist": 5.000000,
             "fovy": 28.841547,
-            "pos": [ 0.443318, 0.055846, -4.677834, 13.535971, 162.208313 ],
+            "pos": [ 0.443318, 0.055846, -4.677792, 13.535971, 162.208328 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 1000
         },
@@ -38,8 +38,15 @@
         },
         "Render_Cam_F03_FR": {
             "doffocusdist": 5.000000,
-            "fovy": 28.072487,
-            "pos": [ -0.446669, 0.022959, 4.384754, 13.721850, 165.462494 ],
+            "fovy": 0.000000,
+            "pos": [ 0.413881, 0.000000, 0.000000, 0.000000, 0.000000 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F03_FR.": {
+            "doffocusdist": 5.000000,
+            "fovy": 28.841547,
+            "pos": [ -0.443318, 0.055846, 4.677792, 13.535926, 162.208328 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 1000
         },
@@ -65,13 +72,13 @@
             "time": 1000
         },
         "hmxBack": {
-            "fovy": 28.841000,
+            "fovy": 28.841547,
             "pos": [ -3.141593, 0.000000, 0.000000, 0.000000, 444.426788 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 0
         },
         "hmxFront": {
-            "fovy": 28.841000,
+            "fovy": 28.841547,
             "pos": [ 0.000000, 0.000000, 0.000000, 0.000000, 444.426788 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 0
@@ -83,24 +90,24 @@
             "time": 0
         },
         "hmxLeft": {
-            "fovy": 28.841000,
+            "fovy": 28.841547,
             "pos": [ -1.570796, 0.000000, 0.000000, 0.000000, 444.426788 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 0
         },
         "hmxRight": {
-            "fovy": 28.841000,
+            "fovy": 28.841547,
             "pos": [ -4.712389, 0.000000, 0.000000, 0.000000, 444.426788 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 0
         },
         "hmxTop": {
-            "fovy": 28.841000,
+            "fovy": 28.841547,
             "pos": [ 0.000000, 1.570796, 0.000000, 0.000000, 444.426788 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 0
         }
     },
-    "states": [ "Ascent_Solid", "Pearl_White", "keyboard_black", "keyboard_off", "keyboard_on", "keyboard_white", "mouse_black", "mouse_off", "mouse_on", "mouse_white" ],
+    "states": [ "Ascent_Solid", "Pearl_White", "Pearl_White__", "keyboard_black", "keyboard_off", "keyboard_on", "keyboard_white", "mouse_black", "mouse_off", "mouse_on", "mouse_white" ],
     "ver": "v2.0.520"
 }
