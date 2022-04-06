@@ -36,6 +36,12 @@
     padding: 8px 0px 0px 0px;
     
   }
+  .Mui-disabled {
+    background-color: #eeeeee !important;
+    opacity: 0.3 !important;
+    pointer-events: none !important; 
+    /* cursor: default !important; */
+}
   #selectProduct{
     padding: 0px 0px 0px 0px !important;
 

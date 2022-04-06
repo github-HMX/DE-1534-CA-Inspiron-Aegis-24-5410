@@ -355,6 +355,7 @@
          var loadingDiv = document.getElementById('loading');
          var exploreBtn = document.getElementById('exploreButtton');
          var mainLoad = document.getElementById('mainload');
+        
          // loaderDiv.style.left = ((document.documentElement.clientWidth / 2) - (265 / 2)) + "px";
          // loaderDiv.style.top = ((document.documentElement.clientHeight / 2) - (12 / 2)) + "px";
          // loadingDiv.style.left = ((document.documentElement.clientWidth / 2) - (265 / 2)) + "px";
@@ -494,7 +495,7 @@
          document.getElementById('footerControMob').style.visibility = "visible"
          document.getElementById('footerControlDesk').style.visibility = "visible"
          // document.getElementById('howTousePopupDesk').style.visibility = "visible"
-
+         document.getElementById('backlitBtn').classList.add('Mui-disabled');
 
          document.getElementById('loading').style.display = 'flex';
          document.getElementById('mainload').style.display = 'block';

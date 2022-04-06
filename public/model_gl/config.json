@@ -1,5 +1,5 @@
 {
-    "displaylayers": [ "Stand_on_off", "color_swap", "keyboard_on_off", "mouse_on_off" ],
+    "displaylayers": [ "Ascent_Solid_Plastic", "Pearl_White_Plastic", "Pearl_White_Plastic_Fiber", "Stand_on_off", "color_swap", "keyboard_on_off", "mouse_on_off" ],
     "positions": {
         "Render_Cam_F01_FL": {
             "doffocusdist": 5.000000,
@@ -39,7 +39,7 @@
         "Render_Cam_F03_FR": {
             "doffocusdist": 5.000000,
             "fovy": 0.000000,
-            "pos": [ 0.413881, 0.000000, 0.000000, 0.000000, 0.000000 ],
+            "pos": [ 0.785321, 0.000000, 0.000000, 3326.104736, 3327.647949 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 1000
         },
@@ -72,13 +72,13 @@
             "time": 1000
         },
         "hmxBack": {
-            "fovy": 28.841547,
+            "fovy": 28.841000,
             "pos": [ -3.141593, 0.000000, 0.000000, 0.000000, 444.426788 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 0
         },
         "hmxFront": {
-            "fovy": 28.841547,
+            "fovy": 28.841000,
             "pos": [ 0.000000, 0.000000, 0.000000, 0.000000, 444.426788 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 0
@@ -90,24 +90,24 @@
             "time": 0
         },
         "hmxLeft": {
-            "fovy": 28.841547,
+            "fovy": 28.841000,
             "pos": [ -1.570796, 0.000000, 0.000000, 0.000000, 444.426788 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 0
         },
         "hmxRight": {
-            "fovy": 28.841547,
+            "fovy": 28.841000,
             "pos": [ -4.712389, 0.000000, 0.000000, 0.000000, 444.426788 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 0
         },
         "hmxTop": {
-            "fovy": 28.841547,
+            "fovy": 28.841000,
             "pos": [ 0.000000, 1.570796, 0.000000, 0.000000, 444.426788 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 0
         }
     },
-    "states": [ "Ascent_Solid", "Pearl_White", "Pearl_White__", "keyboard_black", "keyboard_off", "keyboard_on", "keyboard_white", "mouse_black", "mouse_off", "mouse_on", "mouse_white" ],
+    "states": [ "Ascent_Solid_Plastic_Hide", "Ascent_Solid_Plastic_Show", "Pearl_White_Plastic_Hide", "Pearl_White_Plastic_Show", "Pearl_White_Plastic_Fiber_Hide", "Pearl_White_Plastic_Fiber_Show", "Ascent_Solid", "Ascent_Solid_OLD", "Pearl_White", "Pearl_White_Fabric", "Pearl_White_OLD", "Pearl_White__", "Pearl_White__OLD", "keyboard_black", "keyboard_black_OLD", "keyboard_off", "keyboard_on", "keyboard_white", "keyboard_white_OLD", "mouse_black", "mouse_off", "mouse_on", "mouse_white", "mouse_white_OLD" ],
     "ver": "v2.0.520"
 }

@@ -10,6 +10,7 @@ import MenuBtn from './MenuBtn';
 import MenuCircleBtnBacklite from './MenuCircleBtnBacklite';
 // import MenuCircleBtn from './MenuCircleBtn';
 import MenuCircleBtnOpenClose from './MenuCircleBtnOpenClose';
+import Tooltip from '@material-ui/core/Tooltip';
 
 
 // import RadioBtns from './RadioBtns';
@@ -42,18 +43,23 @@ const MenuFeatures =(props)=>{
   // const [backlit, setBacklite] = useState("./img/Backlite_Off.svg");
   // const [opneClose, setOpenClose] = useState("./img/open.png");
 
+  
     return(
-        <div className="Accordians" style={{display:"none"}}>
+        <div className="Accordians" >
          <Accordion style={{borderRadius:"0px",borderBottom: '1px solid #CCCCCC'}} onChange={props.onChanged} expanded={props.expanded}>
         <AccordionSummary tabIndex="1" id="feature"
           expandIcon={<ExpandMoreIcon /> } style={ProductViewHeader}>
         <Typography id="featuress" className="accordion-headers AccordiansHeader" style={{fontWeight:"700"}}>{props.name}</Typography>
         </AccordionSummary> 
         <AccordionDetails tabIndex="1" id="openCloseBtn" onKeyPress={props.openClosedClicked}  onClick={props.openClosedClicked}>
-        <MenuCircleBtnOpenClose changeOpenCloseImg={props.tobechange}  className="openclose" submenu={window.finalLangues.openclose} />
+        <MenuCircleBtnOpenClose source={props.imgfront1}  className="openclose" submenu={window.finalLangues.plastic} />
         </AccordionDetails>  
+        
+        
+
         <AccordionDetails tabIndex="1"  id="backlitBtn" onKeyPress={props.onOffBackliteClicked} onClick={props.onOffBackliteClicked}>
-        <MenuCircleBtnBacklite changeBacklitImg={props.tobeChanged} submenu={window.finalLangues.backlite} />
+        <MenuCircleBtnBacklite source={props.imgfront2} submenu={window.finalLangues.fabric} />
+        
         {/* <Button className="Btnsubmenu"
          style={Btn}
         variant="contained"
@@ -77,7 +83,8 @@ const MenuFeatures =(props)=>{
         Backlit Keyboard
         </span>
       </Button> */}
-        </AccordionDetails>  
+        </AccordionDetails> 
+       
       </Accordion>
         </div>
     );
