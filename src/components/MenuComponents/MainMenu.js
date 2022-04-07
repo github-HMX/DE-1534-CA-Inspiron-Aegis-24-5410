@@ -617,11 +617,13 @@ const MainMenu = (props) => {
       window.scene.groupApplyState("dynamic_reset");
 
       GotoPosInTimeNamedValue('Render_Cam_F05_Cam_Closeup',function () {
-         window.scene.animPlayInTime("Main_Camera",0.2083333,2000);
-
+         window.scene.animPlayInTime("Main_Camera",0.2083333,2000, function(){
+            window.localStorage.setItem('hotspot','front');
+         });
+        
          
          setTimeout(function () {
-            window.localStorage.setItem('hotspot','front');
+            
             },3000);
 
          if (isNextPrevious != true) {
@@ -678,6 +680,7 @@ const MainMenu = (props) => {
    const onFrontClick = (isNextPrevious) => {
       //Update ZoomBar
          console.log("Front");
+         
          reverseAll();
          resetTimeline1();
          setonFront(true);
@@ -729,7 +732,8 @@ const MainMenu = (props) => {
       window.scene.groupApplyState("Backlit_OFF");
       window.scene.animPlayInTime("Windsor_KM5221W",0.0833333,0);
       GotoPosInTimeNamedValue('Render_Cam_F02_F',function () {
-               
+         window.localStorage.removeItem('hotspot');
+
         // window.localStorage.setItem('hotspot','right')
          if (isNextPrevious != true) {
             window.document.getElementById("hotspot1demo").focus();
@@ -1119,7 +1123,7 @@ const MainMenu = (props) => {
          setTimeout(function () { document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor(); },1000);
       }
       //selectedButton = 'openCloseClick';
-      setSelectedButton('openCloseClick');
+      //setSelectedButton('openCloseClick');
       
 
       var fromPos = window.localStorage.getItem('hotspot')
@@ -1244,7 +1248,7 @@ const MainMenu = (props) => {
 
      // selectedButton = 'backliteClick';
 
-      setSelectedButton('backliteClick');
+      //setSelectedButton('backliteClick');
       window.localStorage.removeItem('hotspot');
       var alreadySelected = document.querySelector('.MuiAccordionDetails-root.active');
       if (alreadySelected != null) {
@@ -1723,6 +1727,8 @@ const MainMenu = (props) => {
       window.scene.groupApplyState("mouse_refle_off");
       window.scene.groupApplyState("keyboard_refle_off");
       // window.scene.animPlayInTime("Windsor_KM5221W",0,0);
+       window.localStorage.removeItem('hotspot');
+       if (window.scene.animIsPlaying('Main_Camera')) window.scene.getAnim("Main_Camera").stop();
        window.scene.animPlayInTime("Main_Camera",0,0);
       window.scene.animPlayInTime("DE_CA_Pro_Wireless_Keyboard_Windsor_KM5221W",0,0);
       window.scene.animPlayInTime("Stand_01",0,0);
@@ -1946,10 +1952,22 @@ const MainMenu = (props) => {
       // else if (prevButton == 'backliteClick') {
       //    setExpandedPanel("panel3");backliteClick(true);  }
       
-      if (prevButton == 'onWebCamClick') onWebCamClick(true);
-      else if (prevButton == 'onFrontClick') onFrontClick(true);
-      else if (prevButton == 'onTopClick') onTopClick(true);
-      else if (prevButton == 'onRightClick') onRightClick(true);
+      if (prevButton == 'onWebCamClick') {
+         setExpandedPanel("panel1");
+         onWebCamClick(true);
+      }
+      else if (prevButton == 'onFrontClick') {
+         setExpandedPanel("panel1");
+         onFrontClick(true);
+      }
+      else if (prevButton == 'onTopClick') {
+         setExpandedPanel("panel1");
+         onTopClick(true);
+      }
+      else if (prevButton == 'onRightClick') {
+         setExpandedPanel("panel1");
+         onRightClick(true);
+      }
       else if (prevButton == 'onLeftClick') {
          onLeftClick(true);
          setExpandedPanel("panel1");
@@ -2005,10 +2023,22 @@ const MainMenu = (props) => {
          setExpandedPanel("panel1");
          onWebCamClick(true);
       }
-      else if (nextButton == 'onFrontClick') onFrontClick(true);
-      else if (nextButton == 'onTopClick') onTopClick(true);
-      else if (nextButton == 'onRightClick') onRightClick(true);
-      else if (nextButton == 'onLeftClick') onLeftClick(true);
+      else if (nextButton == 'onFrontClick') {
+         setExpandedPanel("panel1");  
+         onFrontClick(true);
+      }
+      else if (nextButton == 'onTopClick'){
+         setExpandedPanel("panel1");
+         onTopClick(true);
+      }
+      else if (nextButton == 'onRightClick') {
+         setExpandedPanel("panel1");
+         onRightClick(true);
+      }
+      else if (nextButton == 'onLeftClick') {
+         setExpandedPanel("panel1");
+         onLeftClick(true);
+      }
    }
 
    const [animValue,setAnimValue] = useState("On");
