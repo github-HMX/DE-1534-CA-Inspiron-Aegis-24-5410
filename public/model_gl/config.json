@@ -39,7 +39,7 @@
         "Render_Cam_F03_FR": {
             "doffocusdist": 5.000000,
             "fovy": 0.000000,
-            "pos": [ 0.785321, 0.000000, 0.000000, 3326.104736, 3327.647949 ],
+            "pos": [ 0.764572, 0.000000, 0.000000, 0.000000, 0.000000 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 1000
         },
@@ -108,6 +108,6 @@
             "time": 0
         }
     },
-    "states": [ "Ascent_Solid_Plastic_Hide", "Ascent_Solid_Plastic_Show", "Pearl_White_Plastic_Hide", "Pearl_White_Plastic_Show", "Pearl_White_Plastic_Fiber_Hide", "Pearl_White_Plastic_Fiber_Show", "Ascent_Solid", "Ascent_Solid_OLD", "Pearl_White", "Pearl_White_Fabric", "Pearl_White_OLD", "Pearl_White__", "Pearl_White__OLD", "keyboard_black", "keyboard_black_OLD", "keyboard_off", "keyboard_on", "keyboard_white", "keyboard_white_OLD", "mouse_black", "mouse_off", "mouse_on", "mouse_white", "mouse_white_OLD" ],
+    "states": [ "Ascent_Solid_Plastic_Hide", "Ascent_Solid_Plastic_Show", "Pearl_White_Plastic_Hide", "Pearl_White_Plastic_Show", "Pearl_White_Plastic_Fiber_Hide", "Pearl_White_Plastic_Fiber_Show", "Ascent_Solid", "Pearl_White", "Pearl_White_Fabric", "keyboard_black", "keyboard_off", "keyboard_on", "keyboard_white", "keyboard_white_OLD", "mouse_black", "mouse_off", "mouse_on", "mouse_white", "mouse_white_OLD" ],
     "ver": "v2.0.520"
 }
