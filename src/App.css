@@ -1520,7 +1520,7 @@ and (-webkit-device-pixel-ratio: 3) {
 	.MuiPaper-root.MuiDrawer-paper.jss2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0 {
 		border: none;
 		background: #f8f6f6;
-		top: 176px;
+		top: 100px;
 		left: 64px;
 		overflow: inherit;
 		/* height: 70%; */
@@ -1557,7 +1557,7 @@ and (-webkit-device-pixel-ratio: 3) {
 		padding-left: 49px;
 	}
 	.MuiPaper-root.MuiDrawer-paper.makeStyles-drawerPaper-2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0 {
-		top: 186px !important;
+		top: 100px !important;
 		left: 64px;
 		border-left: 1px solid #5d5858;
 		overflow: inherit;
@@ -1659,7 +1659,7 @@ and (-webkit-device-pixel-ratio: 3) {
 		display: block !important;
 		border: 1px solid rgb(225, 225, 225) !important;
 		position: absolute !important;
-		top: 186px !important;
+		top: 100px !important;
 		left: 0px !important;
 		margin: 0px !important;
 		width: 60px !important;
@@ -1689,7 +1689,7 @@ and (-webkit-device-pixel-ratio: 3) {
 	.MuiPaper-root.MuiDrawer-paper.jss2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0 {
 		border: none;
 		background: #f8f6f6;
-		top: 186px;
+		top: 100px;
 		left: 60px;
 		overflow: auto;
 		/* height: 70%; */
@@ -1700,7 +1700,7 @@ and (-webkit-device-pixel-ratio: 3) {
 		background: #ffff;
 	}
 	.MuiPaper-root.MuiDrawer-paper.makeStyles-drawerPaper-2.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.MuiPaper-elevation0 {
-		top: 186px !important;
+		top: 100px !important;
 		left: 60px;
 		border-left: 1px solid #5d5858;
 		overflow: auto;
@@ -1733,7 +1733,7 @@ and (-webkit-device-pixel-ratio: 3) {
 	.openCloseBar {
 		position: absolute !important;
 		left: 0 !important;
-		top: 186px !important;
+		top: 100px !important;
 		z-index: -1 !important;
 		border: 1px solid #e1e1e1 !important;
 		height: 658px !important;
@@ -1859,16 +1859,16 @@ and (-webkit-device-pixel-ratio: 3) {
 }
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
 	#howToUSE {
-		top: 52px !important;
+		top: 60px !important;
 		height: 400px !important;
 		left: 357px !important;
-		transform: scale(0.8) translate(-00px);
+		transform: scale(0.8) translate(0);
 	}
 }
 
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
 	#howToUSE {
-		top: 56px !important;
+		top: 60px !important;
 		height: 400px !important;
 		transform: scale(0.8) translate(-30px);
 	}
@@ -1940,6 +1940,6 @@ and (-webkit-device-pixel-ratio: 3) {
 }
 
 #blackBtn > .menubtn > button > span > span > div {
-	border: 1px solid #fff;
+	border: 3px solid #fff;
 	border-radius: 50% !important;
 }
