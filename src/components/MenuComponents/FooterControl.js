@@ -53,8 +53,6 @@ export default function FooterControl(props) {
   };
 
   const handleZoomChange = (e, newValue) => {
-
-
    
         if(e){ //console.log(e.target.value);
           window.scene._nav.NavChangeDolly(undefined, e.target.value/100);
@@ -70,6 +68,7 @@ export default function FooterControl(props) {
           //document.getElementById('sliderRange').setAttribute('aria-label', (newValue * 100)+ '%');
           }
           window.localStorage.removeItem('hotspot');
+          
           var sliderValues = document.getElementById('sliderRange').value * 100;
           // document.getElementById('sliderRange').setAttribute('aria-label',  (parseInt(sliderValues)+'%'));
           document.getElementById('sliderRange').setAttribute('aria-label',  '');

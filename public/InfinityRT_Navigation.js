@@ -887,7 +887,6 @@ infinityrt_navigation.prototype.NavChangeDolly = function (delta, sliderValue) {
         return false;
 
     this.ApplyRestrictionAdjust(0.6);
-
     if (this._navMode == 2) {
 
         if(delta === undefined && sliderValue !== undefined){
@@ -895,11 +894,11 @@ infinityrt_navigation.prototype.NavChangeDolly = function (delta, sliderValue) {
             this._zoomFactor = this._navMaxDolly + parseFloat(sliderValue) * (this._navMinDolly-this._navMaxDolly); 
             this._navDolly = this._zoomFactor / Math.tan(window.scene.fovy*0.5*(3.141592658/180.0)) ;
             this._scene.clearRefine();
-           // console.log(this._navDolly);
+        //    console.log(this._navDolly);
      
         }
         else {
-           // console.log(delta);      
+        //    console.log(delta);      
             if(sliderValue !== undefined)
                 this._navFDolly -=  delta * this._navDollySpeed*(1.0-this._navDecay)*(this._navMaxDolly-this._navMinDolly); 
                 

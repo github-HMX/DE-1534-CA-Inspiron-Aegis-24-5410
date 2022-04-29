@@ -674,9 +674,6 @@ const MainMenu = (props) => {
 
    }
 
-
-
-
    const onFrontClick = (isNextPrevious) => {
       //Update ZoomBar
       console.log("Front");
@@ -694,6 +691,8 @@ const MainMenu = (props) => {
       window.scene.groupApplyState("mouse_refle_on");
       window.scene.groupApplyState("keyboard_refle_on");
       window.scene.animPlayInTime("Windsor_KM5221W",0,0);
+
+      var slider = document.getElementById("sliderRange");
 
       if (slider != null) {
          document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor();
@@ -796,6 +795,8 @@ const MainMenu = (props) => {
       setonWebCam(false);
       setonBack(false);
 
+      var slider = document.getElementById("sliderRange");
+      
       // window.scene.animPlayInTime("Windsor_KM5221W",0,0);
       if (slider != null) {
          document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor();

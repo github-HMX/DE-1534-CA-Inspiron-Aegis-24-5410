@@ -303,6 +303,7 @@
    <!-- <script src='jquery-1.8.2.min.js' type='text/javascript'></script> -->
    <script type="text/javascript" src='normalizeWheel.js'></script>
    <script src='libvector3.js' type='text/javascript'></script>
+   <script type="text/javascript" src="https://content.hmxmedia.com/DIST/webglutils.js"></script>
    <script src='SSE.js' type='text/javascript'></script>
    <script src="InfinityRT_Navigation.js" type="text/javascript"></script>
    <!-- <script type="text/javascript" src="skin.js"></script> -->
@@ -386,7 +387,7 @@
 
             ui = document.getElementById("root");
             if (typeof (canvas) != 'undefined') {
-               var gl = infinityrt_getwebglcontext(canvas,{ xrCompatible: true,antialias: true,depth: true });
+               var gl = infinityrt_getwebglcontextHMX(canvas,{ xrCompatible: true,antialias: true,depth: true });
                if (!gl) {
                   alert("***Could not initialise WebGL canvas");
                }
