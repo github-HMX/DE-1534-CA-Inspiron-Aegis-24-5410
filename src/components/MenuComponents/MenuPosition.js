@@ -51,15 +51,18 @@ const MenuPositions =(props)=>{
         <Typography id="positions1" className="accordion-headers AccordiansHeader" style={{fontWeight:"700"}}>{props.name}</Typography>
         </AccordionSummary>
         <AccordionDetails tabIndex="1" aria-label="Tent"  id="tentBtn" onKeyPress={ props.onTentMode} onClick={props.onTentMode}>
-        <MenuBtn aria-hidden="true" submenu="Tent" submenu={window.finalLangues.tent}  source="./img/tent.png"/>
+        {/* <MenuBtn aria-hidden="true" submenu="Tent" submenu={window.finalLangues.tent}  source="./img/tent.png"/> */}
+        <MenuBtn aria-hidden="true" submenu={window.finalLangues.tent}  source="./img/tent.png"/>
 
         </AccordionDetails>  
         <AccordionDetails tabIndex="1" aria-label="Theater"  id="theaterBtn" onKeyPress={props.onTheaterMode} onClick={props.onTheaterMode}>
-        <MenuBtn aria-hidden="true" submenu="Theater" submenu={window.finalLangues.theater} source="./img/theater.png"/>
+        {/* <MenuBtn aria-hidden="true" submenu="Theater" submenu={window.finalLangues.theater} source="./img/theater.png"/> */}
+        <MenuBtn aria-hidden="true" submenu={window.finalLangues.theater} source="./img/theater.png"/>
 
         </AccordionDetails>  
         <AccordionDetails tabIndex="1" aria-label="Tablet"  id="tabletBtn" onKeyPress={props.onTabletMode} onClick={props.onTabletMode}>
-        <MenuBtn aria-hidden="true" submenu="Tablet" submenu={window.finalLangues.tablet} source="./img/tablet.png"/>
+        {/* <MenuBtn aria-hidden="true" submenu="Tablet" submenu={window.finalLangues.tablet} source="./img/tablet.png"/> */}
+        <MenuBtn aria-hidden="true" submenu={window.finalLangues.tablet} source="./img/tablet.png"/>
 
         </AccordionDetails>
       </Accordion>

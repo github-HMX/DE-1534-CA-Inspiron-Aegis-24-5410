@@ -44,7 +44,7 @@ const MenuProductView =(props)=>{
 
         </AccordionDetails>  
         <AccordionDetails tabIndex="1" aria-label="Right" id="leftBtn"  onKeyPress={ props.onLeftBtnClick} onClick={props.onLeftBtnClick}>
-        <MenuBtn aria-hidden="true" style={AccordianIcons} sunMenu="Left" subname={window.finalLangues.left} submenu={window.finalLangues.left} source={props.imgleft}/>
+        <MenuBtn aria-hidden="true" style={AccordianIcons} subMenu="Left" subname={window.finalLangues.left} submenu={window.finalLangues.left} source={props.imgleft}/>
         </AccordionDetails>  
       
       </Accordion>
