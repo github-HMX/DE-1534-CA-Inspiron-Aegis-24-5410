@@ -1,4 +1,16 @@
 {
+    "anims": {
+        "DE_CA_Pro_Wireless_Keyboard_Windsor_KM5221W": {
+            "end": 0.833333,
+            "start": 0.041667,
+            "time": 1000
+        },
+        "Windsor_KM5221W": {
+            "end": 0.833333,
+            "start": 0.041667,
+            "time": 1000
+        }
+    },
     "displaylayers": [ "Ascent_Solid_Plastic", "Pearl_White_Plastic", "Pearl_White_Plastic_Fiber", "Stand_on_off", "UntitledGroup27", "UntitledGroup29", "UntitledGroup30", "color_swap", "keyboard_on_off", "mouse_on_off" ],
     "positions": {
         "Render_Cam_F01_FL": {
@@ -39,7 +51,7 @@
         "Render_Cam_F03_FR": {
             "doffocusdist": 5.000000,
             "fovy": 0.000000,
-            "pos": [ 0.803361, 0.000000, 0.000000, 0.000000, 0.000000 ],
+            "pos": [ 1.081403, 0.000000, 0.000000, 0.000000, 0.000000 ],
             "target": [ 0.0, 0.0, 0.0 ],
             "time": 1000
         },
