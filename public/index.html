@@ -1371,24 +1371,10 @@
                console.log("landscap_mob")
 
                if (currentPosition == 'left') {
-                  //port1 = "Power button
-                  // console.log('by');
-
-                  // HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Right_hotspot_01Shape-0","",port1,"right",0,200,-15);
-                  // HS_SimpleCallout([0,-100],0,-15,"DELL_360_A_Right_hotspot_0Shape2-0","",port2,"right",0,200,-15);
-                  // HS_SimpleCallout([0,-105],0,-15,"DELL_360_A_Right_hotspot_0Shape3-0","",port3,"left",10,200,-10);
-                  // HS_SimpleCallout([0,60],0,-10,"DELL_360_A_Right_hotspot_0Shape4-0","",port4,"center",10,200,0);
 
                } else if (currentPosition == 'right') {
-                  //console.log('hello');
-                  // HS_SimpleCallout([0,50],0,-10,"DELL_360_A_Left_hotspot_0Shape1-0","",port5,"right",-5,200,-10);
-                  // HS_SimpleCallout([0,-100],0,-20,"DELL_360_A_Left_hotspot_0Shape2-0","",port6,"left",10,300,0);
-                  // HS_SimpleCallout([0,-70],0,-20,"DELL_360_A_Left_hotspot_0Shape3-0","",port7,"left",10,350,-10);
-                  // HS_SimpleCallout([0,40],0,-15,"DELL_360_A_Left_hotspot_0Shape4-0","",port8,"left",10,200,-30);
                }
                else if (currentPosition == 'top') {
-                  // HS_SimpleCallout([300,0],0,0,"DELL_360_A_Down_hotspot_0Shape1-0","",port9,"left",10,220,10);
-                  // HS_SimpleCallout1([-140,0],0,0,"DELL_360_A_Down_hotspot_0Shape2-0","",port10,"right",5,0,350);
 
                }
                else if (currentPosition == 'front') {
@@ -1447,7 +1433,6 @@
          else {
             // console.log("desktop");
             if (currentPosition == 'front') {
-               //setHotSpot('hotspot1demo','DELL_360_A_Left_hotspot_0Shape1-0',221,44,1.0,port0,50,18);
 
                HS_SimpleCallout([0,-100],0,0,"hotspot_11","",port1,"right",10,200,0);
                setHotSpot('hotspot5','hotspot_11',150,-155,1.0,port1,150,18);
@@ -1899,7 +1884,7 @@
          </div>
          <div class="mobile">
             <div id="loading">
-               <div style="">
+               <div>
                   <div id="mobMove" style="display: flex; justify-content: space-between; align-items: end;"><span style="padding-right:43px; margin-top:70px;" id="move_text_mob" style="position: relative;  top: -29px;"></span><img style="margin-top: 44px;  height: 76px; width: 146px;" src="./img/move.svg" alt="movesIndex" /></div>
                   <div id="mobRotate" style="display: flex; justify-content: space-between; align-items: end;"><span style="padding-right:43px; margin-top:70px;" id="rotate_text_mob" style="position: relative;  top: -29px;"></span><img style="margin-top: 44px;  height: 76px; width: 146px;" src="./img/rotate.svg" alt="rotateIndex" /></div>
                   <div id="mobZoom" style="display: flex; justify-content: space-between; align-items: end;"><span style="padding-right:43px; margin-top:70px;" id="zoom_text_mob" style="position: relative;  top: -29px;"></span><img style="margin-top: 44px; height: 76px; width: 146px;" src="./img/zoom.svg" alt="zoomIndex" /></div>
@@ -1922,7 +1907,7 @@
 
 
    <div id="hotspot_container">
-      <div class="hotspots" id="hotspot1demo" arial-hidden="true" tabindex="-1" style=""></div>
+      <div class="hotspots" id="hotspot1demo" arial-hidden="true" tabindex="-1"></div>
       <div class="hotspots" id="hotspot1" tabindex="-1"></div>
       <div class="hotspots" id="hotspot2" tabindex="-1"></div>
 

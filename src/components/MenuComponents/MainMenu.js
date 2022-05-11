@@ -1042,11 +1042,7 @@ const MainMenu = (props) => {
       document.getElementById('topBtn').classList.add('active');
       window.localStorage.setItem("position","reset");
       window.scene.groupApplyState("screen_180");
-      if (laptop180) {
-         window.scene.groupApplyState("screenfill_180");
-      } else {
-         window.scene.groupApplyState("screenfill_360");
-      }
+     
       window.scene.groupApplyState("GP_open");
       window.scene.groupApplyState("dynamic_reset");
 
