@@ -2255,9 +2255,9 @@ const MainMenu = (props) => {
          {/* </userContext.Provider> */}
          <MenuPositions name={window.finalLangues.position} tabIndex="1" onTentMode={TentModeClick} onTheaterMode={TheaterModeClick} onTabletMode={TabletModeClick} expanded={expandedPanel === 'panel2'} onChanged={handleAccordionChange('panel2')} />
 
-         <MenuFeatures name={window.finalLangues.speaker} tabIndex="1" tobechange={opneClose} tobeChanged={backlit} openClosedClicked={openCloseClick} imgfront1={laptop360FrontImg} imgfront2={laptop360FrontImg} onOffBackliteClicked={backliteClick} expanded={expandedPanel === 'panel3'} onChanged={handleAccordionChange('panel3')} />
+         <MenuFeatures name={window.finalLangues.speakerType} tabIndex="1" tobechange={opneClose} tobeChanged={backlit} openClosedClicked={openCloseClick} imgfront1={laptop360FrontImg} imgfront2={laptop360FrontImg} onOffBackliteClicked={backliteClick} expanded={expandedPanel === 'panel3'} onChanged={handleAccordionChange('panel3')} />
 
-         <MenuProductView tabIndex="1" onWebCamBtnClick={onWebCamClick} onFrontBtnClick={onFrontClick} onTopBtnClick={onTopClick} onLeftBtnClick={onLeftClick} onRightBtnClick={onRightClick} imgWebCam={webCam} imgfront={laptop360FrontImg} imgtop={laptop360TopImg} imgleft={laptop360LeftImg} imgright={laptop360RightImg} name={window.finalLangues.productview} expanded={expandedPanel === 'panel1'} onChanged={handleAccordionChange('panel1')} />
+         <MenuProductView tabIndex="1" onWebCamBtnClick={onWebCamClick} onFrontBtnClick={onFrontClick} onTopBtnClick={onTopClick} onLeftBtnClick={onLeftClick} onRightBtnClick={onRightClick} imgWebCam={webCam} imgfront={laptop360FrontImg} imgtop={laptop360TopImg} imgleft={laptop360LeftImg} imgright={laptop360RightImg} name={window.finalLangues.productView} expanded={expandedPanel === 'panel1'} onChanged={handleAccordionChange('panel1')} />
 
 
          <AnimationBtn onchange={displayName} forKeypress={setAnimationSwitch} value={animValue} onchange1={displayName1} forKeypress1={setAnimationSwitch1} value1={animValue1} />

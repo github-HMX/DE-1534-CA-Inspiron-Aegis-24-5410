@@ -34,17 +34,17 @@ const MenuProductView =(props)=>{
         <MenuBtn aria-hidden="true" style={AccordianIcons} submenu="Webcam"  source={props.imgWebCam}/>
         </AccordionDetails>  
         <AccordionDetails tabIndex="1" aria-label="Front" id="frontBtn" onKeyPress={ props.onFrontBtnClick} onClick={props.onFrontBtnClick}>
-        <MenuBtn aria-hidden="true" style={AccordianIcons} submenu="Front" source={props.imgfront}/>
+        <MenuBtn aria-hidden="true" style={AccordianIcons} submenu="Front" submenu={window.finalLangues.front} source={props.imgfront}/>
         </AccordionDetails>  
         <AccordionDetails tabIndex="1" aria-label="Top" id="topBtn"  onKeyPress={ props.onTopBtnClick} onClick={props.onTopBtnClick}>
-        <MenuBtn aria-hidden="true" style={AccordianIcons} submenu="Back"  source={props.imgtop}/>
+        <MenuBtn aria-hidden="true" style={AccordianIcons} submenu="Back" submenu={window.finalLangues.back} source={props.imgtop}/>
         </AccordionDetails>
         <AccordionDetails tabIndex="1" aria-label="Left" id="rightBtn" onKeyPress={ props.onRightBtnClick} onClick={props.onRightBtnClick}>
-        <MenuBtn aria-hidden="true" style={AccordianIcons} submenu="Right"  source={props.imgright}/>
+        <MenuBtn aria-hidden="true" style={AccordianIcons} submenu="Right" submenu={window.finalLangues.right}  source={props.imgright}/>
 
         </AccordionDetails>  
         <AccordionDetails tabIndex="1" aria-label="Right" id="leftBtn"  onKeyPress={ props.onLeftBtnClick} onClick={props.onLeftBtnClick}>
-        <MenuBtn aria-hidden="true" style={AccordianIcons} subMenu="Left" subname={window.finalLangues.left} submenu={window.finalLangues.left} source={props.imgleft}/>
+        <MenuBtn aria-hidden="true" style={AccordianIcons} submenu="Left" submenu={window.finalLangues.left}   source={props.imgleft}/>
         </AccordionDetails>  
       
       </Accordion>

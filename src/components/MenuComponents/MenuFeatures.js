@@ -52,7 +52,7 @@ const MenuFeatures =(props)=>{
         <Typography id="featuress" className="accordion-headers AccordiansHeader" style={{fontWeight:"700"}}>{props.name}</Typography>
         </AccordionSummary> 
         <AccordionDetails tabIndex="1" id="openCloseBtn" onKeyPress={props.openClosedClicked}  onClick={props.openClosedClicked}>
-        <MenuCircleBtnOpenClose source={props.imgfront1}  className="openclose" submenu={window.finalLangues.plastic} />
+        <MenuCircleBtnOpenClose source={props.imgfront1}  className="openclose" submenu={window.finalLangues.molded} />
         </AccordionDetails>  
         
         
