@@ -356,7 +356,7 @@
          var loadingDiv = document.getElementById('loading');
          var exploreBtn = document.getElementById('exploreButtton');
          var mainLoad = document.getElementById('mainload');
-        
+
          // loaderDiv.style.left = ((document.documentElement.clientWidth / 2) - (265 / 2)) + "px";
          // loaderDiv.style.top = ((document.documentElement.clientHeight / 2) - (12 / 2)) + "px";
          // loadingDiv.style.left = ((document.documentElement.clientWidth / 2) - (265 / 2)) + "px";
@@ -656,7 +656,7 @@
          }
       }
 
-      
+
       window.addEventListener('resize',resizeCanvas2,false);
       function resizeCanvas2() {
 
@@ -1010,7 +1010,7 @@
          var deltaScene = delta * 4.3;
 
          if (s._nav.NavChangeDolly(deltaScene,true)) {
-           // console.log(s._nav._navDolly);
+            // console.log(s._nav._navDolly);
             document.getElementById("sliderRange").value = s._nav.getZoomFactor();
             s.clearRefine();
          }
@@ -1407,7 +1407,7 @@
                   HS_SimpleCallout([0,-100],0,0,"hotspot_12","",port2,"left",10,300,0);
 
                } else if (currentPosition == 'top') {
-                 
+
                }
                else if (currentPosition == 'left') {
 
@@ -1444,11 +1444,11 @@
 
                // HS_SimpleCallout([0,40],0,-25,"DELL_360_A_Left_hotspot_0Shape4-0","",port8,"left",0,400,10);
                // setHotSpot('hotspot8','DELL_360_A_Left_hotspot_0Shape4-0',292,39,1.0,port8,320,19);
- 
+
             } else if (currentPosition == 'top') {
             }
             else if (currentPosition == 'left') {
-               
+
 
             } else if (currentPosition == 'right') {
             }
@@ -1762,7 +1762,7 @@
             if (this.readyState == 4 && this.status == 200) {
 
                var ldata = JSON.parse(this.responseText);
-               var splitLang = userLang.toLowerCase().split("-")[0];
+               // var splitLang = userLang.toLowerCase().split("-")[0];
 
                // console.log("ldata",ldata);
                // console.log("finalLangues called...",userLang.toLowerCase());
@@ -1770,10 +1770,12 @@
                   if (ldata.config[j].lang.toLowerCase() == userLang.toLowerCase()) {
                      finalLangues = ldata.config[j];
                      break;
-                  } else if (ldata.config[j].lang.toLowerCase() == splitLang.toLowerCase()) {
-                     finalLangues = ldata.config[j];
-                     break;
-                  } else {
+                  }
+                  //  else if (ldata.config[j].lang.toLowerCase() == splitLang.toLowerCase()) {
+                  //    finalLangues = ldata.config[j];
+                  //    break;
+                  // }
+                  else {
                      finalLangues = ldata.config[0];
                   }
                }

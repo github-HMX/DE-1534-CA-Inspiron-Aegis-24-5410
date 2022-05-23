@@ -796,7 +796,7 @@ const MainMenu = (props) => {
       setonBack(false);
 
       var slider = document.getElementById("sliderRange");
-      
+
       // window.scene.animPlayInTime("Windsor_KM5221W",0,0);
       if (slider != null) {
          document.getElementById("sliderRange").value = window.scene._nav.getZoomFactor();
@@ -1042,7 +1042,7 @@ const MainMenu = (props) => {
       document.getElementById('topBtn').classList.add('active');
       window.localStorage.setItem("position","reset");
       window.scene.groupApplyState("screen_180");
-     
+
       window.scene.groupApplyState("GP_open");
       window.scene.groupApplyState("dynamic_reset");
 
@@ -2234,7 +2234,7 @@ const MainMenu = (props) => {
                endIcon={<img src="./img/cross.svg" alt="cross" style={{ marginLeft: '207px',height: '23px' }} />}
                onClick={props.toggleDrawerAction}
             >
-               Main Menu
+               {window.finalLangues.mainmenu}
             </Button>
             <Howtousenew />
 

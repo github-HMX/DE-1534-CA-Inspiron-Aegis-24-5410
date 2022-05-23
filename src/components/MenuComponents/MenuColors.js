@@ -112,13 +112,13 @@ const MenuColors = (props) => {
                <Typography id="colors1" className="accordion-headers AccordiansHeader" style={{ fontWeight: "700" }}>{props.name}</Typography>
             </AccordionSummary>
             <AccordionDetails tabIndex="1" id="whiteBtn" onKeyPress={props.onWhiteBtnClick} onClick={props.onWhiteBtnClick} >
-               <MenuCircleBtn submenu="Dark Shadow Gray" subname={window.finalLangues.darkShadow} source="./img/clr_2.png" />
+               <MenuCircleBtn submenu="Dark Shadow Gray" submenu={window.finalLangues.darkShadow} source="./img/clr_2.png" />
 
             </AccordionDetails>
             <Tooltip open={open1} onOpen={handleOpen1} onClose={handleClose1} title="Not available in selected product type" placement="right" arrow>
 
                <AccordionDetails tabIndex="-1" id="blackBtn" onKeyPress={props.onBlackBtnClick} onClick={props.onBlackBtnClick}>
-                  <MenuCircleBtn submenu="Pearl White" subname={window.finalLangues.pearlWhite} source="./img/clr_1.png" />
+                  <MenuCircleBtn submenu="Pearl White" submenu={window.finalLangues.pearlWhite} source="./img/clr_1.png" />
                   {/* <div className="menubtn">
          <Button className="Btnsubmenu"
          style={Btn}

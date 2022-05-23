@@ -51,7 +51,7 @@ const AnimationBtn = (props) => {
          </div>
          {
             <div id="animation1" style={Animationbtns1} >
-               <span>On-Screen Controls: </span>
+               <span>{window.finalLangues.onScreenControls}: </span>
                {/* <Switch id="switchValue" onChange={displayName} name="checkedA" color="primary"/><span className = 'onOff'>{value}</span> */}
                <label class="switch" tabIndex="1" id="animswtich1" onKeyPress={props.forKeypress1} >
                   <input tabIndex="-1" className="tabIndexStyle" name='keyboadrControlsOnOff' id="animSwitchValue1" onChange={props.onchange1} type="checkbox" />
