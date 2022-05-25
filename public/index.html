@@ -1830,6 +1830,7 @@
                   //     $("#color_container").css("display", "none");
                   //     $("#pos_container").css("padding-top", "0");
                   // }
+
                   if (userLang.toLowerCase() === "es") {
                      // alert();
                      //   console.log("userLang is:" + userLang);
@@ -1844,7 +1845,15 @@
                         document.querySelector(".onOff").style.fontSize = '12px';
 
                      },3000);
+
                   }
+                  else if (userLang.toLowerCase() === "pl") {
+                     document.querySelectorAll(".menubtn button span.MuiButton-label span")[6].style.textTransform = "initial";
+                     document.querySelectorAll(".menubtn button span.MuiButton-label span")[8].style.textTransform = "initial";
+                     // document.querySelectorAll(".menubtn button span.MuiButton-label span")[6].style.border = "2px solid red";
+
+                  }
+
                }
             }
          };
