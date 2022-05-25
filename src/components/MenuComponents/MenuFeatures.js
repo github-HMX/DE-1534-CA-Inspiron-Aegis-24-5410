@@ -60,6 +60,7 @@ const MenuFeatures = (props) => {
             <AccordionDetails tabIndex="1" id="backlitBtn" onKeyPress={props.onOffBackliteClicked} onClick={props.onOffBackliteClicked}>
                <MenuCircleBtnBacklite source={props.imgfront2} className="backlit" submenu={window.finalLangues.fabric} />
 
+
                {/* <Button className="Btnsubmenu"
          style={Btn}
         variant="contained"
